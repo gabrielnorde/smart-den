@@ -1,8 +1,8 @@
-id: smart.who.int.ig-empty
-canonical: http://smart.who.int/ig-empty
-name: IGEmpty
-title: Empty IG
-description: An empty Implementation Guide to be used as a starting point for building SMART Guidelines Implementation Guides
+id: smart.who.int.den
+canonical: https://smart.who.int/den
+name: SMARTDen
+title: SMART Guidelines for Dengue - Brazilian Adaptation
+description: Unpublished Brazilian adaptation of a WHO SMART Guidelines DAK for dengue, under development at the Federal University of Santa Catarina (UFSC)
 status: draft # draft | active | retired | unknown
 experimental: false
 version: 0.1.0
@@ -11,11 +11,11 @@ fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2023+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 license: CC-BY-SA-3.0-IGO # https://www.hl7.org/fhir/valueset-spdx-license.html
-jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World" # https://www.hl7.org/fhir/valueset-jurisdiction.html
+jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#076 "Brazil"
 publisher:
-  name: WHO
-  url: http://who.int
-  # email: test@example.org
+  name: Gabriel Norde Santos
+  # url: http://who.int
+  email: gabrielnorde@gmail.com
 
 dependencies:
 #  hl7.fhir.core:
@@ -37,6 +37,11 @@ dependencies:
     id: sb
     version: 0.1.0
     reason: This IG uses SMART base computable guideline capabilities
+
+  br.gov.saude.br-core.fhir:
+    id: brcore
+    version: 1.4.1
+    reason: This IG uses Brazilian FHIR core profiles
   # smart.who.int.base-clinical:
   #   id: sbc
   #   version: current
