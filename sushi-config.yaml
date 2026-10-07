@@ -42,7 +42,6 @@ dependencies:
     id: brcore
     version: 1.4.1
     reason: This IG uses Brazilian FHIR core profiles
-
   # smart.who.int.base-clinical:
   #   id: sbc
   #   version: current
