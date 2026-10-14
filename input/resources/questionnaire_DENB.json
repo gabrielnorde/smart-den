@@ -1,0 +1,150 @@
+{
+"resourceType": "Questionnaire",
+"id": "DENB",
+"url": "http://smart.who.int/den/Questionnaire/DENB",
+"version": "0.1.0",
+"name": "DENB",
+"title": "DEN.B Registration",
+"status": "draft",
+"subjectType": [ "Patient"],
+"date": "2026-10-14",
+"publisher": "Federal University of Santa Catarina (UFSC)",
+"description": "Questionnaire for the DEN.B Screening activity, based on the DEN.B. Screening data elements.",
+"item": [
+{
+    "linkId": "DEN.B3.DE1",
+    "definition": "http://smart.who.int/den/StructureDefinition/den-vitalsigns#Observation.value[x]",
+    "text": "Systolic blood pressure",
+    "type": "quantity"
+},
+{
+    "linkId": "DEN.B3.DE2",
+    "definition": "http://smart.who.int/den/StructureDefinition/den-vitalsigns#Observation.value[x]",
+    "text": "Diastolic blood pressure",
+    "type": "quantity"
+},
+{
+/// Verificar este componente, pois não sei como declara o definition
+    "linkId": "DEN.B3.DE3",
+    "definition": "http://smart.who.int/den/StructureDefinition/den-vitalsigns#Observation.dataAbsentReason",
+    "text": "Blood pressure cannot be taken",
+    "type": "boolean"
+},
+{
+    "linkId": "DEN.B3.DE3",
+    "definition": "http://smart.who.int/den/StructureDefinition/den-vitalsigns#Observation.value[x]",
+    "text": "Body temperature",
+    "type": "quantity"
+},
+{
+/// Verificar se o recurso, perfil e campo estão corretos
+    "linkId": "DEN.B3.DE4",
+    "definition": "http://smart.who.int/den/StructureDefinition/den-observation#Observation.value[x]",
+    "text": "Fever onset",
+    "type": "quantity"
+},
+{
+    "linkId": "DEN.B3.DE5",
+    "definition": "http://smart.who.int/den/StructureDefinition/den-vitalsigns#Observation.value[x]",
+    "text": "Pulse rate",
+    "type": "quantity"
+},
+{
+/// Verificar se o recurso, perfil e campo estão corretos
+    "linkId": "DEN.B3.DE6",
+    "definition": "http://smart.who.int/den/StructureDefinition/den-observation#Observation.value[x]",
+    "text": "Pallor present",
+    "type": "quantity"
+},
+{
+    "linkId": "DEN.B3.DE8",
+    "definition": "http://smart.who.int/den/StructureDefinition/den-b3-de8#Observation.value[x]",
+    "text": "Respiratory exam result",
+    "type": "choice",
+    "answerValueSet":"http://smart.who.int/den/ValueSet/den-b3-de8-choice-grouper"
+},
+{
+    "linkId": "DEN.B4.DE1",
+    "definition": "http://smart.who.int/den/StructureDefinition/den-vitalsigns#Observation.value[x]",
+    "text": "Current  height",
+    "type": "quantity"
+},
+{
+    "linkId": "DEN.B4.DE2",
+    "definition": "http://smart.who.int/den/StructureDefinition/den-vitalsigns#Observation.value[x]",
+    "text": "Current  weight",
+    "type": "quantity"
+},
+{
+    "linkId": "DEN.B4.DE3",
+    "definition": "http://smart.who.int/den/StructureDefinition/den-vitalsigns#Observation.value[x]",
+    "text": "BMI",
+    "type": "quantity"
+},
+{
+    "linkId": "DEN.B5.DE1",
+    "definition": "http://smart.who.int/den/StructureDefinition/den-b5-de1#Observation.value[x]",
+    "text": "Current physiological symptoms",
+    "type": "choice",
+    "answerValueSet":"http://smart.who.int/den/ValueSet/den-b5-de1-choice-grouper"
+},
+{
+    "linkId": "DEN.B6.DE1",
+    "definition": "http://smart.who.int/den/StructureDefinition/den-b6-de1#Observation.value[x]",
+    "text": "Evaluate consciousness",
+    "type": "choice",
+    "answerValueSet":"http://smart.who.int/den/ValueSet/den-b6-de1-choice-grouper"
+},
+{
+    "linkId": "DEN.B7.DE1",
+    "definition": "http://smart.who.int/den/StructureDefinition/den-b7-de1#Observation.value[x]",
+    "text": "Check diuresis",
+    "type": "choice",
+    "answerValueSet":"http://smart.who.int/den/ValueSet/den-b7-de1-choice-grouper"
+},
+{
+/// Verificar se o recurso, perfil e campo estão corretos
+    "linkId": "DEN.B8.DE1",
+    "definition": "http://smart.who.int/den/StructureDefinition/den-b8-de1#Observation.value[x]",
+    "text": " Investigate pre-existing conditions",
+    "type": "choice",
+    "answerValueSet":"http://smart.who.int/den/ValueSet/den-b8-de1-choice-grouper"
+},
+{
+    "linkId": "DEN.B9.DE1",
+    "definition": "http://smart.who.int/den/StructureDefinition/den-vitalsigns#Observation.dataAbsentReason",
+    "text": "Recent travel to endemic area",
+    "type": "boolean"
+},
+{
+    "linkId": "DEN.B9.DE2",
+    "definition": "http://smart.who.int/den/StructureDefinition/den-vitalsigns#Observation.dataAbsentReason",
+    "text": "Household or community member with similar symptoms",
+    "type": "boolean"
+},
+{
+    "linkId": "DEN.B9.DE3",
+    "definition": "http://smart.who.int/den/StructureDefinition/den-vitalsigns#Observation.dataAbsentReason",
+    "text": "Client has no history of exposure",
+    "type": "boolean"
+},
+{
+    "linkId": "DEN.B9.DE3",
+    "definition": "http://smart.who.int/den/StructureDefinition/den-vitalsigns#Observation.dataAbsentReason",
+    "text": "Client has no history of exposure",
+    "type": "boolean"
+},
+{
+    "linkId": "DEN.B10.DE1",
+    "definition": "http://smart.who.int/den/StructureDefinition/den-b10-de1#Observation.dataAbsentReason",
+    "text": "Perform tourniquet test",
+    "type": "choice",
+    "answerValueSet":"http://smart.who.int/den/ValueSet/den-b10-de1-choice-grouper"
+},
+{
+    "linkId": "DEN.B11.DE1",
+    "definition": "http://smart.who.int/den/StructureDefinition/den-b11-de1#Observation.dataAbsentReason",
+    "text": "Warning sign",
+    "type": "choice",
+    "answerValueSet":"http://smart.who.int/den/ValueSet/den-b11-de1-choice-grouper"
+}
