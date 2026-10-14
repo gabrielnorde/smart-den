@@ -1,0 +1,142 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "DENA",
+  "url": "https://smart.who.int/den/Questionnaire/DENA",
+  "version": "0.1.0",
+  "name": "DENA",
+  "title": "DEN.A Registration",
+  "status": "draft",
+  "subjectType": [
+    "Patient"
+  ],
+  "date": "2026-10-13",
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "Questionnaire for the DEN.A Registration activity, based on the DEN.A. Registration data elements.",
+  "item": [
+    {
+      "linkId": "DEN.A2.DE1",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-patient#Patient.identifier:cns.value",
+      "text": "Unique identification",
+      "type": "string",
+      "required": true
+    },
+    {
+      "linkId": "DEN.A2.DE2",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-patient#Patient.name.given",
+      "text": "First name",
+      "type": "string",
+      "required": true
+    },
+    {
+      "linkId": "DEN.A2.DE3",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-patient#Patient.name.family",
+      "text": "Last name",
+      "type": "string",
+      "required": true
+    },
+    {
+      "linkId": "DEN.A2.DE4",
+      "definition": "https://br-core.saude.gov.br/fhir/StructureDefinition/br-core-encounter#Encounter.period.start",
+      "text": "Visit date",
+      "type": "dateTime",
+      "required": true
+    },
+    {
+      "linkId": "DEN.A2.DE5",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-patient#Patient.birthDate",
+      "text": "Date of birth",
+      "type": "date",
+      "required": true
+    },
+    {
+      "linkId": "DEN.A2.DE6",
+      "definition": "https://br-core.saude.gov.br/fhir/StructureDefinition/br-core-observation#Observation.valueQuantity",
+      "text": "Age",
+      "type": "quantity",
+      "readOnly": true,
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+          "valueExpression": {
+            "description": "Age in years calculated from visit date and date of birth using the DAK formula.",
+            "language": "text/fhirpath",
+            "expression": "((%denVisitDate.difference(%denBirthDate, 'day') / 365.25).toString() + ' a').toQuantity()"
+          }
+        }
+      ],
+      "required": true
+    },
+    {
+      "linkId": "DEN.A2.DE7",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-patient#Patient.extension:identidadeGenero",
+      "text": "Gender*",
+      "type": "open-choice",
+      "answerValueSet": "https://terminologia.saude.gov.br/fhir/ValueSet/BRIdentidadeGenero"
+    },
+    {
+      "linkId": "DEN.A2.DE13",
+      "text": "Other (specify)",
+      "type": "string",
+      "enableWhen": [
+        {
+          "question": "DEN.A2.DE7",
+          "operator": "=",
+          "answerString": "Other"
+        }
+      ]
+    },
+    {
+      "linkId": "DEN.A2.DE14",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-patient#Patient.address.text",
+      "text": "Address",
+      "type": "string",
+      "required": true
+    },
+    {
+      "linkId": "DEN.A2.DE15",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-patient#Patient.telecom",
+      "text": "Mobile phone number",
+      "type": "string",
+      "required": true
+    },
+    {
+      "linkId": "DEN.A2.DE16",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-patient#Patient.contact.name.text",
+      "text": "Alternative contact's name",
+      "type": "string",
+      "required": false
+    },
+    {
+      "linkId": "DEN.A2.DE17",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-patient#Patient.contact.telecom",
+      "text": "Alternative contact's phone number",
+      "type": "string",
+      "required": false
+    },
+    {
+      "linkId": "DEN.A2.DE18",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-patient#Patient.contact.name.text",
+      "text": "Mother´s name",
+      "type": "string",
+      "required": true
+    }
+  ],
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/variable",
+      "valueExpression": {
+        "name": "denVisitDate",
+        "language": "text/fhirpath",
+        "expression": "%context.item.repeat(item).where(linkId='DEN.A2.DE4').answer.value.ofType(dateTime).dateOf()"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/variable",
+      "valueExpression": {
+        "name": "denBirthDate",
+        "language": "text/fhirpath",
+        "expression": "%context.item.repeat(item).where(linkId='DEN.A2.DE5').answer.value.ofType(date)"
+      }
+    }
+  ]
+}
