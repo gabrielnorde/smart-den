@@ -1,0 +1,118 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "DENC11",
+  "url": "https://smart.who.int/den/Questionnaire/DENC11",
+  "version": "0.1.0",
+  "name": "DENC11",
+  "title": "DEN.C11 ClinicalLab evaluation",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-10-18",
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "Questionnaire for the DEN.C11 ClinicalLab evaluation data elements, based on the source data dictionary.",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Implementation notes and pending items</h2><p>This Questionnaire represents the six hematocrit evaluation questions in source order. The narrative records modeling decisions and unresolved source details; it is not additional questionnaire content.</p><ul><li>Each evaluation question is marked Select one. Its Required cell is blank, so all six are optional; repeats are false. The response option rows are marked Required=O and are choices under their parent question, not separate questions.</li><li>The source labels identify first through sixth evaluations but provide no measurement date/time, numeric hematocrit result, units, reference range, or rule linking a rising/falling status to prior values. The profile stores only the selected coded status and ordinal evaluation code; no time, numeric result, unit, or comparison rule is added.</li><li>The workbook lists LOINC 20570-8 as “Best Fit” for follow-up status options. It identifies a hematocrit measurement, not a rising/falling/normal-stable status; mappings are retained as relatedto candidates for review.</li><li>The workbook supplies SNOMED CT 365618006 for both rising and falling hematocrit, with the broad display “Finding of hematocrit - packed cell volume level (finding)” and a Best Fit note. The normal/stable status uses 409683007. These are candidate mappings requiring terminology review. The first-question “Normal hematocrit” option has no SNOMED code and remains locally coded.</li><li>ICD-10, ICD-11, and ICF cells are blank or marked not classifiable; no target mappings are asserted. No skip logic, conditional requirements, or additional clinical rules are supplied.</li><li>Answers may be represented as BR-Core Observations as an implementation choice. Observation status and Patient context must come from the implementing workflow. QuestionnaireResponse remains the direct record of the form answer.</li></ul></div>"
+  },
+  "subjectType": [
+    "Patient"
+  ],
+  "item": [
+    {
+      "linkId": "DEN.C11.DE1",
+      "code": [
+        {
+          "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+          "code": "den-c11-de1-hematocrit-evaluation-first",
+          "display": "Hematocrit evaluation - first"
+        }
+      ],
+      "text": "Hematocrit evaluation - first",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-c11-hematocrit-evaluation-observation#Observation.valueCodeableConcept",
+      "type": "choice",
+      "required": false,
+      "repeats": false,
+      "answerValueSet": "https://smart.who.int/den/ValueSet/den-c11-first-hematocrit-evaluation-choices"
+    },
+    {
+      "linkId": "DEN.C11.DE5",
+      "code": [
+        {
+          "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+          "code": "den-c11-de5-hematocrit-evaluation-second",
+          "display": "Hematocrit evaluation - second"
+        }
+      ],
+      "text": "Hematocrit evaluation - second",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-c11-hematocrit-evaluation-observation#Observation.valueCodeableConcept",
+      "type": "choice",
+      "required": false,
+      "repeats": false,
+      "answerValueSet": "https://smart.who.int/den/ValueSet/den-c11-trend-hematocrit-evaluation-choices"
+    },
+    {
+      "linkId": "DEN.C11.DE9",
+      "code": [
+        {
+          "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+          "code": "den-c11-de9-hematocrit-evaluation-third",
+          "display": "Hematocrit evaluation - third"
+        }
+      ],
+      "text": "Hematocrit evaluation - third",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-c11-hematocrit-evaluation-observation#Observation.valueCodeableConcept",
+      "type": "choice",
+      "required": false,
+      "repeats": false,
+      "answerValueSet": "https://smart.who.int/den/ValueSet/den-c11-trend-hematocrit-evaluation-choices"
+    },
+    {
+      "linkId": "DEN.C11.DE13",
+      "code": [
+        {
+          "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+          "code": "den-c11-de13-hematocrit-evaluation-fourth",
+          "display": "Hematocrit evaluation - fourth"
+        }
+      ],
+      "text": "Hematocrit evaluation - fourth",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-c11-hematocrit-evaluation-observation#Observation.valueCodeableConcept",
+      "type": "choice",
+      "required": false,
+      "repeats": false,
+      "answerValueSet": "https://smart.who.int/den/ValueSet/den-c11-trend-hematocrit-evaluation-choices"
+    },
+    {
+      "linkId": "DEN.C11.DE17",
+      "code": [
+        {
+          "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+          "code": "den-c11-de17-hematocrit-evaluation-fifth",
+          "display": "Hematocrit evaluation - fifth"
+        }
+      ],
+      "text": "Hematocrit evaluation - fifth",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-c11-hematocrit-evaluation-observation#Observation.valueCodeableConcept",
+      "type": "choice",
+      "required": false,
+      "repeats": false,
+      "answerValueSet": "https://smart.who.int/den/ValueSet/den-c11-trend-hematocrit-evaluation-choices"
+    },
+    {
+      "linkId": "DEN.C11.DE21",
+      "code": [
+        {
+          "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+          "code": "den-c11-de21-hematocrit-evaluation-sixth",
+          "display": "Hematocrit evaluation - sixth"
+        }
+      ],
+      "text": "Hematocrit evaluation - sixth",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-c11-hematocrit-evaluation-observation#Observation.valueCodeableConcept",
+      "type": "choice",
+      "required": false,
+      "repeats": false,
+      "answerValueSet": "https://smart.who.int/den/ValueSet/den-c11-trend-hematocrit-evaluation-choices"
+    }
+  ]
+}

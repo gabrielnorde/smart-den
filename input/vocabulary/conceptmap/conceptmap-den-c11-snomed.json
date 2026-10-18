@@ -1,0 +1,113 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "den-c11-snomed",
+  "url": "https://smart.who.int/den/ConceptMap/den-c11-snomed",
+  "version": "0.1.0",
+  "name": "DENC11SNOMEDConceptMap",
+  "title": "DEN.C11 ConceptMap to SNOMED CT",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-10-18",
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "Candidate mappings from DEN.C11 local concepts to SNOMED CT, transcribed from the source data dictionary without asserting exact equivalence.",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>SNOMED CT candidates and displays are transcribed from the workbook. The same broad hematocrit finding candidate is supplied for rising and falling; the first evaluation has no SNOMED candidate for normal hematocrit. Mappings use relatedto and require terminology review.</p></div>"
+  },
+  "group": [
+    {
+      "source": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+      "target": "http://snomed.info/sct",
+      "element": [
+        {
+          "code": "den-c11-de1-hematocrit-evaluation-first",
+          "display": "Hematocrit evaluation - first"
+        },
+        {
+          "code": "den-c11-de5-hematocrit-evaluation-second",
+          "display": "Hematocrit evaluation - second"
+        },
+        {
+          "code": "den-c11-de9-hematocrit-evaluation-third",
+          "display": "Hematocrit evaluation - third"
+        },
+        {
+          "code": "den-c11-de13-hematocrit-evaluation-fourth",
+          "display": "Hematocrit evaluation - fourth"
+        },
+        {
+          "code": "den-c11-de17-hematocrit-evaluation-fifth",
+          "display": "Hematocrit evaluation - fifth"
+        },
+        {
+          "code": "den-c11-de21-hematocrit-evaluation-sixth",
+          "display": "Hematocrit evaluation - sixth"
+        },
+        {
+          "code": "den-c11-hematocrit-below-reference-range",
+          "display": "Hematocrit below reference range",
+          "target": [
+            {
+              "code": "165414004",
+              "display": "Hematocrit below reference range (finding)",
+              "equivalence": "relatedto",
+              "comment": "Candidate transcribed from source rows 3 (DEN.C11.DE2); relatedto only, not independently asserted as equivalent."
+            }
+          ]
+        },
+        {
+          "code": "den-c11-hematocrit-above-reference-range",
+          "display": "Hematocrit above reference range",
+          "target": [
+            {
+              "code": "165413005",
+              "display": "Hematocrit above reference range (finding)",
+              "equivalence": "relatedto",
+              "comment": "Candidate transcribed from source rows 4 (DEN.C11.DE3); relatedto only, not independently asserted as equivalent."
+            }
+          ]
+        },
+        {
+          "code": "den-c11-normal-hematocrit",
+          "display": "Normal hematocrit"
+        },
+        {
+          "code": "den-c11-rising-hematocrit",
+          "display": "Rising hematocrit",
+          "target": [
+            {
+              "code": "365618006",
+              "display": "Finding of hematocrit - packed cell volume level (finding)",
+              "equivalence": "relatedto",
+              "comment": "Candidate transcribed from source rows 7, 11, 15, 19, 23 (DEN.C11.DE6, DEN.C11.DE10, DEN.C11.DE14, DEN.C11.DE18, DEN.C11.DE22); relatedto only, not independently asserted as equivalent. The worksheet supplies the same broad hematocrit finding code for both rising and falling, marked Best Fit; confirm this mapping."
+            }
+          ]
+        },
+        {
+          "code": "den-c11-falling-hematocrit",
+          "display": "Falling hematocrit",
+          "target": [
+            {
+              "code": "365618006",
+              "display": "Finding of hematocrit - packed cell volume level (finding)",
+              "equivalence": "relatedto",
+              "comment": "Candidate transcribed from source rows 8, 12, 16, 20, 24 (DEN.C11.DE7, DEN.C11.DE11, DEN.C11.DE15, DEN.C11.DE19, DEN.C11.DE23); relatedto only, not independently asserted as equivalent. The worksheet supplies the same broad hematocrit finding code for both rising and falling, marked Best Fit; confirm this mapping."
+            }
+          ]
+        },
+        {
+          "code": "den-c11-normal-stable-hematocrit",
+          "display": "Normal/stable hematocrit",
+          "target": [
+            {
+              "code": "409683007",
+              "display": "Stable hematocrit (finding)",
+              "equivalence": "relatedto",
+              "comment": "Candidate transcribed from source rows 9, 13, 17, 21, 25 (DEN.C11.DE8, DEN.C11.DE12, DEN.C11.DE16, DEN.C11.DE20, DEN.C11.DE24); relatedto only, not independently asserted as equivalent."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

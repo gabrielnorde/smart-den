@@ -1,0 +1,98 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "den-c11-loinc",
+  "url": "https://smart.who.int/den/ConceptMap/den-c11-loinc",
+  "version": "0.1.0",
+  "name": "DENC11LOINCConceptMap",
+  "title": "DEN.C11 ConceptMap to LOINC",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-10-18",
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "Candidate mappings from DEN.C11 local concepts to LOINC, transcribed from the source data dictionary without asserting exact equivalence.",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>The workbook supplies LOINC 20570-8 as a Best Fit candidate for rising, falling, and normal/stable hematocrit options. This code identifies a hematocrit measurement and is not the directional status itself; mappings are relatedto candidates pending review.</p></div>"
+  },
+  "group": [
+    {
+      "source": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+      "target": "http://loinc.org",
+      "targetVersion": "2.68",
+      "element": [
+        {
+          "code": "den-c11-de1-hematocrit-evaluation-first",
+          "display": "Hematocrit evaluation - first"
+        },
+        {
+          "code": "den-c11-de5-hematocrit-evaluation-second",
+          "display": "Hematocrit evaluation - second"
+        },
+        {
+          "code": "den-c11-de9-hematocrit-evaluation-third",
+          "display": "Hematocrit evaluation - third"
+        },
+        {
+          "code": "den-c11-de13-hematocrit-evaluation-fourth",
+          "display": "Hematocrit evaluation - fourth"
+        },
+        {
+          "code": "den-c11-de17-hematocrit-evaluation-fifth",
+          "display": "Hematocrit evaluation - fifth"
+        },
+        {
+          "code": "den-c11-de21-hematocrit-evaluation-sixth",
+          "display": "Hematocrit evaluation - sixth"
+        },
+        {
+          "code": "den-c11-hematocrit-below-reference-range",
+          "display": "Hematocrit below reference range"
+        },
+        {
+          "code": "den-c11-hematocrit-above-reference-range",
+          "display": "Hematocrit above reference range"
+        },
+        {
+          "code": "den-c11-normal-hematocrit",
+          "display": "Normal hematocrit"
+        },
+        {
+          "code": "den-c11-rising-hematocrit",
+          "display": "Rising hematocrit",
+          "target": [
+            {
+              "code": "20570-8",
+              "display": "Hematocrit [Volume Fraction] of Blood by calculation",
+              "equivalence": "relatedto",
+              "comment": "Source rows 7, 11, 15, 19, 23 (DEN.C11.DE6, DEN.C11.DE10, DEN.C11.DE14, DEN.C11.DE18, DEN.C11.DE22) mark this candidate as 'Best Fit'. It identifies a hematocrit measurement rather than the directional/status answer; retained as relatedto and requires terminology review."
+            }
+          ]
+        },
+        {
+          "code": "den-c11-falling-hematocrit",
+          "display": "Falling hematocrit",
+          "target": [
+            {
+              "code": "20570-8",
+              "display": "Hematocrit [Volume Fraction] of Blood by calculation",
+              "equivalence": "relatedto",
+              "comment": "Source rows 8, 12, 16, 20, 24 (DEN.C11.DE7, DEN.C11.DE11, DEN.C11.DE15, DEN.C11.DE19, DEN.C11.DE23) mark this candidate as 'Best Fit'. It identifies a hematocrit measurement rather than the directional/status answer; retained as relatedto and requires terminology review."
+            }
+          ]
+        },
+        {
+          "code": "den-c11-normal-stable-hematocrit",
+          "display": "Normal/stable hematocrit",
+          "target": [
+            {
+              "code": "20570-8",
+              "display": "Hematocrit [Volume Fraction] of Blood by calculation",
+              "equivalence": "relatedto",
+              "comment": "Source rows 9, 13, 17, 21, 25 (DEN.C11.DE8, DEN.C11.DE12, DEN.C11.DE16, DEN.C11.DE20, DEN.C11.DE24) mark this candidate as 'Best Fit'. It identifies a hematocrit measurement rather than the directional/status answer; retained as relatedto and requires terminology review."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

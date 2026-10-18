@@ -1,0 +1,46 @@
+{
+  "resourceType": "ValueSet",
+  "id": "den-c11-hematocrit-evaluation-codes",
+  "url": "https://smart.who.int/den/ValueSet/den-c11-hematocrit-evaluation-codes",
+  "version": "0.1.0",
+  "name": "DenC11HematocritEvaluationCodes",
+  "title": "DEN.C11 hematocrit evaluation codes",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-10-18",
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "Codes identifying which ordinal hematocrit evaluation was answered in DEN.C11.",
+  "compose": {
+    "include": [
+      {
+        "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+        "concept": [
+          {
+            "code": "den-c11-de1-hematocrit-evaluation-first",
+            "display": "Hematocrit evaluation - first"
+          },
+          {
+            "code": "den-c11-de5-hematocrit-evaluation-second",
+            "display": "Hematocrit evaluation - second"
+          },
+          {
+            "code": "den-c11-de9-hematocrit-evaluation-third",
+            "display": "Hematocrit evaluation - third"
+          },
+          {
+            "code": "den-c11-de13-hematocrit-evaluation-fourth",
+            "display": "Hematocrit evaluation - fourth"
+          },
+          {
+            "code": "den-c11-de17-hematocrit-evaluation-fifth",
+            "display": "Hematocrit evaluation - fifth"
+          },
+          {
+            "code": "den-c11-de21-hematocrit-evaluation-sixth",
+            "display": "Hematocrit evaluation - sixth"
+          }
+        ]
+      }
+    ]
+  }
+}

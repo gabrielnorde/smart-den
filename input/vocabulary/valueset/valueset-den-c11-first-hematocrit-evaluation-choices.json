@@ -1,0 +1,34 @@
+{
+  "resourceType": "ValueSet",
+  "id": "den-c11-first-hematocrit-evaluation-choices",
+  "url": "https://smart.who.int/den/ValueSet/den-c11-first-hematocrit-evaluation-choices",
+  "version": "0.1.0",
+  "name": "DenC11FirstHematocritEvaluationChoices",
+  "title": "DEN.C11 first hematocrit evaluation choices",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-10-18",
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "Answer choices for DEN.C11.DE1, derived from the shared DEN custom CodeSystem.",
+  "compose": {
+    "include": [
+      {
+        "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+        "concept": [
+          {
+            "code": "den-c11-hematocrit-below-reference-range",
+            "display": "Hematocrit below reference range"
+          },
+          {
+            "code": "den-c11-hematocrit-above-reference-range",
+            "display": "Hematocrit above reference range"
+          },
+          {
+            "code": "den-c11-normal-hematocrit",
+            "display": "Normal hematocrit"
+          }
+        ]
+      }
+    ]
+  }
+}
