@@ -1,0 +1,31 @@
+{
+  "resourceType": "Observation",
+  "id": "denc7-management-example",
+  "meta": {
+    "profile": [
+      "https://smart.who.int/den/StructureDefinition/den-c7-management-observation"
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+        "code": "define-management",
+        "display": "Define management"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+        "code": "ambulatory-care",
+        "display": "Ambulatory care"
+      }
+    ]
+  }
+}

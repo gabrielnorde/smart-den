@@ -67,6 +67,51 @@
       "code": "dengue-classification-group-d",
       "display": "Group D",
       "definition": "DEN.C6.DE5 classification option: severe forms of dengue with shock, severe bleeding, or organ dysfunction."
+    },
+    {
+      "code": "starts-hydration",
+      "display": "Starts hydration",
+      "definition": "DEN.C7.1.DE1 question concept: whether hydration therapy has been initiated."
+    },
+    {
+      "code": "oral-hydration",
+      "display": "Oral hydration",
+      "definition": "DEN.C7.1.DE2 response option: patient started oral fluid therapy."
+    },
+    {
+      "code": "iv-hydration",
+      "display": "IV hydration",
+      "definition": "DEN.C7.1.DE3 response option: patient started intravenous fluid therapy."
+    },
+    {
+      "code": "no-hydration",
+      "display": "No hydration",
+      "definition": "DEN.C7.1.DE4 response option: not indicated or not yet initiated; the source does not distinguish these cases."
+    },
+    {
+      "code": "define-management",
+      "display": "Define management",
+      "definition": "DEN.C7.2.DE1 question concept: management category aligned with severity classification and available resources."
+    },
+    {
+      "code": "ambulatory-care",
+      "display": "Ambulatory care",
+      "definition": "DEN.C7.2.DE2 response option: management provided on an outpatient basis."
+    },
+    {
+      "code": "in-hospital-care",
+      "display": "In-Hospital care",
+      "definition": "DEN.C7.2.DE3 response option: closer monitoring than ambulatory care but not full hospital admission."
+    },
+    {
+      "code": "hospital-care",
+      "display": "Hospital care",
+      "definition": "DEN.C7.2.DE4 response option: continuous monitoring, IV fluids, complication management, and supportive care."
+    },
+    {
+      "code": "intensive-care-icu",
+      "display": "Intensive care (ICU)",
+      "definition": "DEN.C7.2.DE5 response option: advanced monitoring, aggressive fluid management, blood products, and organ support."
     }
   ]
 }

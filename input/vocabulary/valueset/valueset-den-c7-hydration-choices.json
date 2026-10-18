@@ -1,0 +1,34 @@
+{
+  "resourceType": "ValueSet",
+  "id": "den-c7-hydration-choices",
+  "url": "https://smart.who.int/den/ValueSet/den-c7-hydration-choices",
+  "version": "0.1.0",
+  "name": "DENC7HydrationChoices",
+  "title": "DEN.C7 Hydration Choices",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-10-18",
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "DEN.C7.1.DE1 single-select answer options, derived from the shared DEN custom CodeSystem.",
+  "compose": {
+    "include": [
+      {
+        "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+        "concept": [
+          {
+            "code": "oral-hydration",
+            "display": "Oral hydration"
+          },
+          {
+            "code": "iv-hydration",
+            "display": "IV hydration"
+          },
+          {
+            "code": "no-hydration",
+            "display": "No hydration"
+          }
+        ]
+      }
+    ]
+  }
+}
