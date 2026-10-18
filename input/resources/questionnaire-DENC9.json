@@ -1,0 +1,138 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "DENC9",
+  "url": "https://smart.who.int/den/Questionnaire/DENC9",
+  "version": "0.1.0",
+  "name": "DENC9",
+  "title": "DEN.C9 Refer to complex services",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-10-18",
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "Questionnaire for the DEN.C9 referral data elements, based on the DEN.C9. Refer to complex servic data dictionary.",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Implementation notes and pending items</h2><p>The Questionnaire preserves the seven DEN.C9 data elements in source order. The following source constraints and implementation decisions need review:</p><ul><li>All seven data elements are Required=R and non-repeating. DE2 says “If patient was referred” in its description, but the source has no skip logic; it remains required and has no enableWhen.</li><li>DE2, DE4, DE5, and DE6 are marked not editable. The sheet supplies no initial answers or source expression for these values, so the implementing system must determine how to pre-populate them before the form can be completed.</li><li>DE3 is a string and the note says Location.identifier; the facility registry list and identifier system are not specified. The answer is retained as a string and can be resolved to a BR-Core Location reference only after that registry mapping is defined.</li><li>DE4 is DateTime and both Quantity Sub-Type and Validation Condition contain “contact date”. Which contact date is meant and what validation relation is required are unspecified; no equality rule is added.</li><li>DE5 is a read-only string derived from “Same as end-user’s profile”. The source does not identify the profile element or whether it represents a Location, Organization, or another resource; no requester reference is inferred.</li><li>DE6 is a read-only Quantity with “Integer quantity” calculation, while its description and LOINC candidate identify a telephone number. Telephone contact values are normally strings; the source gives no unit or conversion rule. The Quantity and integer constraint are preserved pending confirmation.</li><li>When DE1 is yes, this IG permits deriving a BR-Core ServiceRequest; this is an implementation choice based on the activity wording. The ServiceRequest still needs workflow data such as status, intent, category, priority, patient subject, and requester from outside this worksheet. DE1 and DE2 may also be represented as BR-Core Observations while retaining their QuestionnaireResponse answers.</li><li>External terminology codes and displays are transcribed from the workbook as candidate relations only. The LOINC entry for DE2 describes medication administration, which does not clearly match the question; all candidates need terminology review. Blank or not-classifiable cells have no target mapping.</li></ul></div>"
+  },
+  "subjectType": [
+    "Patient"
+  ],
+  "item": [
+    {
+      "linkId": "DEN.C9",
+      "text": "Refer to complex services",
+      "type": "group",
+      "required": false,
+      "repeats": false,
+      "item": [
+        {
+          "linkId": "DEN.C9.DE1",
+          "code": [
+            {
+              "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+              "code": "den-c9-de1-emergency-referral",
+              "display": "Emergency referral"
+            }
+          ],
+          "text": "Emergency referral — Referral for urgent care",
+          "type": "boolean",
+          "required": true,
+          "repeats": false,
+          "definition": "https://smart.who.int/den/StructureDefinition/den-c9-referral-question-observation#Observation.valueBoolean"
+        },
+        {
+          "linkId": "DEN.C9.DE2",
+          "code": [
+            {
+              "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+              "code": "den-c9-de2-treatment-before-referral",
+              "display": "Any treatment given before referral?"
+            }
+          ],
+          "text": "Any treatment given before referral? — If patient was referred, was any treatment provided before referral?",
+          "type": "boolean",
+          "required": true,
+          "repeats": false,
+          "definition": "https://smart.who.int/den/StructureDefinition/den-c9-referral-question-observation#Observation.valueBoolean",
+          "readOnly": true
+        },
+        {
+          "linkId": "DEN.C9.DE3",
+          "code": [
+            {
+              "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+              "code": "den-c9-de3-referral-location",
+              "display": "Location of referral"
+            }
+          ],
+          "text": "Location of referral — Where the client is being referred to",
+          "type": "string",
+          "required": true,
+          "repeats": false,
+          "definition": "https://br-core.saude.gov.br/fhir/StructureDefinition/br-core-location#Location.identifier.value"
+        },
+        {
+          "linkId": "DEN.C9.DE4",
+          "code": [
+            {
+              "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+              "code": "den-c9-de4-referral-date",
+              "display": "Date referral was made"
+            }
+          ],
+          "text": "Date referral was made — The date the referral was made",
+          "type": "dateTime",
+          "required": true,
+          "repeats": false,
+          "definition": "https://smart.who.int/den/StructureDefinition/den-c9-complex-service-referral#ServiceRequest.authoredOn",
+          "readOnly": true
+        },
+        {
+          "linkId": "DEN.C9.DE5",
+          "code": [
+            {
+              "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+              "code": "den-c9-de5-provider-facility",
+              "display": "Provider's facility"
+            }
+          ],
+          "text": "Provider's facility — Facility client is being referred from",
+          "type": "string",
+          "required": true,
+          "repeats": false,
+          "readOnly": true
+        },
+        {
+          "linkId": "DEN.C9.DE6",
+          "code": [
+            {
+              "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+              "code": "den-c9-de6-provider-telephone",
+              "display": "Provider's telephone number"
+            }
+          ],
+          "text": "Provider's telephone number — The contact details of the provider making the referral",
+          "type": "quantity",
+          "required": true,
+          "repeats": false,
+          "readOnly": true
+        },
+        {
+          "linkId": "DEN.C9.DE7",
+          "code": [
+            {
+              "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+              "code": "den-c9-de7-referral-notes",
+              "display": "Referral notes"
+            }
+          ],
+          "text": "Referral notes — Any additional relevant details of clinical significance for the referral facility to provide continuity of care",
+          "type": "string",
+          "required": true,
+          "repeats": false,
+          "definition": "https://smart.who.int/den/StructureDefinition/den-c9-complex-service-referral#ServiceRequest.note.text"
+        }
+      ]
+    }
+  ]
+}

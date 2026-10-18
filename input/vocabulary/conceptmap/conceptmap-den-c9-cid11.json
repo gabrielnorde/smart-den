@@ -1,0 +1,53 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "den-c9-cid11",
+  "url": "https://smart.who.int/den/ConceptMap/den-c9-cid11",
+  "version": "0.1.0",
+  "name": "DENC9CID11ConceptMap",
+  "title": "DEN.C9 ConceptMap to ICD-11",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-10-18",
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "Candidate mappings from DEN.C9 local concepts to CID11, transcribed from the source data dictionary without asserting validated equivalence.",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>The source marks these concepts not classifiable or has no code; no target mapping is asserted.</p></div>"
+  },
+  "group": [
+    {
+      "source": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+      "target": "http://id.who.int/icd/release/11/mms",
+      "element": [
+        {
+          "code": "den-c9-de1-emergency-referral",
+          "display": "Emergency referral"
+        },
+        {
+          "code": "den-c9-de2-treatment-before-referral",
+          "display": "Any treatment given before referral?"
+        },
+        {
+          "code": "den-c9-de3-referral-location",
+          "display": "Location of referral"
+        },
+        {
+          "code": "den-c9-de4-referral-date",
+          "display": "Date referral was made"
+        },
+        {
+          "code": "den-c9-de5-provider-facility",
+          "display": "Provider's facility"
+        },
+        {
+          "code": "den-c9-de6-provider-telephone",
+          "display": "Provider's telephone number"
+        },
+        {
+          "code": "den-c9-de7-referral-notes",
+          "display": "Referral notes"
+        }
+      ]
+    }
+  ]
+}
