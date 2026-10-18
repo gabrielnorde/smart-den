@@ -407,6 +407,66 @@
       "code": "den-c10-de13-dipyrone",
       "display": "Dipyrone",
       "definition": "DEN.C10.DE13 from the DEN.C10 Clinical management data dictionary."
+    },
+    {
+      "code": "den-c11-de1-hematocrit-evaluation-first",
+      "display": "Hematocrit evaluation - first",
+      "definition": "DEN.C11.DE1 from the DEN.C11 ClinicalLab evaluation worksheet; local concept identifies the ordinal hematocrit evaluation question."
+    },
+    {
+      "code": "den-c11-de5-hematocrit-evaluation-second",
+      "display": "Hematocrit evaluation - second",
+      "definition": "DEN.C11.DE5 from the DEN.C11 ClinicalLab evaluation worksheet; local concept identifies the ordinal hematocrit evaluation question."
+    },
+    {
+      "code": "den-c11-de9-hematocrit-evaluation-third",
+      "display": "Hematocrit evaluation - third",
+      "definition": "DEN.C11.DE9 from the DEN.C11 ClinicalLab evaluation worksheet; local concept identifies the ordinal hematocrit evaluation question."
+    },
+    {
+      "code": "den-c11-de13-hematocrit-evaluation-fourth",
+      "display": "Hematocrit evaluation - fourth",
+      "definition": "DEN.C11.DE13 from the DEN.C11 ClinicalLab evaluation worksheet; local concept identifies the ordinal hematocrit evaluation question."
+    },
+    {
+      "code": "den-c11-de17-hematocrit-evaluation-fifth",
+      "display": "Hematocrit evaluation - fifth",
+      "definition": "DEN.C11.DE17 from the DEN.C11 ClinicalLab evaluation worksheet; local concept identifies the ordinal hematocrit evaluation question."
+    },
+    {
+      "code": "den-c11-de21-hematocrit-evaluation-sixth",
+      "display": "Hematocrit evaluation - sixth",
+      "definition": "DEN.C11.DE21 from the DEN.C11 ClinicalLab evaluation worksheet; local concept identifies the ordinal hematocrit evaluation question."
+    },
+    {
+      "code": "den-c11-hematocrit-below-reference-range",
+      "display": "Hematocrit below reference range",
+      "definition": "DEN.C11.DE2 from the DEN.C11 ClinicalLab evaluation worksheet; local answer concept."
+    },
+    {
+      "code": "den-c11-hematocrit-above-reference-range",
+      "display": "Hematocrit above reference range",
+      "definition": "DEN.C11.DE3 from the DEN.C11 ClinicalLab evaluation worksheet; local answer concept."
+    },
+    {
+      "code": "den-c11-normal-hematocrit",
+      "display": "Normal hematocrit",
+      "definition": "DEN.C11.DE4 from the DEN.C11 ClinicalLab evaluation worksheet; local answer concept."
+    },
+    {
+      "code": "den-c11-rising-hematocrit",
+      "display": "Rising hematocrit",
+      "definition": "DEN.C11.DE6, DEN.C11.DE10, DEN.C11.DE14, DEN.C11.DE18, DEN.C11.DE22 from the DEN.C11 ClinicalLab evaluation worksheet; local answer concept."
+    },
+    {
+      "code": "den-c11-falling-hematocrit",
+      "display": "Falling hematocrit",
+      "definition": "DEN.C11.DE7, DEN.C11.DE11, DEN.C11.DE15, DEN.C11.DE19, DEN.C11.DE23 from the DEN.C11 ClinicalLab evaluation worksheet; local answer concept."
+    },
+    {
+      "code": "den-c11-normal-stable-hematocrit",
+      "display": "Normal/stable hematocrit",
+      "definition": "DEN.C11.DE8, DEN.C11.DE12, DEN.C11.DE16, DEN.C11.DE20, DEN.C11.DE24 from the DEN.C11 ClinicalLab evaluation worksheet; local answer concept."
     }
   ]
 }

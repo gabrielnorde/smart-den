@@ -1,0 +1,46 @@
+{
+  "resourceType": "ValueSet",
+  "id": "den-c11-hematocrit-evaluation-results",
+  "url": "https://smart.who.int/den/ValueSet/den-c11-hematocrit-evaluation-results",
+  "version": "0.1.0",
+  "name": "DenC11HematocritEvaluationResults",
+  "title": "DEN.C11 hematocrit evaluation results",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-10-18",
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "All coded answer concepts allowed as values of the DEN.C11 BR-Core Observation profile.",
+  "compose": {
+    "include": [
+      {
+        "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+        "concept": [
+          {
+            "code": "den-c11-hematocrit-below-reference-range",
+            "display": "Hematocrit below reference range"
+          },
+          {
+            "code": "den-c11-hematocrit-above-reference-range",
+            "display": "Hematocrit above reference range"
+          },
+          {
+            "code": "den-c11-normal-hematocrit",
+            "display": "Normal hematocrit"
+          },
+          {
+            "code": "den-c11-rising-hematocrit",
+            "display": "Rising hematocrit"
+          },
+          {
+            "code": "den-c11-falling-hematocrit",
+            "display": "Falling hematocrit"
+          },
+          {
+            "code": "den-c11-normal-stable-hematocrit",
+            "display": "Normal/stable hematocrit"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "resourceType": "ValueSet",
+  "id": "den-c11-trend-hematocrit-evaluation-choices",
+  "url": "https://smart.who.int/den/ValueSet/den-c11-trend-hematocrit-evaluation-choices",
+  "version": "0.1.0",
+  "name": "DenC11TrendHematocritEvaluationChoices",
+  "title": "DEN.C11 follow-up hematocrit evaluation choices",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-10-18",
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "Answer choices for DEN.C11.DE5, DE9, DE13, DE17, and DE21, derived from the shared DEN custom CodeSystem.",
+  "compose": {
+    "include": [
+      {
+        "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+        "concept": [
+          {
+            "code": "den-c11-rising-hematocrit",
+            "display": "Rising hematocrit"
+          },
+          {
+            "code": "den-c11-falling-hematocrit",
+            "display": "Falling hematocrit"
+          },
+          {
+            "code": "den-c11-normal-stable-hematocrit",
+            "display": "Normal/stable hematocrit"
+          }
+        ]
+      }
+    ]
+  }
+}

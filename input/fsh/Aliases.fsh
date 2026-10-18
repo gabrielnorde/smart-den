@@ -29,3 +29,7 @@ Alias: $DENC9ReferralServiceTypes = https://smart.who.int/den/ValueSet/den-c9-re
 Alias: $DENC10HydrationVolumeCodes = https://smart.who.int/den/ValueSet/den-c10-hydration-volume-codes
 Alias: $DENC10HydrationPhaseCodes = https://smart.who.int/den/ValueSet/den-c10-hydration-phase-codes
 Alias: $DENC10MedicationUseCodes = https://smart.who.int/den/ValueSet/den-c10-medication-use-codes
+Alias: $DENC11HematocritEvaluationCodes = https://smart.who.int/den/ValueSet/den-c11-hematocrit-evaluation-codes
+Alias: $DENC11FirstHematocritChoices = https://smart.who.int/den/ValueSet/den-c11-first-hematocrit-evaluation-choices
+Alias: $DENC11TrendHematocritChoices = https://smart.who.int/den/ValueSet/den-c11-trend-hematocrit-evaluation-choices
+Alias: $DENC11HematocritEvaluationResults = https://smart.who.int/den/ValueSet/den-c11-hematocrit-evaluation-results
