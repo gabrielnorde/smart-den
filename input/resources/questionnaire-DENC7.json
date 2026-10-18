@@ -1,0 +1,58 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "DENC7",
+  "url": "https://smart.who.int/den/Questionnaire/DENC7",
+  "version": "0.1.0",
+  "name": "DENC7",
+  "title": "DEN.C7 Initial management",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-10-18",
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "Questionnaire for the DEN.C7 Initial management activity, based on the DEN.C7 data elements.",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <h2>Implementation notes and pending items</h2>\n  <p>Pending decisions and terminology checks for DEN.C7 Initial management:</p>\n  <ul>\n    <li><strong>Hydration requiredness:</strong> DEN.C7.1.DE1 is marked required, while its option rows DEN.C7.1.DE2 and DE3 are marked required and DE4 is optional. A single-select question cannot require each alternative independently. The parent requirement is implemented; confirm what the option-level markers mean.</li>\n    <li><strong>Management requiredness:</strong> DEN.C7.2.DE1 has no requiredness value. Its option rows mix Optional and blank values. The question remains optional pending clarification; blank source cells are not interpreted as requirements.</li>\n    <li><strong>No hydration meaning:</strong> DEN.C7.1.DE4 combines “Not indicated” and “not yet initiated”. These situations can differ clinically, but the source supplies one answer option and no rule to distinguish them; the Questionnaire preserves that option as written.</li>\n    <li><strong>Terminology mappings:</strong> ICD-11 is marked not classifiable for DEN.C7.1.DE1 and its options and for DEN.C7.2.DE2–DE5; the DEN.C7.2.DE1 cell is blank. ICD-10, LOINC, and ICF option rows are marked not classifiable and question-row cells are blank. No targets are asserted for those systems. The supplied SNOMED CT codes are represented as candidate related-to mappings, not validated equivalents; numeric spreadsheet values are normalized to digit-string SCTIDs in the ConceptMaps. The care-level options map to SNOMED environment concepts, which may not represent management decisions; review before production.</li>\n    <li><strong>Storage choice:</strong> QuestionnaireResponse remains the raw answer. A receiving system may derive a BR-Core Observation from each coded response as an implementation choice; resource generation is not specified by the source. This does not assert a Procedure, Encounter, or admission. The source does not supply an effective time, performer, or Observation.status. A receiving system must populate the BR-Core-required status; the example uses final only to demonstrate a valid instance. The examples omit effective time and performer because the source does not provide them.</li>\n    <li><strong>Decision support:</strong> The source provides no skip logic or executable decision rules for these items. The questionnaire records the selected answers without deriving one from the other.</li>\n    <li><strong>Terminology validation:</strong> Candidate SNOMED CT targets have not been independently validated against a terminology server.</li>\n  </ul>\n</div>"
+  },
+  "subjectType": [
+    "Patient"
+  ],
+  "item": [
+    {
+      "linkId": "DEN.C7.1",
+      "text": "DEN.C7.1 Starts hydration",
+      "type": "group",
+      "required": false,
+      "repeats": false,
+      "item": [
+        {
+          "linkId": "DEN.C7.1.DE1",
+          "definition": "https://smart.who.int/den/StructureDefinition/den-c7-hydration-observation#Observation.valueCodeableConcept",
+          "text": "Starts hydration — Indicates whether hydration therapy has been initiated for a patient with suspected or confirmed dengue.",
+          "type": "choice",
+          "required": true,
+          "repeats": false,
+          "answerValueSet": "https://smart.who.int/den/ValueSet/den-c7-hydration-choices"
+        }
+      ]
+    },
+    {
+      "linkId": "DEN.C7.2",
+      "text": "DEN.C7.2. Define management",
+      "type": "group",
+      "required": false,
+      "repeats": false,
+      "item": [
+        {
+          "linkId": "DEN.C7.2.DE1",
+          "definition": "https://smart.who.int/den/StructureDefinition/den-c7-management-observation#Observation.valueCodeableConcept",
+          "text": "Define management — Define management categories aligned with severity classification and available resources.",
+          "type": "choice",
+          "required": false,
+          "repeats": false,
+          "answerValueSet": "https://smart.who.int/den/ValueSet/den-c7-management-choices"
+        }
+      ]
+    }
+  ]
+}

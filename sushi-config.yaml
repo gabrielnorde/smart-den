@@ -71,6 +71,18 @@ resources:
     name: DEN.C4-6 classification Condition example
     description: Fictional BR-Core-based Condition example for the selected DEN.C6 classification.
     exampleBoolean: true
+  QuestionnaireResponse/denc7-example:
+    name: DEN.C7 example QuestionnaireResponse
+    description: Example completed response with no hydration selected and ambulatory care selected.
+    exampleBoolean: true
+  Observation/denc7-hydration-example:
+    name: DEN.C7 hydration selection example
+    description: Example BR-Core Observation recording the No hydration answer.
+    exampleBoolean: true
+  Observation/denc7-management-example:
+    name: DEN.C7 management selection example
+    description: Example BR-Core Observation recording the Ambulatory care answer.
+    exampleBoolean: true
 
   # smart.who.int.base-clinical:
   #   id: sbc

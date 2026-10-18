@@ -1,0 +1,45 @@
+{
+  "resourceType": "QuestionnaireResponse",
+  "id": "denc7-example",
+  "questionnaire": "https://smart.who.int/den/Questionnaire/DENC7",
+  "status": "completed",
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "item": [
+    {
+      "linkId": "DEN.C7.1",
+      "item": [
+        {
+          "linkId": "DEN.C7.1.DE1",
+          "answer": [
+            {
+              "valueCoding": {
+                "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+                "code": "no-hydration",
+                "display": "No hydration"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "DEN.C7.2",
+      "item": [
+        {
+          "linkId": "DEN.C7.2.DE1",
+          "answer": [
+            {
+              "valueCoding": {
+                "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+                "code": "ambulatory-care",
+                "display": "Ambulatory care"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

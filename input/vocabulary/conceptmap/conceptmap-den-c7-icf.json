@@ -1,0 +1,61 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "den-c7-icf",
+  "url": "https://smart.who.int/den/ConceptMap/den-c7-icf",
+  "version": "0.1.0",
+  "name": "DENC7ICFConceptMap",
+  "title": "DEN.C7 ConceptMap to ICF",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-10-18",
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "Unmapped DEN.C7 local concepts for ICF; the source workbook provides no classifiable target codes for the rows in this map.",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>The question rows have blank ICF cells; option rows are marked “Not classifiable in ICF”. No target is asserted.</p><p>Blank and not-classifiable cells are retained as unmapped entries, not treated as terminology concepts.</p></div>"
+  },
+  "group": [
+    {
+      "source": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+      "target": "http://hl7.org/fhir/sid/icf",
+      "element": [
+        {
+          "code": "starts-hydration",
+          "display": "Starts hydration"
+        },
+        {
+          "code": "oral-hydration",
+          "display": "Oral hydration"
+        },
+        {
+          "code": "iv-hydration",
+          "display": "IV hydration"
+        },
+        {
+          "code": "no-hydration",
+          "display": "No hydration"
+        },
+        {
+          "code": "define-management",
+          "display": "Define management"
+        },
+        {
+          "code": "ambulatory-care",
+          "display": "Ambulatory care"
+        },
+        {
+          "code": "in-hospital-care",
+          "display": "In-Hospital care"
+        },
+        {
+          "code": "hospital-care",
+          "display": "Hospital care"
+        },
+        {
+          "code": "intensive-care-icu",
+          "display": "Intensive care (ICU)"
+        }
+      ]
+    }
+  ]
+}

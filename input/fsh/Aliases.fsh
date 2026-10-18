@@ -16,3 +16,6 @@ Alias: $DENCustomCodes = https://smart.who.int/den/CodeSystem/den-custom-codes
 Alias: $BRCoreCondition = https://br-core.saude.gov.br/fhir/StructureDefinition/br-core-condition
 Alias: $DENC46DiagnosticConditions = https://smart.who.int/den/ValueSet/den-c4-6-diagnostic-conditions
 Alias: $BRCorePatient = https://br-core.saude.gov.br/fhir/StructureDefinition/br-core-patient
+Alias: $DENC7HydrationChoices = https://smart.who.int/den/ValueSet/den-c7-hydration-choices
+Alias: $DENC7ManagementChoices = https://smart.who.int/den/ValueSet/den-c7-management-choices
+Alias: $DENC7Questionnaire = https://smart.who.int/den/Questionnaire/DENC7

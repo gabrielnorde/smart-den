@@ -1,0 +1,125 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "den-c7-snomed",
+  "url": "https://smart.who.int/den/ConceptMap/den-c7-snomed",
+  "version": "0.1.0",
+  "name": "DENC7SNOMEDConceptMap",
+  "title": "DEN.C7 ConceptMap to SNOMED CT",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-10-18",
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "Candidate mappings from DEN.C7 local concepts to SNOMED CT supplied by the data dictionary. They are not validated equivalences.",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Candidate SNOMED CT codes are transcribed from the workbook. Numeric Excel values are normalized to SCTID strings. The relatedto relationship avoids claiming equivalence; each candidate needs independent terminology review. The care-level targets are environment concepts and may not represent management decisions.</p><ul><li><code>starts-hydration</code>: The source target describes rehydration therapy, while the local concept is a question about whether hydration was initiated; this is a candidate relation only.</li><li><code>oral-hydration</code>: Candidate code copied from the source worksheet and normalized from its numeric Excel value; validate against SNOMED CT.</li><li><code>iv-hydration</code>: Candidate code copied from the source worksheet and normalized from its numeric Excel value; validate against SNOMED CT.</li><li><code>no-hydration</code>: The source combines not indicated and not yet initiated; the candidate qualifier does not distinguish these meanings and needs review.</li><li><code>define-management</code>: The source workbook supplies no SNOMED CT code for this question concept.</li><li><code>ambulatory-care</code>: The target describes an environment/site and may not represent the management decision; candidate relation needs review.</li><li><code>in-hospital-care</code>: The source says closer monitoring without full admission; the candidate is an environment concept and may not represent that care level.</li><li><code>hospital-care</code>: The target display is primary care hospital environment, which may conflict with the source hospital-care definition; candidate relation needs review.</li><li><code>intensive-care-icu</code>: The target identifies a care environment, not necessarily the management decision itself; candidate relation needs review.</li></ul></div>"
+  },
+  "group": [
+    {
+      "source": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+      "target": "http://snomed.info/sct",
+      "element": [
+        {
+          "code": "starts-hydration",
+          "display": "Starts hydration",
+          "target": [
+            {
+              "code": "243221009",
+              "display": "Rehydration therapy (procedure)",
+              "equivalence": "relatedto",
+              "comment": "The source target describes rehydration therapy, while the local concept is a question about whether hydration was initiated; this is a candidate relation only."
+            }
+          ]
+        },
+        {
+          "code": "oral-hydration",
+          "display": "Oral hydration",
+          "target": [
+            {
+              "code": "243222002",
+              "display": "Oral rehydration therapy (procedure)",
+              "equivalence": "relatedto",
+              "comment": "Candidate code copied from the source worksheet and normalized from its numeric Excel value; validate against SNOMED CT."
+            }
+          ]
+        },
+        {
+          "code": "iv-hydration",
+          "display": "IV hydration",
+          "target": [
+            {
+              "code": "1290011002",
+              "display": "Intravenous rehydration therapy (procedure)",
+              "equivalence": "relatedto",
+              "comment": "Candidate code copied from the source worksheet and normalized from its numeric Excel value; validate against SNOMED CT."
+            }
+          ]
+        },
+        {
+          "code": "no-hydration",
+          "display": "No hydration",
+          "target": [
+            {
+              "code": "262001002",
+              "display": "None used (qualifier value)",
+              "equivalence": "relatedto",
+              "comment": "The source combines not indicated and not yet initiated; the candidate qualifier does not distinguish these meanings and needs review."
+            }
+          ]
+        },
+        {
+          "code": "define-management",
+          "display": "Define management"
+        },
+        {
+          "code": "ambulatory-care",
+          "display": "Ambulatory care",
+          "target": [
+            {
+              "code": "35971002",
+              "display": "Ambulatory care site (environment)",
+              "equivalence": "relatedto",
+              "comment": "The target describes an environment/site and may not represent the management decision; candidate relation needs review."
+            }
+          ]
+        },
+        {
+          "code": "in-hospital-care",
+          "display": "In-Hospital care",
+          "target": [
+            {
+              "code": "702881000",
+              "display": "Medical day care (environment)",
+              "equivalence": "relatedto",
+              "comment": "The source says closer monitoring without full admission; the candidate is an environment concept and may not represent that care level."
+            }
+          ]
+        },
+        {
+          "code": "hospital-care",
+          "display": "Hospital care",
+          "target": [
+            {
+              "code": "45131006",
+              "display": "Primary care hospital (environment)",
+              "equivalence": "relatedto",
+              "comment": "The target display is primary care hospital environment, which may conflict with the source hospital-care definition; candidate relation needs review."
+            }
+          ]
+        },
+        {
+          "code": "intensive-care-icu",
+          "display": "Intensive care (ICU)",
+          "target": [
+            {
+              "code": "309904001",
+              "display": "Intensive care unit (environment)",
+              "equivalence": "relatedto",
+              "comment": "The target identifies a care environment, not necessarily the management decision itself; candidate relation needs review."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

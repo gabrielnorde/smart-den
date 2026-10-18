@@ -1,0 +1,31 @@
+{
+  "resourceType": "Observation",
+  "id": "denc7-hydration-example",
+  "meta": {
+    "profile": [
+      "https://smart.who.int/den/StructureDefinition/den-c7-hydration-observation"
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+        "code": "starts-hydration",
+        "display": "Starts hydration"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+        "code": "no-hydration",
+        "display": "No hydration"
+      }
+    ]
+  }
+}
