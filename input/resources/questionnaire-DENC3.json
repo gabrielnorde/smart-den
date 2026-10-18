@@ -1,0 +1,43 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "DENC3",
+  "url": "https://smart.who.int/den/Questionnaire/DENC3",
+  "version": "0.1.0",
+  "name": "DENC3",
+  "title": "DEN.C3 Physical examination",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-10-18",
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "Questionnaire for the DEN.C3 Physical examination activity, based on the DEN.C3 data elements.",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <h2>Implementation notes and pending items</h2>\n  <p>Pending decisions and terminology checks for DEN.C3 Physical examination:</p>\n  <ul>\n    <li><strong>Danger sign requiredness:</strong> the main DEN.C3.DE1 row has no requiredness value, while option rows DEN.C3.DE3, DE4 and DE5 are marked required and DEN.C3.DE6 (None) is optional. The Questionnaire leaves the multiselect optional; confirm the intended question-level requirement and whether each option's required marker has another meaning.</li>\n    <li><strong>Danger sign terminology:</strong> the answer options use local concepts to preserve the data dictionary labels. Candidate ICD-11, ICD-10, LOINC and SNOMED CT mappings are recorded as inexact or unmapped; verify the codes and their clinical meaning before treating them as validated terminology mappings.</li>\n    <li><strong>None exclusivity:</strong> the source says None cannot be selected with any other option. A DEN.C3 QuestionnaireResponse profile invariant enforces this for responses that declare conformance to that profile; confirm that consuming systems will validate against it.</li>\n    <li><strong>Oral intake code:</strong> the data dictionary lists LOINC code 2595931.0, while the accompanying DAK-to-FHIR mapping workbook proposes LOINC 9007-6. A local Observation code is used until this discrepancy is resolved.</li>\n    <li><strong>Oral intake unit and period:</strong> the source specifies an integer quantity but does not specify a unit or measurement interval. The secondary mapping proposes a 24-hour LOINC code and period; confirm these details before constraining the Observation or example with a unit or period.</li>\n    <li><strong>Terminology validation:</strong> ICD, LOINC, SNOMED CT and ICF targets have not been independently validated against terminology servers. ICF entries are explicitly unmapped because the source marks them not classifiable.</li>\n    <li><strong>Source structure:</strong> the source skips DEN.C3.DE2. The identifier gap is preserved and no item was invented for it. Activities DEN.C1 and DEN.C2 are excluded from answer capture because the source states that no data is recorded during them.</li>\n  </ul>\n</div>"
+  },
+  "subjectType": [
+    "Patient"
+  ],
+  "item": [
+    {
+      "linkId": "DEN.C3.DE1",
+      "text": "Danger sign — Evaluate if patient is in shock",
+      "type": "choice",
+      "required": false,
+      "repeats": true,
+      "answerValueSet": "https://smart.who.int/den/ValueSet/den-c3-danger-signs"
+    },
+    {
+      "linkId": "DEN.C3.oral-intake",
+      "text": "Oral intake",
+      "type": "display"
+    },
+    {
+      "linkId": "DEN.C3.DE7",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-c3-oral-intake-observation#Observation.valueQuantity",
+      "text": "Quantity of oral intake — Volume of fluids consumed by the patient.",
+      "type": "quantity",
+      "required": false,
+      "repeats": false
+    }
+  ]
+}

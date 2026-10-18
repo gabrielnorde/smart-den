@@ -1,0 +1,38 @@
+{
+  "resourceType": "ValueSet",
+  "id": "den-c3-danger-signs",
+  "url": "https://smart.who.int/den/ValueSet/den-c3-danger-signs",
+  "version": "0.1.0",
+  "name": "DENC3DangerSigns",
+  "title": "DEN.C3 Danger Signs",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-10-18",
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "Answer options for DEN.C3.DE1. Local codes preserve the worksheet choices; candidate external mappings are maintained separately and have not been validated.",
+  "compose": {
+    "include": [
+      {
+        "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+        "concept": [
+          {
+            "code": "hypotensive-shock",
+            "display": "Hypotensive shock"
+          },
+          {
+            "code": "severe-bleeding",
+            "display": "Severe bleeding"
+          },
+          {
+            "code": "severe-organ-impairment",
+            "display": "Severe organ impairment"
+          },
+          {
+            "code": "no-danger-sign",
+            "display": "None"
+          }
+        ]
+      }
+    ]
+  }
+}

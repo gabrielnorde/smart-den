@@ -1,0 +1,61 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "den-c3-loinc",
+  "url": "https://smart.who.int/den/ConceptMap/den-c3-loinc",
+  "version": "0.1.0",
+  "name": "DENC3LOINCConceptMap",
+  "title": "DEN.C3 ConceptMap to LOINC",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-10-18",
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "Candidate terminology mappings for DEN.C3 local concepts to LOINC. Mappings are inexact/narrower and require terminology review; unsupported concepts are explicitly unmapped.",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Mappings are candidate relationships from the source data dictionary and secondary mapping workbook. They are not independently terminology-validated. Inexact and narrower relations intentionally avoid claiming exact equivalence.</p><ul><li><code>hypotensive-shock</code>: The source marks this concept not classifiable in LOINC.</li><li><code>severe-bleeding</code>: Source-listed candidate does not exactly match the response concept Severe bleeding; validate suitability.</li><li><code>severe-organ-impairment</code>: The source marks this concept not classifiable in LOINC.</li><li><code>no-danger-sign</code>: The source marks this concept not classifiable in LOINC.</li><li><code>oral-fluid-intake-volume</code>: Secondary mapping workbook proposes this code, while the data dictionary lists 2595931.0. The 24-hour period is not specified in the data dictionary; resolve both issues.</li></ul></div>"
+  },
+  "group": [
+    {
+      "source": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+      "target": "http://loinc.org",
+      "element": [
+        {
+          "code": "hypotensive-shock",
+          "display": "Hypotensive shock"
+        },
+        {
+          "code": "severe-bleeding",
+          "display": "Severe bleeding",
+          "target": [
+            {
+              "code": "45703-6",
+              "display": "Internal bleeding [Minimum Data Set]",
+              "equivalence": "inexact",
+              "comment": "Source-listed candidate does not exactly match the response concept Severe bleeding; validate suitability."
+            }
+          ]
+        },
+        {
+          "code": "severe-organ-impairment",
+          "display": "Severe organ impairment"
+        },
+        {
+          "code": "no-danger-sign",
+          "display": "None"
+        },
+        {
+          "code": "oral-fluid-intake-volume",
+          "display": "Quantity of oral intake",
+          "target": [
+            {
+              "code": "9007-6",
+              "display": "Fluid intake oral 24 hour",
+              "equivalence": "inexact",
+              "comment": "Secondary mapping workbook proposes this code, while the data dictionary lists 2595931.0. The 24-hour period is not specified in the data dictionary; resolve both issues."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "resourceType": "Observation",
+  "id": "denc3-oral-intake-example",
+  "meta": {
+    "profile": [
+      "https://smart.who.int/den/StructureDefinition/den-c3-oral-intake-observation"
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+        "code": "oral-fluid-intake-volume",
+        "display": "Quantity of oral intake"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "valueQuantity": {
+    "value": 1500
+  }
+}

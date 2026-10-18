@@ -11,7 +11,7 @@ fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2023+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 license: CC-BY-SA-3.0-IGO # https://www.hl7.org/fhir/valueset-spdx-license.html
-jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#076 "Brazil"
+jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#076 "Brazil (BRA)"
 publisher:
   name: Gabriel Norde Santos
   # url: http://who.int
@@ -43,6 +43,26 @@ dependencies:
     uri: https://br-core.saude.gov.br/fhir/ImplementationGuide/br.gov.saude.br-core.fhir
     version: 1.4.1
     reason: This IG uses Brazilian FHIR core profiles
+
+# The IG Publisher does not recursively scan nested resource directories.
+# List each vocabulary leaf directory and the examples directory explicitly
+# so these authored FHIR resources are included in the published package.
+parameters:
+  path-resource:
+    - input/vocabulary/codesystem
+    - input/vocabulary/valueset
+    - input/vocabulary/conceptmap
+    - input/examples
+
+resources:
+  QuestionnaireResponse/denc3-example:
+    name: DEN.C3 multiple danger signs example
+    description: Fictional QuestionnaireResponse demonstrating multiple danger-sign answers and an integer oral-intake response.
+    exampleBoolean: true
+  Observation/denc3-oral-intake-example:
+    name: DEN.C3 oral intake Observation example
+    description: Fictional BR-Core-based Observation demonstrating integer oral intake without assuming a unit or measurement period.
+    exampleBoolean: true
 
   # smart.who.int.base-clinical:
   #   id: sbc

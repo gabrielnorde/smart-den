@@ -1,0 +1,42 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "den-custom-codes",
+  "url": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+  "version": "0.1.0",
+  "name": "DENDengueCustomCodes",
+  "title": "DEN Custom Codes",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-10-18",
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "Single local code system for DEN project concepts that need a local representation; concepts are preserved from the source data dictionary and are not asserted to be equivalent to candidate external codes.",
+  "caseSensitive": true,
+  "content": "complete",
+  "concept": [
+    {
+      "code": "hypotensive-shock",
+      "display": "Hypotensive shock",
+      "definition": "DEN.C3.DE3 response option from the data dictionary."
+    },
+    {
+      "code": "severe-bleeding",
+      "display": "Severe bleeding",
+      "definition": "DEN.C3.DE4 response option from the data dictionary."
+    },
+    {
+      "code": "severe-organ-impairment",
+      "display": "Severe organ impairment",
+      "definition": "DEN.C3.DE5 response option from the data dictionary."
+    },
+    {
+      "code": "no-danger-sign",
+      "display": "None",
+      "definition": "DEN.C3.DE6 response for no danger sign; kept local because the supplied SNOMED CT qualifier is not an exact match."
+    },
+    {
+      "code": "oral-fluid-intake-volume",
+      "display": "Quantity of oral intake",
+      "definition": "DEN.C3.DE7 Observation code used pending resolution of conflicting LOINC codes in the source material."
+    }
+  ]
+}

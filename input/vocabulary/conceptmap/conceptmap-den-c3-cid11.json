@@ -1,0 +1,69 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "den-c3-cid11",
+  "url": "https://smart.who.int/den/ConceptMap/den-c3-cid11",
+  "version": "0.1.0",
+  "name": "DENC3CID11ConceptMap",
+  "title": "DEN.C3 ConceptMap to ICD-11 MMS",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-10-18",
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "Candidate terminology mappings for DEN.C3 local concepts to ICD-11 MMS. Mappings are inexact/narrower and require terminology review; unsupported concepts are explicitly unmapped.",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Mappings are candidate relationships from the source data dictionary and secondary mapping workbook. They are not independently terminology-validated. Inexact and narrower relations intentionally avoid claiming exact equivalence.</p><ul><li><code>hypotensive-shock</code>: Source code is titled Shock, broader than hypotensive shock; candidate requires terminology review.</li><li><code>severe-bleeding</code>: Source code is a broad haemorrhage category; candidate requires terminology review.</li><li><code>severe-organ-impairment</code>: Source code is more specific than severe organ impairment; validate the intended clinical concept.</li><li><code>no-danger-sign</code>: The source has no classifiable ICD-11 code for this concept.</li><li><code>oral-fluid-intake-volume</code>: The source has no classifiable ICD-11 code for this concept.</li></ul></div>"
+  },
+  "group": [
+    {
+      "source": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+      "target": "http://id.who.int/icd/release/11/mms",
+      "element": [
+        {
+          "code": "hypotensive-shock",
+          "display": "Hypotensive shock",
+          "target": [
+            {
+              "code": "MG40",
+              "display": "Shock",
+              "equivalence": "inexact",
+              "comment": "Source code is titled Shock, broader than hypotensive shock; candidate requires terminology review."
+            }
+          ]
+        },
+        {
+          "code": "severe-bleeding",
+          "display": "Severe bleeding",
+          "target": [
+            {
+              "code": "MG27",
+              "display": "Haemorrhage, not elsewhere classified",
+              "equivalence": "inexact",
+              "comment": "Source code is a broad haemorrhage category; candidate requires terminology review."
+            }
+          ]
+        },
+        {
+          "code": "severe-organ-impairment",
+          "display": "Severe organ impairment",
+          "target": [
+            {
+              "code": "MG4A",
+              "display": "Multi organ failure",
+              "equivalence": "narrower",
+              "comment": "Source code is more specific than severe organ impairment; validate the intended clinical concept."
+            }
+          ]
+        },
+        {
+          "code": "no-danger-sign",
+          "display": "None"
+        },
+        {
+          "code": "oral-fluid-intake-volume",
+          "display": "Quantity of oral intake"
+        }
+      ]
+    }
+  ]
+}
