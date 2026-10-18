@@ -1,0 +1,181 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "den-c8-cid11",
+  "url": "https://smart.who.int/den/ConceptMap/den-c8-cid11",
+  "version": "0.1.0",
+  "name": "DENC8CID11ConceptMap",
+  "title": "DEN.C8 ConceptMap to ICD-11",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-10-18",
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "Candidate mappings from DEN.C8 local concepts to ICD-11, transcribed from the source data dictionary without asserting validated equivalence.",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Source ICD-11 cells are blank or marked not classifiable for DEN.C8. No target mapping is asserted for those rows.</p></div>"
+  },
+  "group": [
+    {
+      "source": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+      "target": "http://id.who.int/icd/release/11/mms",
+      "element": [
+        {
+          "code": "den-c8-de2-complete-blood-count-test",
+          "display": "Complete blood count test"
+        },
+        {
+          "code": "den-c8-de3-hematocrit",
+          "display": "Hematocrit"
+        },
+        {
+          "code": "den-c8-de4-platelet-count",
+          "display": "Platelet count"
+        },
+        {
+          "code": "den-c8-de5-dengue-pcr",
+          "display": "Dengue PCR"
+        },
+        {
+          "code": "den-c8-de6-dengue-virus-serology",
+          "display": "Dengue virus serology"
+        },
+        {
+          "code": "den-c8-de8-complete-blood-count-test-2",
+          "display": "Complete blood count test (2)"
+        },
+        {
+          "code": "den-c8-de9-hematocrit-2",
+          "display": "Hematocrit (2)"
+        },
+        {
+          "code": "den-c8-de10-platelet-count-2",
+          "display": "Platelet count (2)"
+        },
+        {
+          "code": "den-c8-de12-complete-blood-count-test-3",
+          "display": "Complete blood count test (3)"
+        },
+        {
+          "code": "den-c8-de13-hematocrit-3",
+          "display": "Hematocrit (3)"
+        },
+        {
+          "code": "den-c8-de14-platelet-count-3",
+          "display": "Platelet count (3)"
+        },
+        {
+          "code": "den-c8-de16-complete-blood-count-test-4",
+          "display": "Complete blood count test (4)"
+        },
+        {
+          "code": "den-c8-de17-hematocrit-4",
+          "display": "Hematocrit (4)"
+        },
+        {
+          "code": "den-c8-de18-platelet-count-4",
+          "display": "Platelet count (4)"
+        },
+        {
+          "code": "den-c8-de20-complete-blood-count-test-5",
+          "display": "Complete blood count test (5)"
+        },
+        {
+          "code": "den-c8-de21-hematocrit-5",
+          "display": "Hematocrit (5)"
+        },
+        {
+          "code": "den-c8-de22-platelet-count-5",
+          "display": "Platelet count (5)"
+        },
+        {
+          "code": "den-c8-de24-complete-blood-count-test-6",
+          "display": "Complete blood count test (6)"
+        },
+        {
+          "code": "den-c8-de25-hematocrit-6",
+          "display": "Hematocrit (6)"
+        },
+        {
+          "code": "den-c8-de26-platelet-count-6",
+          "display": "Platelet count (6)"
+        },
+        {
+          "code": "den-c8-de28-complete-blood-count-test-7",
+          "display": "Complete blood count test (7)"
+        },
+        {
+          "code": "den-c8-de29-hematocrit-7",
+          "display": "Hematocrit (7)"
+        },
+        {
+          "code": "den-c8-de30-platelet-count-7",
+          "display": "Platelet count (7)"
+        },
+        {
+          "code": "den-c8-de31-hematocrit-ht-results-1",
+          "display": "Hematocrit (Ht) results (1)"
+        },
+        {
+          "code": "den-c8-de32-platelet-count-observable-entity-results-1",
+          "display": "Platelet count (observable entity) results (1)"
+        },
+        {
+          "code": "den-c8-de33-dengue-virus-serology-results",
+          "display": "Dengue virus serology results"
+        },
+        {
+          "code": "den-c8-de34-dengue-pcr-results",
+          "display": "Dengue PCR results"
+        },
+        {
+          "code": "den-c8-de35-hematocrit-ht-results-2",
+          "display": "Hematocrit (Ht) results (2)"
+        },
+        {
+          "code": "den-c8-de36-platelet-count-observable-entity-results-2",
+          "display": "Platelet count (observable entity) results (2)"
+        },
+        {
+          "code": "den-c8-de37-hematocrit-ht-results-3",
+          "display": "Hematocrit (Ht) results (3)"
+        },
+        {
+          "code": "den-c8-de38-platelet-count-observable-entity-results-3",
+          "display": "Platelet count (observable entity) results (3)"
+        },
+        {
+          "code": "den-c8-de39-hematocrit-ht-results-4",
+          "display": "Hematocrit (Ht) results (4)"
+        },
+        {
+          "code": "den-c8-de40-platelet-count-observable-entity-results-4",
+          "display": "Platelet count (observable entity) results (4)"
+        },
+        {
+          "code": "den-c8-de41-hematocrit-ht-results-5",
+          "display": "Hematocrit (Ht) results (5)"
+        },
+        {
+          "code": "den-c8-de42-platelet-count-observable-entity-results-5",
+          "display": "Platelet count (observable entity) results (5)"
+        },
+        {
+          "code": "den-c8-de43-hematocrit-ht-results-6",
+          "display": "Hematocrit (Ht) results (6)"
+        },
+        {
+          "code": "den-c8-de44-platelet-count-observable-entity-results-6",
+          "display": "Platelet count (observable entity) results (6)"
+        },
+        {
+          "code": "den-c8-de45-hematocrit-ht-results-7",
+          "display": "Hematocrit (Ht) results (7)"
+        },
+        {
+          "code": "den-c8-de46-platelet-count-observable-entity-results-7",
+          "display": "Platelet count (observable entity) results (7)"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "resourceType": "ValueSet",
+  "id": "den-c8-order-options-1",
+  "url": "https://smart.who.int/den/ValueSet/den-c8-order-options-1",
+  "version": "0.1.0",
+  "name": "DenC8OrderOptions1",
+  "title": "DEN.C8 order options (1)",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-10-18",
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "Answer choices for DEN.C8.DE1 in the DEN C8. Lab test & imaging Questionnaire, derived from the shared DEN custom CodeSystem.",
+  "compose": {
+    "include": [
+      {
+        "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+        "concept": [
+          {
+            "code": "den-c8-de2-complete-blood-count-test",
+            "display": "Complete blood count test"
+          },
+          {
+            "code": "den-c8-de3-hematocrit",
+            "display": "Hematocrit"
+          },
+          {
+            "code": "den-c8-de4-platelet-count",
+            "display": "Platelet count"
+          },
+          {
+            "code": "den-c8-de5-dengue-pcr",
+            "display": "Dengue PCR"
+          },
+          {
+            "code": "den-c8-de6-dengue-virus-serology",
+            "display": "Dengue virus serology"
+          }
+        ]
+      }
+    ]
+  }
+}

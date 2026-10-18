@@ -1,0 +1,86 @@
+{
+  "resourceType": "ValueSet",
+  "id": "den-c8-lab-result-codes",
+  "url": "https://smart.who.int/den/ValueSet/den-c8-lab-result-codes",
+  "version": "0.1.0",
+  "name": "DenC8LabResultCodes",
+  "title": "DEN.C8 laboratory result codes",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-10-18",
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "Codes for hematocrit, platelet count, dengue serology, and dengue PCR results in DEN.C8, derived from the shared DEN custom CodeSystem.",
+  "compose": {
+    "include": [
+      {
+        "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+        "concept": [
+          {
+            "code": "den-c8-de31-hematocrit-ht-results-1",
+            "display": "Hematocrit (Ht) results (1)"
+          },
+          {
+            "code": "den-c8-de32-platelet-count-observable-entity-results-1",
+            "display": "Platelet count (observable entity) results (1)"
+          },
+          {
+            "code": "den-c8-de33-dengue-virus-serology-results",
+            "display": "Dengue virus serology results"
+          },
+          {
+            "code": "den-c8-de34-dengue-pcr-results",
+            "display": "Dengue PCR results"
+          },
+          {
+            "code": "den-c8-de35-hematocrit-ht-results-2",
+            "display": "Hematocrit (Ht) results (2)"
+          },
+          {
+            "code": "den-c8-de36-platelet-count-observable-entity-results-2",
+            "display": "Platelet count (observable entity) results (2)"
+          },
+          {
+            "code": "den-c8-de37-hematocrit-ht-results-3",
+            "display": "Hematocrit (Ht) results (3)"
+          },
+          {
+            "code": "den-c8-de38-platelet-count-observable-entity-results-3",
+            "display": "Platelet count (observable entity) results (3)"
+          },
+          {
+            "code": "den-c8-de39-hematocrit-ht-results-4",
+            "display": "Hematocrit (Ht) results (4)"
+          },
+          {
+            "code": "den-c8-de40-platelet-count-observable-entity-results-4",
+            "display": "Platelet count (observable entity) results (4)"
+          },
+          {
+            "code": "den-c8-de41-hematocrit-ht-results-5",
+            "display": "Hematocrit (Ht) results (5)"
+          },
+          {
+            "code": "den-c8-de42-platelet-count-observable-entity-results-5",
+            "display": "Platelet count (observable entity) results (5)"
+          },
+          {
+            "code": "den-c8-de43-hematocrit-ht-results-6",
+            "display": "Hematocrit (Ht) results (6)"
+          },
+          {
+            "code": "den-c8-de44-platelet-count-observable-entity-results-6",
+            "display": "Platelet count (observable entity) results (6)"
+          },
+          {
+            "code": "den-c8-de45-hematocrit-ht-results-7",
+            "display": "Hematocrit (Ht) results (7)"
+          },
+          {
+            "code": "den-c8-de46-platelet-count-observable-entity-results-7",
+            "display": "Platelet count (observable entity) results (7)"
+          }
+        ]
+      }
+    ]
+  }
+}

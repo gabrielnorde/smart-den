@@ -1,0 +1,34 @@
+{
+  "resourceType": "ValueSet",
+  "id": "den-c8-order-options-6",
+  "url": "https://smart.who.int/den/ValueSet/den-c8-order-options-6",
+  "version": "0.1.0",
+  "name": "DenC8OrderOptions6",
+  "title": "DEN.C8 order options (6)",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-10-18",
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "Answer choices for DEN.C8.DE23 in the DEN C8. Lab test & imaging Questionnaire, derived from the shared DEN custom CodeSystem.",
+  "compose": {
+    "include": [
+      {
+        "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+        "concept": [
+          {
+            "code": "den-c8-de24-complete-blood-count-test-6",
+            "display": "Complete blood count test (6)"
+          },
+          {
+            "code": "den-c8-de25-hematocrit-6",
+            "display": "Hematocrit (6)"
+          },
+          {
+            "code": "den-c8-de26-platelet-count-6",
+            "display": "Platelet count (6)"
+          }
+        ]
+      }
+    ]
+  }
+}

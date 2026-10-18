@@ -112,6 +112,201 @@
       "code": "intensive-care-icu",
       "display": "Intensive care (ICU)",
       "definition": "DEN.C7.2.DE5 response option: advanced monitoring, aggressive fluid management, blood products, and organ support."
+    },
+    {
+      "code": "den-c8-de2-complete-blood-count-test",
+      "display": "Complete blood count test",
+      "definition": "DEN.C8.DE2 from the DEN C8. Lab test & imaging data dictionary; source row 3."
+    },
+    {
+      "code": "den-c8-de3-hematocrit",
+      "display": "Hematocrit",
+      "definition": "DEN.C8.DE3 from the DEN C8. Lab test & imaging data dictionary; source row 4."
+    },
+    {
+      "code": "den-c8-de4-platelet-count",
+      "display": "Platelet count",
+      "definition": "DEN.C8.DE4 from the DEN C8. Lab test & imaging data dictionary; source row 5."
+    },
+    {
+      "code": "den-c8-de5-dengue-pcr",
+      "display": "Dengue PCR",
+      "definition": "DEN.C8.DE5 from the DEN C8. Lab test & imaging data dictionary; source row 6."
+    },
+    {
+      "code": "den-c8-de6-dengue-virus-serology",
+      "display": "Dengue virus serology",
+      "definition": "DEN.C8.DE6 from the DEN C8. Lab test & imaging data dictionary; source row 7."
+    },
+    {
+      "code": "den-c8-de8-complete-blood-count-test-2",
+      "display": "Complete blood count test (2)",
+      "definition": "DEN.C8.DE8 from the DEN C8. Lab test & imaging data dictionary; source row 9."
+    },
+    {
+      "code": "den-c8-de9-hematocrit-2",
+      "display": "Hematocrit (2)",
+      "definition": "DEN.C8.DE9 from the DEN C8. Lab test & imaging data dictionary; source row 10."
+    },
+    {
+      "code": "den-c8-de10-platelet-count-2",
+      "display": "Platelet count (2)",
+      "definition": "DEN.C8.DE10 from the DEN C8. Lab test & imaging data dictionary; source row 11."
+    },
+    {
+      "code": "den-c8-de12-complete-blood-count-test-3",
+      "display": "Complete blood count test (3)",
+      "definition": "DEN.C8.DE12 from the DEN C8. Lab test & imaging data dictionary; source row 13."
+    },
+    {
+      "code": "den-c8-de13-hematocrit-3",
+      "display": "Hematocrit (3)",
+      "definition": "DEN.C8.DE13 from the DEN C8. Lab test & imaging data dictionary; source row 14."
+    },
+    {
+      "code": "den-c8-de14-platelet-count-3",
+      "display": "Platelet count (3)",
+      "definition": "DEN.C8.DE14 from the DEN C8. Lab test & imaging data dictionary; source row 15."
+    },
+    {
+      "code": "den-c8-de16-complete-blood-count-test-4",
+      "display": "Complete blood count test (4)",
+      "definition": "DEN.C8.DE16 from the DEN C8. Lab test & imaging data dictionary; source row 17."
+    },
+    {
+      "code": "den-c8-de17-hematocrit-4",
+      "display": "Hematocrit (4)",
+      "definition": "DEN.C8.DE17 from the DEN C8. Lab test & imaging data dictionary; source row 18."
+    },
+    {
+      "code": "den-c8-de18-platelet-count-4",
+      "display": "Platelet count (4)",
+      "definition": "DEN.C8.DE18 from the DEN C8. Lab test & imaging data dictionary; source row 19."
+    },
+    {
+      "code": "den-c8-de20-complete-blood-count-test-5",
+      "display": "Complete blood count test (5)",
+      "definition": "DEN.C8.DE20 from the DEN C8. Lab test & imaging data dictionary; source row 21."
+    },
+    {
+      "code": "den-c8-de21-hematocrit-5",
+      "display": "Hematocrit (5)",
+      "definition": "DEN.C8.DE21 from the DEN C8. Lab test & imaging data dictionary; source row 22."
+    },
+    {
+      "code": "den-c8-de22-platelet-count-5",
+      "display": "Platelet count (5)",
+      "definition": "DEN.C8.DE22 from the DEN C8. Lab test & imaging data dictionary; source row 23."
+    },
+    {
+      "code": "den-c8-de24-complete-blood-count-test-6",
+      "display": "Complete blood count test (6)",
+      "definition": "DEN.C8.DE24 from the DEN C8. Lab test & imaging data dictionary; source row 25."
+    },
+    {
+      "code": "den-c8-de25-hematocrit-6",
+      "display": "Hematocrit (6)",
+      "definition": "DEN.C8.DE25 from the DEN C8. Lab test & imaging data dictionary; source row 26."
+    },
+    {
+      "code": "den-c8-de26-platelet-count-6",
+      "display": "Platelet count (6)",
+      "definition": "DEN.C8.DE26 from the DEN C8. Lab test & imaging data dictionary; source row 27."
+    },
+    {
+      "code": "den-c8-de28-complete-blood-count-test-7",
+      "display": "Complete blood count test (7)",
+      "definition": "DEN.C8.DE28 from the DEN C8. Lab test & imaging data dictionary; source row 29."
+    },
+    {
+      "code": "den-c8-de29-hematocrit-7",
+      "display": "Hematocrit (7)",
+      "definition": "DEN.C8.DE29 from the DEN C8. Lab test & imaging data dictionary; source row 30."
+    },
+    {
+      "code": "den-c8-de30-platelet-count-7",
+      "display": "Platelet count (7)",
+      "definition": "DEN.C8.DE30 from the DEN C8. Lab test & imaging data dictionary; source row 31."
+    },
+    {
+      "code": "den-c8-de31-hematocrit-ht-results-1",
+      "display": "Hematocrit (Ht) results (1)",
+      "definition": "DEN.C8.DE31 from the DEN C8. Lab test & imaging data dictionary; source row 33."
+    },
+    {
+      "code": "den-c8-de32-platelet-count-observable-entity-results-1",
+      "display": "Platelet count (observable entity) results (1)",
+      "definition": "DEN.C8.DE32 from the DEN C8. Lab test & imaging data dictionary; source row 34."
+    },
+    {
+      "code": "den-c8-de33-dengue-virus-serology-results",
+      "display": "Dengue virus serology results",
+      "definition": "DEN.C8.DE33 from the DEN C8. Lab test & imaging data dictionary; source row 35."
+    },
+    {
+      "code": "den-c8-de34-dengue-pcr-results",
+      "display": "Dengue PCR results",
+      "definition": "DEN.C8.DE34 from the DEN C8. Lab test & imaging data dictionary; source row 36."
+    },
+    {
+      "code": "den-c8-de35-hematocrit-ht-results-2",
+      "display": "Hematocrit (Ht) results (2)",
+      "definition": "DEN.C8.DE35 from the DEN C8. Lab test & imaging data dictionary; source row 38."
+    },
+    {
+      "code": "den-c8-de36-platelet-count-observable-entity-results-2",
+      "display": "Platelet count (observable entity) results (2)",
+      "definition": "DEN.C8.DE36 from the DEN C8. Lab test & imaging data dictionary; source row 39."
+    },
+    {
+      "code": "den-c8-de37-hematocrit-ht-results-3",
+      "display": "Hematocrit (Ht) results (3)",
+      "definition": "DEN.C8.DE37 from the DEN C8. Lab test & imaging data dictionary; source row 41."
+    },
+    {
+      "code": "den-c8-de38-platelet-count-observable-entity-results-3",
+      "display": "Platelet count (observable entity) results (3)",
+      "definition": "DEN.C8.DE38 from the DEN C8. Lab test & imaging data dictionary; source row 42."
+    },
+    {
+      "code": "den-c8-de39-hematocrit-ht-results-4",
+      "display": "Hematocrit (Ht) results (4)",
+      "definition": "DEN.C8.DE39 from the DEN C8. Lab test & imaging data dictionary; source row 44."
+    },
+    {
+      "code": "den-c8-de40-platelet-count-observable-entity-results-4",
+      "display": "Platelet count (observable entity) results (4)",
+      "definition": "DEN.C8.DE40 from the DEN C8. Lab test & imaging data dictionary; source row 45."
+    },
+    {
+      "code": "den-c8-de41-hematocrit-ht-results-5",
+      "display": "Hematocrit (Ht) results (5)",
+      "definition": "DEN.C8.DE41 from the DEN C8. Lab test & imaging data dictionary; source row 47."
+    },
+    {
+      "code": "den-c8-de42-platelet-count-observable-entity-results-5",
+      "display": "Platelet count (observable entity) results (5)",
+      "definition": "DEN.C8.DE42 from the DEN C8. Lab test & imaging data dictionary; source row 48."
+    },
+    {
+      "code": "den-c8-de43-hematocrit-ht-results-6",
+      "display": "Hematocrit (Ht) results (6)",
+      "definition": "DEN.C8.DE43 from the DEN C8. Lab test & imaging data dictionary; source row 50."
+    },
+    {
+      "code": "den-c8-de44-platelet-count-observable-entity-results-6",
+      "display": "Platelet count (observable entity) results (6)",
+      "definition": "DEN.C8.DE44 from the DEN C8. Lab test & imaging data dictionary; source row 51."
+    },
+    {
+      "code": "den-c8-de45-hematocrit-ht-results-7",
+      "display": "Hematocrit (Ht) results (7)",
+      "definition": "DEN.C8.DE45 from the DEN C8. Lab test & imaging data dictionary; source row 53."
+    },
+    {
+      "code": "den-c8-de46-platelet-count-observable-entity-results-7",
+      "display": "Platelet count (observable entity) results (7)",
+      "definition": "DEN.C8.DE46 from the DEN C8. Lab test & imaging data dictionary; source row 54."
     }
   ]
 }
