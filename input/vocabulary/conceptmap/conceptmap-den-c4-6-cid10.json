@@ -1,0 +1,97 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "den-c4-6-cid10",
+  "url": "https://smart.who.int/den/ConceptMap/den-c4-6-cid10",
+  "version": "0.1.0",
+  "name": "DENC46CID10ConceptMap",
+  "title": "DEN.C4-6 ConceptMap to CID-10",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-10-18",
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "Candidate mappings for DEN.C4-6 local concepts to CID-10. Mappings are unvalidated and preserve source worksheet candidates without claiming exact equivalence.",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Candidate codes are copied from the source worksheet and not independently terminology-validated. The generic relatedto relationship avoids asserting equivalence; conflicts are documented in target comments.</p></div>"
+  },
+  "group": [
+    {
+      "source": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+      "target": "http://hl7.org/fhir/sid/icd-10",
+      "element": [
+        {
+          "code": "suspected-dengue-fever",
+          "display": "Suspected dengue fever",
+          "target": [
+            {
+              "code": "A97.9",
+              "display": "Dengue, unspecified",
+              "equivalence": "relatedto",
+              "comment": "Candidate ICD-10 code in source worksheet; same code is also supplied for confirmed dengue."
+            }
+          ]
+        },
+        {
+          "code": "confirmed-dengue-fever",
+          "display": "Confirmed dengue fever",
+          "target": [
+            {
+              "code": "A97.9",
+              "display": "Dengue, unspecified",
+              "equivalence": "relatedto",
+              "comment": "Candidate ICD-10 code in source worksheet; same code is also supplied for suspected dengue."
+            }
+          ]
+        },
+        {
+          "code": "dengue-classification-group-a",
+          "display": "Group A",
+          "target": [
+            {
+              "code": "A97.0",
+              "display": "Dengue without warning signs",
+              "equivalence": "relatedto",
+              "comment": "Candidate code supplied by source worksheet."
+            }
+          ]
+        },
+        {
+          "code": "dengue-classification-group-b",
+          "display": "Group B",
+          "target": [
+            {
+              "code": "A97.0",
+              "display": "Dengue without warning signs",
+              "equivalence": "relatedto",
+              "comment": "Source repeats Group A code despite Group B including special conditions, social risk factors, or comorbidities; validate."
+            }
+          ]
+        },
+        {
+          "code": "dengue-classification-group-c",
+          "display": "Group C",
+          "target": [
+            {
+              "code": "A97.1",
+              "display": "Dengue with warning signs",
+              "equivalence": "relatedto",
+              "comment": "Candidate code supplied by source worksheet."
+            }
+          ]
+        },
+        {
+          "code": "dengue-classification-group-d",
+          "display": "Group D",
+          "target": [
+            {
+              "code": "A97.2",
+              "display": "Severe Dengue",
+              "equivalence": "relatedto",
+              "comment": "Candidate code supplied by source worksheet."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

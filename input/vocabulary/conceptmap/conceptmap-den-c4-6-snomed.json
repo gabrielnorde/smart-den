@@ -1,0 +1,97 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "den-c4-6-snomed",
+  "url": "https://smart.who.int/den/ConceptMap/den-c4-6-snomed",
+  "version": "0.1.0",
+  "name": "DENC46SNOMEDConceptMap",
+  "title": "DEN.C4-6 ConceptMap to SNOMED CT",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-10-18",
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "Candidate mappings for DEN.C4-6 local concepts to SNOMED CT. Mappings are unvalidated and preserve source worksheet candidates without claiming exact equivalence.",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Candidate codes are copied from the source worksheet and not independently terminology-validated. The generic relatedto relationship avoids asserting equivalence; conflicts are documented in target comments.</p></div>"
+  },
+  "group": [
+    {
+      "source": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+      "target": "http://snomed.info/sct",
+      "element": [
+        {
+          "code": "suspected-dengue-fever",
+          "display": "Suspected dengue fever",
+          "target": [
+            {
+              "code": "418429061000132101",
+              "display": "Suspected dengue (situation)",
+              "equivalence": "relatedto",
+              "comment": "Candidate SNOMED CT code supplied by source worksheet; validate independently."
+            }
+          ]
+        },
+        {
+          "code": "confirmed-dengue-fever",
+          "display": "Confirmed dengue fever",
+          "target": [
+            {
+              "code": "38362002",
+              "display": "Dengue (disorder)",
+              "equivalence": "relatedto",
+              "comment": "Candidate SNOMED CT code supplied by source worksheet; validate independently."
+            }
+          ]
+        },
+        {
+          "code": "dengue-classification-group-a",
+          "display": "Group A",
+          "target": [
+            {
+              "code": "722862003",
+              "display": "Dengue without warning signs (disorder)",
+              "equivalence": "relatedto",
+              "comment": "Candidate code supplied by source worksheet."
+            }
+          ]
+        },
+        {
+          "code": "dengue-classification-group-b",
+          "display": "Group B",
+          "target": [
+            {
+              "code": "722862003",
+              "display": "Dengue without warning signs (disorder)",
+              "equivalence": "relatedto",
+              "comment": "Source repeats Group A code despite Group B description; validate."
+            }
+          ]
+        },
+        {
+          "code": "dengue-classification-group-c",
+          "display": "Group C",
+          "target": [
+            {
+              "code": "722863008",
+              "display": "Dengue with warning signs (disorder)",
+              "equivalence": "relatedto",
+              "comment": "Candidate code supplied by source worksheet."
+            }
+          ]
+        },
+        {
+          "code": "dengue-classification-group-d",
+          "display": "Group D",
+          "target": [
+            {
+              "code": "722863008",
+              "display": "Dengue with warning signs (disorder)",
+              "equivalence": "relatedto",
+              "comment": "Source repeats Group C code although Group D is described as severe dengue; validate before production."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

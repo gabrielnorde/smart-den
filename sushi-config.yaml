@@ -63,6 +63,14 @@ resources:
     name: DEN.C3 oral intake Observation example
     description: Fictional BR-Core-based Observation demonstrating integer oral intake without assuming a unit or measurement period.
     exampleBoolean: true
+  QuestionnaireResponse/denc4-6-example:
+    name: DEN.C4-6 QuestionnaireResponse example
+    description: Fictional example preserving Boolean diagnostic answers and a single coded dengue classification.
+    exampleBoolean: true
+  Condition/denc4-6-classification-example:
+    name: DEN.C4-6 classification Condition example
+    description: Fictional BR-Core-based Condition example for the selected DEN.C6 classification.
+    exampleBoolean: true
 
   # smart.who.int.base-clinical:
   #   id: sbc
