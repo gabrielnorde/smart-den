@@ -1,0 +1,101 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "den-c9-snomed",
+  "url": "https://smart.who.int/den/ConceptMap/den-c9-snomed",
+  "version": "0.1.0",
+  "name": "DENC9SNOMEDCTConceptMap",
+  "title": "DEN.C9 ConceptMap to SNOMED CT",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-10-18",
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "Candidate mappings from DEN.C9 local concepts to SNOMED CT, transcribed from the source data dictionary without asserting validated equivalence.",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Workbook candidates are transcribed without asserting exact equivalence. Candidate targets use relatedto and require terminology review; blank and not-classifiable cells have no target.</p></div>"
+  },
+  "group": [
+    {
+      "source": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+      "target": "http://snomed.info/sct",
+      "element": [
+        {
+          "code": "den-c9-de1-emergency-referral",
+          "display": "Emergency referral",
+          "target": [
+            {
+              "code": "134403003",
+              "display": "Referral to emergency clinic (procedure)",
+              "equivalence": "relatedto",
+              "comment": "Candidate code transcribed from source row 3 (DEN.C9. Refer to complex servic); it has not been independently validated."
+            }
+          ]
+        },
+        {
+          "code": "den-c9-de2-treatment-before-referral",
+          "display": "Any treatment given before referral?"
+        },
+        {
+          "code": "den-c9-de3-referral-location",
+          "display": "Location of referral",
+          "target": [
+            {
+              "code": "246267002",
+              "display": "Location (attribute)",
+              "equivalence": "relatedto",
+              "comment": "Candidate code transcribed from source row 5 (DEN.C9. Refer to complex servic); it has not been independently validated."
+            }
+          ]
+        },
+        {
+          "code": "den-c9-de4-referral-date",
+          "display": "Date referral was made",
+          "target": [
+            {
+              "code": "439272007",
+              "display": "Date of procedure (observable entity)",
+              "equivalence": "relatedto",
+              "comment": "Candidate code transcribed from source row 6 (DEN.C9. Refer to complex servic); it has not been independently validated."
+            }
+          ]
+        },
+        {
+          "code": "den-c9-de5-provider-facility",
+          "display": "Provider's facility",
+          "target": [
+            {
+              "code": "257622000",
+              "display": "Healthcare facility (environment)",
+              "equivalence": "relatedto",
+              "comment": "Candidate code transcribed from source row 7 (DEN.C9. Refer to complex servic); it has not been independently validated."
+            }
+          ]
+        },
+        {
+          "code": "den-c9-de6-provider-telephone",
+          "display": "Provider's telephone number",
+          "target": [
+            {
+              "code": "734005006",
+              "display": "Telephone number (property) (qualifier value)",
+              "equivalence": "relatedto",
+              "comment": "Candidate code transcribed from source row 8 (DEN.C9. Refer to complex servic); it has not been independently validated."
+            }
+          ]
+        },
+        {
+          "code": "den-c9-de7-referral-notes",
+          "display": "Referral notes",
+          "target": [
+            {
+              "code": "721927009",
+              "display": "Referral note (record artifact)",
+              "equivalence": "relatedto",
+              "comment": "Candidate code transcribed from source row 9 (DEN.C9. Refer to complex servic); it has not been independently validated."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

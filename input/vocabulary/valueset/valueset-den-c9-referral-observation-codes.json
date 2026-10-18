@@ -1,0 +1,30 @@
+{
+  "resourceType": "ValueSet",
+  "id": "den-c9-referral-observation-codes",
+  "url": "https://smart.who.int/den/ValueSet/den-c9-referral-observation-codes",
+  "version": "0.1.0",
+  "name": "DENC9ReferralObservationCodes",
+  "title": "DEN.C9 referral question observation codes",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-10-18",
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "Local concepts for the DEN.C9 DE1 and DE2 Boolean observations, derived from the shared DEN custom CodeSystem.",
+  "compose": {
+    "include": [
+      {
+        "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+        "concept": [
+          {
+            "code": "den-c9-de1-emergency-referral",
+            "display": "Emergency referral"
+          },
+          {
+            "code": "den-c9-de2-treatment-before-referral",
+            "display": "Any treatment given before referral?"
+          }
+        ]
+      }
+    ]
+  }
+}

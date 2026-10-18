@@ -22,3 +22,7 @@ Alias: $DENC7Questionnaire = https://smart.who.int/den/Questionnaire/DENC7
 Alias: $BRCoreServiceRequest = https://br-core.saude.gov.br/fhir/StructureDefinition/br-core-servicerequest
 Alias: $DENC8OrderOptions = https://smart.who.int/den/ValueSet/den-c8-all-order-options
 Alias: $DENC8LabResultCodes = https://smart.who.int/den/ValueSet/den-c8-lab-result-codes
+Alias: $BRCoreLocation = https://br-core.saude.gov.br/fhir/StructureDefinition/br-core-location
+Alias: $DENC9Questionnaire = https://smart.who.int/den/Questionnaire/DENC9
+Alias: $DENC9ReferralObservationCodes = https://smart.who.int/den/ValueSet/den-c9-referral-observation-codes
+Alias: $DENC9ReferralServiceTypes = https://smart.who.int/den/ValueSet/den-c9-referral-service-types

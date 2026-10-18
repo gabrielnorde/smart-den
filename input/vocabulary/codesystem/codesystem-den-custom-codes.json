@@ -307,6 +307,41 @@
       "code": "den-c8-de46-platelet-count-observable-entity-results-7",
       "display": "Platelet count (observable entity) results (7)",
       "definition": "DEN.C8.DE46 from the DEN C8. Lab test & imaging data dictionary; source row 54."
+    },
+    {
+      "code": "den-c9-de1-emergency-referral",
+      "display": "Emergency referral",
+      "definition": "DEN.C9.DE1 from the DEN.C9. Refer to complex servic data dictionary; source row 3."
+    },
+    {
+      "code": "den-c9-de2-treatment-before-referral",
+      "display": "Any treatment given before referral?",
+      "definition": "DEN.C9.DE2 from the DEN.C9. Refer to complex servic data dictionary; source row 4."
+    },
+    {
+      "code": "den-c9-de3-referral-location",
+      "display": "Location of referral",
+      "definition": "DEN.C9.DE3 from the DEN.C9. Refer to complex servic data dictionary; source row 5."
+    },
+    {
+      "code": "den-c9-de4-referral-date",
+      "display": "Date referral was made",
+      "definition": "DEN.C9.DE4 from the DEN.C9. Refer to complex servic data dictionary; source row 6."
+    },
+    {
+      "code": "den-c9-de5-provider-facility",
+      "display": "Provider's facility",
+      "definition": "DEN.C9.DE5 from the DEN.C9. Refer to complex servic data dictionary; source row 7."
+    },
+    {
+      "code": "den-c9-de6-provider-telephone",
+      "display": "Provider's telephone number",
+      "definition": "DEN.C9.DE6 from the DEN.C9. Refer to complex servic data dictionary; source row 8."
+    },
+    {
+      "code": "den-c9-de7-referral-notes",
+      "display": "Referral notes",
+      "definition": "DEN.C9.DE7 from the DEN.C9. Refer to complex servic data dictionary; source row 9."
     }
   ]
 }
