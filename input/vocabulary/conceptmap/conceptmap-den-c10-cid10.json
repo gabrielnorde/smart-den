@@ -1,0 +1,77 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "den-c10-cid10",
+  "url": "https://smart.who.int/den/ConceptMap/den-c10-cid10",
+  "version": "0.1.0",
+  "name": "DENC10CID10ConceptMap",
+  "title": "DEN.C10 ConceptMap to ICD-10",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-10-18",
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "Candidate mappings from DEN.C10 local concepts to ICD-10, transcribed from the source data dictionary without asserting validated equivalence.",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>The source cells are blank or marked not classifiable for this target system. No target mapping is asserted.</p></div>"
+  },
+  "group": [
+    {
+      "source": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+      "target": "http://hl7.org/fhir/sid/icd-10",
+      "element": [
+        {
+          "code": "den-c10-de1-volume-hydration",
+          "display": "Define Volume hydration"
+        },
+        {
+          "code": "den-c10-de2-homemade-fluids",
+          "display": "Homemade Fluids"
+        },
+        {
+          "code": "den-c10-de3-oral-rehydration-solution",
+          "display": "Oral rehydration solution (ORS)"
+        },
+        {
+          "code": "den-c10-de4-isotonic-solutions",
+          "display": "Isotonic solutions"
+        },
+        {
+          "code": "den-c10-de5-plasma-expanders",
+          "display": "Plasma expanders"
+        },
+        {
+          "code": "den-c10-de6-hydration-phase",
+          "display": "Hydration Phase"
+        },
+        {
+          "code": "den-c10-de7-expansion-phase-1",
+          "display": "Expansion phase 1"
+        },
+        {
+          "code": "den-c10-de8-expansion-phase-2",
+          "display": "Expansion phase 2"
+        },
+        {
+          "code": "den-c10-de9-expansion-phase-3",
+          "display": "Expansion phase 3"
+        },
+        {
+          "code": "den-c10-de10-maintenance-phase-1",
+          "display": "Maintenance phase 1"
+        },
+        {
+          "code": "den-c10-de11-maintenance-phase-2",
+          "display": "Maintenance phase 2"
+        },
+        {
+          "code": "den-c10-de12-paracetamol",
+          "display": "Paracetamol"
+        },
+        {
+          "code": "den-c10-de13-dipyrone",
+          "display": "Dipyrone"
+        }
+      ]
+    }
+  ]
+}

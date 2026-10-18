@@ -1,0 +1,133 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "den-c10-snomed",
+  "url": "https://smart.who.int/den/ConceptMap/den-c10-snomed",
+  "version": "0.1.0",
+  "name": "DENC10SNOMEDConceptMap",
+  "title": "DEN.C10 ConceptMap to SNOMED CT",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-10-18",
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "Candidate mappings from DEN.C10 local concepts to SNOMED CT, transcribed from the source data dictionary without asserting validated equivalence.",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>SNOMED CT candidates from the workbook are recorded with relatedto relations. The repeated Phase (attribute) concept and medication displays require review; no independent equivalence is asserted.</p></div>"
+  },
+  "group": [
+    {
+      "source": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+      "target": "http://snomed.info/sct",
+      "element": [
+        {
+          "code": "den-c10-de1-volume-hydration",
+          "display": "Define Volume hydration"
+        },
+        {
+          "code": "den-c10-de2-homemade-fluids",
+          "display": "Homemade Fluids"
+        },
+        {
+          "code": "den-c10-de3-oral-rehydration-solution",
+          "display": "Oral rehydration solution (ORS)"
+        },
+        {
+          "code": "den-c10-de4-isotonic-solutions",
+          "display": "Isotonic solutions"
+        },
+        {
+          "code": "den-c10-de5-plasma-expanders",
+          "display": "Plasma expanders"
+        },
+        {
+          "code": "den-c10-de6-hydration-phase",
+          "display": "Hydration Phase"
+        },
+        {
+          "code": "den-c10-de7-expansion-phase-1",
+          "display": "Expansion phase 1",
+          "target": [
+            {
+              "code": "21191007",
+              "display": "Phase (attribute)",
+              "equivalence": "relatedto",
+              "comment": "Candidate from source row 9 (DEN.C10 Clinical management); transcribed without independent terminology validation."
+            }
+          ]
+        },
+        {
+          "code": "den-c10-de8-expansion-phase-2",
+          "display": "Expansion phase 2",
+          "target": [
+            {
+              "code": "21191007",
+              "display": "Phase (attribute)",
+              "equivalence": "relatedto",
+              "comment": "Candidate from source row 10 (DEN.C10 Clinical management); transcribed without independent terminology validation."
+            }
+          ]
+        },
+        {
+          "code": "den-c10-de9-expansion-phase-3",
+          "display": "Expansion phase 3",
+          "target": [
+            {
+              "code": "21191007",
+              "display": "Phase (attribute)",
+              "equivalence": "relatedto",
+              "comment": "Candidate from source row 11 (DEN.C10 Clinical management); transcribed without independent terminology validation."
+            }
+          ]
+        },
+        {
+          "code": "den-c10-de10-maintenance-phase-1",
+          "display": "Maintenance phase 1",
+          "target": [
+            {
+              "code": "21191007",
+              "display": "Phase (attribute)",
+              "equivalence": "relatedto",
+              "comment": "Candidate from source row 12 (DEN.C10 Clinical management); transcribed without independent terminology validation."
+            }
+          ]
+        },
+        {
+          "code": "den-c10-de11-maintenance-phase-2",
+          "display": "Maintenance phase 2",
+          "target": [
+            {
+              "code": "21191007",
+              "display": "Phase (attribute)",
+              "equivalence": "relatedto",
+              "comment": "Candidate from source row 13 (DEN.C10 Clinical management); transcribed without independent terminology validation."
+            }
+          ]
+        },
+        {
+          "code": "den-c10-de12-paracetamol",
+          "display": "Paracetamol",
+          "target": [
+            {
+              "code": "387517004",
+              "display": "Paracetamol (substDENe)",
+              "equivalence": "relatedto",
+              "comment": "Candidate from source row 15 (DEN.C10 Clinical management); transcribed without independent terminology validation. The workbook target display begins with whitespace and contains the apparent malformed suffix “substDENe”. The leading whitespace was trimmed for FHIR display formatting; the source string is preserved in the traceability matrix. Review the terminology candidate."
+            }
+          ]
+        },
+        {
+          "code": "den-c10-de13-dipyrone",
+          "display": "Dipyrone",
+          "target": [
+            {
+              "code": "22165008",
+              "display": "Metamizole sodium (substDENe)",
+              "equivalence": "relatedto",
+              "comment": "Candidate from source row 16 (DEN.C10 Clinical management); transcribed without independent terminology validation. The workbook target display contains the apparent malformed suffix “substDENe”; retained for terminology review."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

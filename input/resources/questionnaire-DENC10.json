@@ -1,0 +1,166 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "DENC10",
+  "url": "https://smart.who.int/den/Questionnaire/DENC10",
+  "version": "0.1.0",
+  "name": "DENC10",
+  "title": "DEN.C10 Clinical management",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-10-18",
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "Questionnaire for the DEN.C10 clinical management data elements.",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Implementation notes and pending items</h2><p>The Questionnaire follows the DEN.C10 source order and preserves the source requirements. Review these unresolved dependencies and implementation choices:</p><ul><li>The source rows 3–7 mark the hydration quantities Required=R and Editable=No and refer the calculation to “DEN.DT.03 Define hydration”. That worksheet is absent from the supplied workbook. No formulas, default values, units, ranges, or precision beyond Decimal quantity are supplied; the required read-only values must be provided by a separately defined calculation or workflow.</li><li>DEN.C10.DE6 Hydration Phase is marked “Select all that apply”. Its Required cell is blank, so the Questionnaire item is optional and repeating. Option rows DE7–DE11 are represented as the five answer codes; their Required cells are blank and do not create separate questions or additional requirements.</li><li>The source has structural headings “Define hydration” (row 2) and “Define Medication” (row 14), with no Data Element IDs or answer values. They are represented as Questionnaire groups only.</li><li>DEN.C10.DE12 and DE13 have Multiple Choice Type=Boolean but Data Type=Yes/No. They are represented as optional Boolean questions based on the Yes/No wording; confirm the swapped or inconsistent source columns. Required, Editable, and Skip Logic are blank and no restrictions are inferred.</li><li>The row 15 paracetamol note is preserved as source guidance: “Give paracetamol for high fever if the patient is uncomfortable. The interval of paracetamol dosing should not be less than six hours.” It is not implemented as a dosage, timing, or decision rule because the Questionnaire has no corresponding dose or time fields.</li><li>Derived Observations are an implementation choice to carry the quantities, selected hydration phases, and medication-use Boolean answers. They do not assert medication administration. BR-Core-required Observation status and patient/workflow context must be supplied by the implementing system; the sheet provides no status, effective time, performer, unit, or clinical workflow metadata.</li><li>SNOMED CT codes and displays are transcribed from the worksheet as candidate relatedto mappings. The same Phase (attribute) code is supplied for each phase option; medication displays end in the apparent malformed text “substDENe”. These targets require terminology review. Blank or not-classifiable cells have no target mapping.</li></ul></div>"
+  },
+  "subjectType": [
+    "Patient"
+  ],
+  "item": [
+    {
+      "linkId": "DEN.C10.Hydration",
+      "text": "Define hydration",
+      "type": "group",
+      "required": false,
+      "repeats": false,
+      "item": [
+        {
+          "linkId": "DEN.C10.DE1",
+          "code": [
+            {
+              "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+              "code": "den-c10-de1-volume-hydration",
+              "display": "Define Volume hydration"
+            }
+          ],
+          "text": "Define Volume hydration — Hydration: Daily fluid requirement based on patient’s body weight",
+          "type": "quantity",
+          "required": true,
+          "repeats": false,
+          "definition": "https://smart.who.int/den/StructureDefinition/den-c10-hydration-volume-observation#Observation.valueQuantity",
+          "readOnly": true
+        },
+        {
+          "linkId": "DEN.C10.DE2",
+          "code": [
+            {
+              "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+              "code": "den-c10-de2-homemade-fluids",
+              "display": "Homemade Fluids"
+            }
+          ],
+          "text": "Homemade Fluids — Fluids commonly prepared at home, such as water, fruit juices, soups, teas, coconut water or other readily available household beverages",
+          "type": "quantity",
+          "required": true,
+          "repeats": false,
+          "definition": "https://smart.who.int/den/StructureDefinition/den-c10-hydration-volume-observation#Observation.valueQuantity",
+          "readOnly": true
+        },
+        {
+          "linkId": "DEN.C10.DE3",
+          "code": [
+            {
+              "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+              "code": "den-c10-de3-oral-rehydration-solution",
+              "display": "Oral rehydration solution (ORS)"
+            }
+          ],
+          "text": "Oral rehydration solution (ORS) — Mixture of glucose and electrolytes dissolved in water used to treat dehydration",
+          "type": "quantity",
+          "required": true,
+          "repeats": false,
+          "definition": "https://smart.who.int/den/StructureDefinition/den-c10-hydration-volume-observation#Observation.valueQuantity",
+          "readOnly": true
+        },
+        {
+          "linkId": "DEN.C10.DE4",
+          "code": [
+            {
+              "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+              "code": "den-c10-de4-isotonic-solutions",
+              "display": "Isotonic solutions"
+            }
+          ],
+          "text": "Isotonic solutions — Solutions that match the body's natural fluid concentration, making them safe for IV administration without damaging cells",
+          "type": "quantity",
+          "required": true,
+          "repeats": false,
+          "definition": "https://smart.who.int/den/StructureDefinition/den-c10-hydration-volume-observation#Observation.valueQuantity",
+          "readOnly": true
+        },
+        {
+          "linkId": "DEN.C10.DE5",
+          "code": [
+            {
+              "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+              "code": "den-c10-de5-plasma-expanders",
+              "display": "Plasma expanders"
+            }
+          ],
+          "text": "Plasma expanders — Plasma expanders (albumin 0.5–1 g/kg): prepare a 5% albumin solution (for every 100 mL of this solution, use 25 mL of 20% albumin and 75 mL of 0.9% saline); if unavailable, use synthetic colloids.",
+          "type": "quantity",
+          "required": true,
+          "repeats": false,
+          "definition": "https://smart.who.int/den/StructureDefinition/den-c10-hydration-volume-observation#Observation.valueQuantity",
+          "readOnly": true
+        },
+        {
+          "linkId": "DEN.C10.DE6",
+          "code": [
+            {
+              "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+              "code": "den-c10-de6-hydration-phase",
+              "display": "Hydration Phase"
+            }
+          ],
+          "text": "Hydration Phase",
+          "type": "choice",
+          "required": false,
+          "repeats": true,
+          "definition": "https://smart.who.int/den/StructureDefinition/den-c10-hydration-phase-observation#Observation.valueCodeableConcept",
+          "answerValueSet": "https://smart.who.int/den/ValueSet/den-c10-hydration-phase-codes"
+        }
+      ]
+    },
+    {
+      "linkId": "DEN.C10.Medication",
+      "text": "Define Medication",
+      "type": "group",
+      "required": false,
+      "repeats": false,
+      "item": [
+        {
+          "linkId": "DEN.C10.DE12",
+          "code": [
+            {
+              "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+              "code": "den-c10-de12-paracetamol",
+              "display": "Paracetamol"
+            }
+          ],
+          "text": "Paracetamol — Record of paracetamol (acetaminophen) use for management of fever or pain in a patient with suspected or confirmed dengue.",
+          "type": "boolean",
+          "required": false,
+          "repeats": false,
+          "definition": "https://smart.who.int/den/StructureDefinition/den-c10-medication-use-observation#Observation.valueBoolean"
+        },
+        {
+          "linkId": "DEN.C10.DE13",
+          "code": [
+            {
+              "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+              "code": "den-c10-de13-dipyrone",
+              "display": "Dipyrone"
+            }
+          ],
+          "text": "Dipyrone — Record of dipyrone (metamizole) use for management of fever or pain in a patient with suspected or confirmed dengue.",
+          "type": "boolean",
+          "required": false,
+          "repeats": false,
+          "definition": "https://smart.who.int/den/StructureDefinition/den-c10-medication-use-observation#Observation.valueBoolean"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "resourceType": "ValueSet",
+  "id": "den-c10-hydration-volume-codes",
+  "url": "https://smart.who.int/den/ValueSet/den-c10-hydration-volume-codes",
+  "version": "0.1.0",
+  "name": "DENC10HydrationVolumeCodes",
+  "title": "DEN.C10 hydration volume codes",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-10-18",
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "Local concepts for DEN.C10 hydration quantity observations, derived from the shared DEN custom CodeSystem.",
+  "compose": {
+    "include": [
+      {
+        "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+        "concept": [
+          {
+            "code": "den-c10-de1-volume-hydration",
+            "display": "Define Volume hydration"
+          },
+          {
+            "code": "den-c10-de2-homemade-fluids",
+            "display": "Homemade Fluids"
+          },
+          {
+            "code": "den-c10-de3-oral-rehydration-solution",
+            "display": "Oral rehydration solution (ORS)"
+          },
+          {
+            "code": "den-c10-de4-isotonic-solutions",
+            "display": "Isotonic solutions"
+          },
+          {
+            "code": "den-c10-de5-plasma-expanders",
+            "display": "Plasma expanders"
+          }
+        ]
+      }
+    ]
+  }
+}
