@@ -1,0 +1,276 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "DENC8",
+  "url": "https://smart.who.int/den/Questionnaire/DENC8",
+  "version": "0.1.0",
+  "name": "DENC8",
+  "title": "DEN.C8 Lab test and imaging",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-10-18",
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "Questionnaire for DEN.C8 Order Complementary exams and results, based on the DEN C8. Lab test & imaging data elements.",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Implementation notes and pending items</h2><p>The Questionnaire preserves the DEN.C8 data elements and their source sequence. The following decisions and dependencies remain open:</p><ul><li><strong>Requiredness and repeats:</strong> Each of the seven order questions is marked Required=R and “Select all that apply”; each is represented as required and repeating. The option-row Required values are not separately enforceable for individual choices. Every source option remains separate and in source order; the answer display uses the Input Options cell, while the matrix retains the Data Element Label.</li><li><strong>Conditional result groups:</strong> Results (1) through Results (7) are retained as structural groups. Their Required=C and skip logic refer to “Blood haemoglobin test conducted” and “Blood haemoglobin test ordered”, but those questions are absent from this sheet and their linkIds/answer codes are not available. No enableWhen rule can be created. The groups and affected hematocrit results remain optional pending those dependencies.</li><li><strong>Data type gaps:</strong> DEN.C8.DE33 and DEN.C8.DE34 have a blank Data Type but specify Quantity Sub-Type=Decimal quantity. They are temporarily represented as Quantity based on that subtype; confirm that serology and PCR outputs are numeric before production.</li><li><strong>Quantity details:</strong> The sheet supplies no unit, precision, reference range, or validation limit for the numeric results. No such constraints or units are added. “Hematocrit percentage” is preserved as the description, not expanded into an additional numeric rule.</li><li><strong>Dengue C/D note:</strong> The note on source row 3 is preserved verbatim: “If Dengue C or D: colocar todos os exames sugeridos”. Its intended meaning, referenced suggestions, and relationship to DEN.C6 are not specified, so no conditional or auto-selection logic is implemented.</li><li><strong>Prose versus Required field:</strong> The descriptions for Dengue PCR and Dengue virus serology say “Required for surveillance/confirmation”, while the Required cells are blank. Blank Required cells remain optional; clarify whether that prose is intended to create a requirement.</li><li><strong>Order resource modeling:</strong> Selections are captured first in QuestionnaireResponse. A selected test may be derived into a BR-Core ServiceRequest as an implementation choice because the activity is “Order Complementary exams”; the sheet does not define request status, intent, requester, or generation workflow. BR-Core-required status, intent, category, priority, subject, and requester must come from the surrounding clinical workflow.</li><li><strong>Observation resource modeling:</strong> Numeric results are captured in QuestionnaireResponse and may be derived into the shared BR-Core Observation profile. BR-Core Observation.status is required by the base profile but is not specified by the worksheet; effective time, performer, and specimen details are not added.</li><li><strong>Terminology candidates:</strong> Candidate mappings are transcribed to the ConceptMaps with a relatedto relationship and have not been independently validated. LOINC codes 20570-8 and 777-3 occur on order choices although they describe result observations; the serology candidate 82519-0 is described in the workbook as an NAA panel. Review these candidates before production. ICD cells marked not classifiable and blank cells have no target. Source SNOMED CT codes are preserved as strings after exact numeric normalization.</li></ul></div>"
+  },
+  "subjectType": [
+    "Patient"
+  ],
+  "item": [
+    {
+      "linkId": "DEN.C8.DE1",
+      "text": "Order Complementary exams",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-c8-complementary-exam-service-request#ServiceRequest.code",
+      "type": "choice",
+      "required": true,
+      "repeats": true,
+      "answerValueSet": "https://smart.who.int/den/ValueSet/den-c8-order-options-1"
+    },
+    {
+      "linkId": "DEN.C8.DE7",
+      "text": "Order Complementary exams (2)",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-c8-complementary-exam-service-request#ServiceRequest.code",
+      "type": "choice",
+      "required": true,
+      "repeats": true,
+      "answerValueSet": "https://smart.who.int/den/ValueSet/den-c8-order-options-2"
+    },
+    {
+      "linkId": "DEN.C8.DE11",
+      "text": "Order Complementary exams (3)",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-c8-complementary-exam-service-request#ServiceRequest.code",
+      "type": "choice",
+      "required": true,
+      "repeats": true,
+      "answerValueSet": "https://smart.who.int/den/ValueSet/den-c8-order-options-3"
+    },
+    {
+      "linkId": "DEN.C8.DE15",
+      "text": "Order Complementary exams (4)",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-c8-complementary-exam-service-request#ServiceRequest.code",
+      "type": "choice",
+      "required": true,
+      "repeats": true,
+      "answerValueSet": "https://smart.who.int/den/ValueSet/den-c8-order-options-4"
+    },
+    {
+      "linkId": "DEN.C8.DE19",
+      "text": "Order Complementary exams (5)",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-c8-complementary-exam-service-request#ServiceRequest.code",
+      "type": "choice",
+      "required": true,
+      "repeats": true,
+      "answerValueSet": "https://smart.who.int/den/ValueSet/den-c8-order-options-5"
+    },
+    {
+      "linkId": "DEN.C8.DE23",
+      "text": "Order Complementary exams (6)",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-c8-complementary-exam-service-request#ServiceRequest.code",
+      "type": "choice",
+      "required": true,
+      "repeats": true,
+      "answerValueSet": "https://smart.who.int/den/ValueSet/den-c8-order-options-6"
+    },
+    {
+      "linkId": "DEN.C8.DE27",
+      "text": "Order Complementary exams (7)",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-c8-complementary-exam-service-request#ServiceRequest.code",
+      "type": "choice",
+      "required": true,
+      "repeats": true,
+      "answerValueSet": "https://smart.who.int/den/ValueSet/den-c8-order-options-7"
+    },
+    {
+      "linkId": "DEN.C8.Results.1",
+      "text": "Results (1)",
+      "type": "group",
+      "required": false,
+      "repeats": false,
+      "item": [
+        {
+          "linkId": "DEN.C8.DE31",
+          "definition": "https://smart.who.int/den/StructureDefinition/den-c8-lab-result-observation#Observation.valueQuantity",
+          "text": "Hematocrit (Ht) results (1) — Hematocrit percentage",
+          "type": "quantity",
+          "required": false,
+          "repeats": false
+        },
+        {
+          "linkId": "DEN.C8.DE32",
+          "definition": "https://smart.who.int/den/StructureDefinition/den-c8-lab-result-observation#Observation.valueQuantity",
+          "text": "Platelet count (observable entity) results (1) — Quantitative platelet count",
+          "type": "quantity",
+          "required": false,
+          "repeats": false
+        },
+        {
+          "linkId": "DEN.C8.DE33",
+          "definition": "https://smart.who.int/den/StructureDefinition/den-c8-lab-result-observation#Observation.valueQuantity",
+          "text": "Dengue virus serology results — Results of laboratory tests for dengue confirmation. Required for surveillance/confirmation, but not essential for immediate clinical management.",
+          "type": "quantity",
+          "required": false,
+          "repeats": false
+        },
+        {
+          "linkId": "DEN.C8.DE34",
+          "definition": "https://smart.who.int/den/StructureDefinition/den-c8-lab-result-observation#Observation.valueQuantity",
+          "text": "Dengue PCR results — Results of laboratory tests for dengue confirmation. Required for surveillance/confirmation, but not essential for immediate clinical management.",
+          "type": "quantity",
+          "required": false,
+          "repeats": false
+        }
+      ]
+    },
+    {
+      "linkId": "DEN.C8.Results.2",
+      "text": "Results (2)",
+      "type": "group",
+      "required": false,
+      "repeats": false,
+      "item": [
+        {
+          "linkId": "DEN.C8.DE35",
+          "definition": "https://smart.who.int/den/StructureDefinition/den-c8-lab-result-observation#Observation.valueQuantity",
+          "text": "Hematocrit (Ht) results (2) — Results of second hematocrit percentage",
+          "type": "quantity",
+          "required": false,
+          "repeats": false
+        },
+        {
+          "linkId": "DEN.C8.DE36",
+          "definition": "https://smart.who.int/den/StructureDefinition/den-c8-lab-result-observation#Observation.valueQuantity",
+          "text": "Platelet count (observable entity) results (2) — Results of second quantitative platelet count",
+          "type": "quantity",
+          "required": false,
+          "repeats": false
+        }
+      ]
+    },
+    {
+      "linkId": "DEN.C8.Results.3",
+      "text": "Results (3)",
+      "type": "group",
+      "required": false,
+      "repeats": false,
+      "item": [
+        {
+          "linkId": "DEN.C8.DE37",
+          "definition": "https://smart.who.int/den/StructureDefinition/den-c8-lab-result-observation#Observation.valueQuantity",
+          "text": "Hematocrit (Ht) results (3) — Results of third hematocrit percentage",
+          "type": "quantity",
+          "required": false,
+          "repeats": false
+        },
+        {
+          "linkId": "DEN.C8.DE38",
+          "definition": "https://smart.who.int/den/StructureDefinition/den-c8-lab-result-observation#Observation.valueQuantity",
+          "text": "Platelet count (observable entity) results (3) — Results of third quantitative platelet count",
+          "type": "quantity",
+          "required": false,
+          "repeats": false
+        }
+      ]
+    },
+    {
+      "linkId": "DEN.C8.Results.4",
+      "text": "Results (4)",
+      "type": "group",
+      "required": false,
+      "repeats": false,
+      "item": [
+        {
+          "linkId": "DEN.C8.DE39",
+          "definition": "https://smart.who.int/den/StructureDefinition/den-c8-lab-result-observation#Observation.valueQuantity",
+          "text": "Hematocrit (Ht) results (4) — Results of fourth hematocrit percentage",
+          "type": "quantity",
+          "required": false,
+          "repeats": false
+        },
+        {
+          "linkId": "DEN.C8.DE40",
+          "definition": "https://smart.who.int/den/StructureDefinition/den-c8-lab-result-observation#Observation.valueQuantity",
+          "text": "Platelet count (observable entity) results (4) — Results of fourth quantitative platelet count",
+          "type": "quantity",
+          "required": false,
+          "repeats": false
+        }
+      ]
+    },
+    {
+      "linkId": "DEN.C8.Results.5",
+      "text": "Results (5)",
+      "type": "group",
+      "required": false,
+      "repeats": false,
+      "item": [
+        {
+          "linkId": "DEN.C8.DE41",
+          "definition": "https://smart.who.int/den/StructureDefinition/den-c8-lab-result-observation#Observation.valueQuantity",
+          "text": "Hematocrit (Ht) results (5) — Results of fifth hematocrit percentage",
+          "type": "quantity",
+          "required": false,
+          "repeats": false
+        },
+        {
+          "linkId": "DEN.C8.DE42",
+          "definition": "https://smart.who.int/den/StructureDefinition/den-c8-lab-result-observation#Observation.valueQuantity",
+          "text": "Platelet count (observable entity) results (5) — Results of fifth  quantitative platelet count",
+          "type": "quantity",
+          "required": false,
+          "repeats": false
+        }
+      ]
+    },
+    {
+      "linkId": "DEN.C8.Results.6",
+      "text": "Results (6)",
+      "type": "group",
+      "required": false,
+      "repeats": false,
+      "item": [
+        {
+          "linkId": "DEN.C8.DE43",
+          "definition": "https://smart.who.int/den/StructureDefinition/den-c8-lab-result-observation#Observation.valueQuantity",
+          "text": "Hematocrit (Ht) results (6) — Results of sixth hematocrit percentage",
+          "type": "quantity",
+          "required": false,
+          "repeats": false
+        },
+        {
+          "linkId": "DEN.C8.DE44",
+          "definition": "https://smart.who.int/den/StructureDefinition/den-c8-lab-result-observation#Observation.valueQuantity",
+          "text": "Platelet count (observable entity) results (6) — Results of sixth quantitative platelet count",
+          "type": "quantity",
+          "required": false,
+          "repeats": false
+        }
+      ]
+    },
+    {
+      "linkId": "DEN.C8.Results.7",
+      "text": "Results (7)",
+      "type": "group",
+      "required": false,
+      "repeats": false,
+      "item": [
+        {
+          "linkId": "DEN.C8.DE45",
+          "definition": "https://smart.who.int/den/StructureDefinition/den-c8-lab-result-observation#Observation.valueQuantity",
+          "text": "Hematocrit (Ht) results (7) — Results of seventh hematocrit percentage",
+          "type": "quantity",
+          "required": false,
+          "repeats": false
+        },
+        {
+          "linkId": "DEN.C8.DE46",
+          "definition": "https://smart.who.int/den/StructureDefinition/den-c8-lab-result-observation#Observation.valueQuantity",
+          "text": "Platelet count (observable entity) results (7) — Results of seventh quantitative platelet count",
+          "type": "quantity",
+          "required": false,
+          "repeats": false
+        }
+      ]
+    }
+  ]
+}
