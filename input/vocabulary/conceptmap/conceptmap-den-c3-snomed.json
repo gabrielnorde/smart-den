@@ -1,0 +1,83 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "den-c3-snomed",
+  "url": "https://smart.who.int/den/ConceptMap/den-c3-snomed",
+  "version": "0.1.0",
+  "name": "DENC3SNOMEDConceptMap",
+  "title": "DEN.C3 ConceptMap to SNOMED CT",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-10-18",
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "Candidate terminology mappings for DEN.C3 local concepts to SNOMED CT. Mappings are inexact/narrower and require terminology review; unsupported concepts are explicitly unmapped.",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Mappings are candidate relationships from the source data dictionary and secondary mapping workbook. They are not independently terminology-validated. Inexact and narrower relations intentionally avoid claiming exact equivalence.</p><ul><li><code>hypotensive-shock</code>: Source candidate does not mean hypotensive shock exactly; validate. Source candidate does not mean hypotensive shock exactly; validate.</li><li><code>severe-bleeding</code>: Source candidate is a morphology concept and may not represent the assessment of severe bleeding; validate.</li><li><code>severe-organ-impairment</code>: Source candidate is narrower than severe organ impairment; validate the intended concept.</li><li><code>no-danger-sign</code>: The supplied “No history of” qualifier does not represent current absence of danger signs.</li><li><code>oral-fluid-intake-volume</code>: Source candidate describes oral fluid input; validate that it is suitable for the quantity observation.</li></ul></div>"
+  },
+  "group": [
+    {
+      "source": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+      "target": "http://snomed.info/sct",
+      "element": [
+        {
+          "code": "hypotensive-shock",
+          "display": "Hypotensive shock",
+          "target": [
+            {
+              "code": "409671005",
+              "display": "Dengue shock syndrome (disorder)",
+              "equivalence": "inexact",
+              "comment": "Source candidate does not mean hypotensive shock exactly; validate."
+            },
+            {
+              "code": "39419009",
+              "display": "Hypovolemic shock (disorder)",
+              "equivalence": "inexact",
+              "comment": "Source candidate does not mean hypotensive shock exactly; validate."
+            }
+          ]
+        },
+        {
+          "code": "severe-bleeding",
+          "display": "Severe bleeding",
+          "target": [
+            {
+              "code": "112648003",
+              "display": "Massive hemorrhage (morphologic abnormality)",
+              "equivalence": "inexact",
+              "comment": "Source candidate is a morphology concept and may not represent the assessment of severe bleeding; validate."
+            }
+          ]
+        },
+        {
+          "code": "severe-organ-impairment",
+          "display": "Severe organ impairment",
+          "target": [
+            {
+              "code": "57653000",
+              "display": "Multiple organ failure (disorder)",
+              "equivalence": "narrower",
+              "comment": "Source candidate is narrower than severe organ impairment; validate the intended concept."
+            }
+          ]
+        },
+        {
+          "code": "no-danger-sign",
+          "display": "None"
+        },
+        {
+          "code": "oral-fluid-intake-volume",
+          "display": "Quantity of oral intake",
+          "target": [
+            {
+              "code": "251853006",
+              "display": "Oral fluid input (observable entity)",
+              "equivalence": "inexact",
+              "comment": "Source candidate describes oral fluid input; validate that it is suitable for the quantity observation."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

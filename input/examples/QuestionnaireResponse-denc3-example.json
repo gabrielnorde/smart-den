@@ -1,0 +1,46 @@
+{
+  "resourceType": "QuestionnaireResponse",
+  "id": "denc3-example",
+  "meta": {
+    "profile": [
+      "https://smart.who.int/den/StructureDefinition/den-c3-questionnaire-response"
+    ]
+  },
+  "questionnaire": "https://smart.who.int/den/Questionnaire/DENC3",
+  "status": "completed",
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "authored": "2026-10-18",
+  "item": [
+    {
+      "linkId": "DEN.C3.DE1",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+            "code": "hypotensive-shock",
+            "display": "Hypotensive shock"
+          }
+        },
+        {
+          "valueCoding": {
+            "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+            "code": "severe-bleeding",
+            "display": "Severe bleeding"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "DEN.C3.DE7",
+      "answer": [
+        {
+          "valueQuantity": {
+            "value": 1500
+          }
+        }
+      ]
+    }
+  ]
+}

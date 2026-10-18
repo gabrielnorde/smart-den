@@ -1,0 +1,45 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "den-c3-icf",
+  "url": "https://smart.who.int/den/ConceptMap/den-c3-icf",
+  "version": "0.1.0",
+  "name": "DENC3ICFConceptMap",
+  "title": "DEN.C3 ConceptMap to ICF",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-10-18",
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "Candidate terminology mappings for DEN.C3 local concepts to ICF. Mappings are inexact/narrower and require terminology review; unsupported concepts are explicitly unmapped.",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Mappings are candidate relationships from the source data dictionary and secondary mapping workbook. They are not independently terminology-validated. Inexact and narrower relations intentionally avoid claiming exact equivalence.</p><ul><li><code>hypotensive-shock</code>: Every relevant source row is marked not classifiable in ICF; no ICF target is asserted.</li><li><code>severe-bleeding</code>: Every relevant source row is marked not classifiable in ICF; no ICF target is asserted.</li><li><code>severe-organ-impairment</code>: Every relevant source row is marked not classifiable in ICF; no ICF target is asserted.</li><li><code>no-danger-sign</code>: Every relevant source row is marked not classifiable in ICF; no ICF target is asserted.</li><li><code>oral-fluid-intake-volume</code>: Every relevant source row is marked not classifiable in ICF; no ICF target is asserted.</li></ul></div>"
+  },
+  "group": [
+    {
+      "source": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+      "target": "http://hl7.org/fhir/sid/icf",
+      "element": [
+        {
+          "code": "hypotensive-shock",
+          "display": "Hypotensive shock"
+        },
+        {
+          "code": "severe-bleeding",
+          "display": "Severe bleeding"
+        },
+        {
+          "code": "severe-organ-impairment",
+          "display": "Severe organ impairment"
+        },
+        {
+          "code": "no-danger-sign",
+          "display": "None"
+        },
+        {
+          "code": "oral-fluid-intake-volume",
+          "display": "Quantity of oral intake"
+        }
+      ]
+    }
+  ]
+}
