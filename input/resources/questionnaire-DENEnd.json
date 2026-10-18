@@ -1,0 +1,39 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "DENEnd",
+  "url": "https://smart.who.int/den/Questionnaire/DENEnd",
+  "version": "0.1.0",
+  "name": "DENEnd",
+  "title": "DEN.End",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-10-18",
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "Questionnaire for the DEN.End data elements, based on the source data dictionary.",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Implementation notes and pending items</h2><ul><li>The source contains one required “Select one” closure reason question. It is represented as a required, non-repeating choice; the three option rows are answer choices, not separate questions.</li><li>The source label “Discharge” conflicts with Input Options “Discarge”. The exact Input Options text is preserved as the answer display and the source typo is flagged for correction.</li><li>This implementation uses a FHIR Task as the record-closure workflow representation, with the answer in Task.reasonCode and the patient in Task.for. This is a modeling choice because the worksheet does not specify a FHIR resource. Task.status and Task.intent are required by FHIR and must be supplied by the surrounding workflow; this profile adds no values for them.</li><li>The worksheet provides LOINC 81954-0 and 45237-5 as “Best fit”, but those codes describe dates, not categorical closure reasons. They are retained only as relatedto candidates for terminology review. SNOMED CT 399307001 is transcribed from the workbook, whose cell is displayed in scientific notation, and remains a relatedto candidate pending verification.</li><li>ICD-10, ICD-11, and ICF are blank or marked not classifiable. ICHI is marked not classifiable and no ICHI URI is supplied. The ICD-10, ICD-11, ICF, LOINC, and SNOMED CT ConceptMaps are provided; only workbook-supported targets are included, and ICD/ICF options without classifiable codes have no target. No ICHI map is created because its URI is absent. No skip logic, conditions, calculation, unit, precision, or limits are specified.</li></ul></div>"
+  },
+  "subjectType": [
+    "Patient"
+  ],
+  "item": [
+    {
+      "linkId": "DEN.End.1",
+      "code": [
+        {
+          "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+          "code": "den-end-closure-reason",
+          "display": "Reason for closing DEN record"
+        }
+      ],
+      "text": "Reason for closing DEN record",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-end-closure-task#Task.reasonCode",
+      "type": "choice",
+      "required": true,
+      "repeats": false,
+      "answerValueSet": "https://smart.who.int/den/ValueSet/den-end-closure-reasons"
+    }
+  ]
+}
+
