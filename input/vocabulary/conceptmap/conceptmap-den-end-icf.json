@@ -1,0 +1,37 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "den-end-icf",
+  "url": "https://smart.who.int/den/ConceptMap/den-end-icf",
+  "version": "0.1.0",
+  "name": "DENEndICFConceptMap",
+  "title": "DEN.End ConceptMap to ICF",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-10-18",
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "DEN.End local answer concepts and their mapping status for ICF, transcribed from the source data dictionary. No target mappings are asserted because the workbook marks the relevant entries not classifiable or leaves them blank.",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>The workbook provides no classifiable ICF target codes for these options. Elements are listed without target mappings; no equivalence is asserted.</p></div>"
+  },
+  "group": [
+    {
+      "source": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+      "target": "http://hl7.org/fhir/sid/icf",
+      "element": [
+        {
+          "code": "den-end-patient-died",
+          "display": "Patient died"
+        },
+        {
+          "code": "den-end-lost-to-follow-up",
+          "display": "Lost to follow-up"
+        },
+        {
+          "code": "den-end-discharge",
+          "display": "Discarge"
+        }
+      ]
+    }
+  ]
+}

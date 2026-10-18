@@ -467,6 +467,26 @@
       "code": "den-c11-normal-stable-hematocrit",
       "display": "Normal/stable hematocrit",
       "definition": "DEN.C11.DE8, DEN.C11.DE12, DEN.C11.DE16, DEN.C11.DE20, DEN.C11.DE24 from the DEN.C11 ClinicalLab evaluation worksheet; local answer concept."
+    },
+    {
+      "code": "den-end-closure-reason",
+      "display": "Reason for closing DEN record",
+      "definition": "DEN.End question concept from the source data dictionary (row 2)."
+    },
+    {
+      "code": "den-end-patient-died",
+      "display": "Patient died",
+      "definition": "DEN.End response option from source Input Options (row 3); source label is Death."
+    },
+    {
+      "code": "den-end-lost-to-follow-up",
+      "display": "Lost to follow-up",
+      "definition": "DEN.End response option from source data dictionary (row 4)."
+    },
+    {
+      "code": "den-end-discharge",
+      "display": "Discarge",
+      "definition": "DEN.End response option transcribed from source Input Options (row 5); source label/definition say Discharge / Patient was discharged. The source option is misspelled 'Discarge'."
     }
   ]
 }

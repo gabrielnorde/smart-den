@@ -1,0 +1,45 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "den-end-snomed",
+  "url": "https://smart.who.int/den/ConceptMap/den-end-snomed",
+  "version": "0.1.0",
+  "name": "DENEndSNOMEDConceptMap",
+  "title": "DEN.End ConceptMap to SNOMED CT",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-10-18",
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "Candidate mappings from DEN.End local answer concepts to SNOMED CT, transcribed from the source data dictionary without asserting exact equivalence.",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Only targets supplied in the workbook are included. Candidate targets use relatedto pending terminology review; blank and not-classifiable cells have no target. The LOINC codes identify date-valued concepts, whereas the DEN.End answers are categorical closure reasons.</p></div>"
+  },
+  "group": [
+    {
+      "source": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+      "target": "http://snomed.info/sct",
+      "element": [
+        {
+          "code": "den-end-patient-died",
+          "display": "Patient died"
+        },
+        {
+          "code": "den-end-lost-to-follow-up",
+          "display": "Lost to follow-up",
+          "target": [
+            {
+              "code": "399307001",
+              "display": "Lost to follow-up (finding)",
+              "equivalence": "relatedto",
+              "comment": "Candidate transcribed from source row 4 (DEN.End); the workbook cell is displayed in scientific notation and is normalized here as 399307001. The target was not independently verified and is retained as relatedto pending review."
+            }
+          ]
+        },
+        {
+          "code": "den-end-discharge",
+          "display": "Discarge"
+        }
+      ]
+    }
+  ]
+}
