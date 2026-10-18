@@ -342,6 +342,71 @@
       "code": "den-c9-de7-referral-notes",
       "display": "Referral notes",
       "definition": "DEN.C9.DE7 from the DEN.C9. Refer to complex servic data dictionary; source row 9."
+    },
+    {
+      "code": "den-c10-de1-volume-hydration",
+      "display": "Define Volume hydration",
+      "definition": "DEN.C10.DE1 from the DEN.C10 Clinical management data dictionary."
+    },
+    {
+      "code": "den-c10-de2-homemade-fluids",
+      "display": "Homemade Fluids",
+      "definition": "DEN.C10.DE2 from the DEN.C10 Clinical management data dictionary."
+    },
+    {
+      "code": "den-c10-de3-oral-rehydration-solution",
+      "display": "Oral rehydration solution (ORS)",
+      "definition": "DEN.C10.DE3 from the DEN.C10 Clinical management data dictionary."
+    },
+    {
+      "code": "den-c10-de4-isotonic-solutions",
+      "display": "Isotonic solutions",
+      "definition": "DEN.C10.DE4 from the DEN.C10 Clinical management data dictionary."
+    },
+    {
+      "code": "den-c10-de5-plasma-expanders",
+      "display": "Plasma expanders",
+      "definition": "DEN.C10.DE5 from the DEN.C10 Clinical management data dictionary."
+    },
+    {
+      "code": "den-c10-de6-hydration-phase",
+      "display": "Hydration Phase",
+      "definition": "DEN.C10.DE6 from the DEN.C10 Clinical management data dictionary."
+    },
+    {
+      "code": "den-c10-de7-expansion-phase-1",
+      "display": "Expansion phase 1",
+      "definition": "DEN.C10.DE7 from the DEN.C10 Clinical management data dictionary."
+    },
+    {
+      "code": "den-c10-de8-expansion-phase-2",
+      "display": "Expansion phase 2",
+      "definition": "DEN.C10.DE8 from the DEN.C10 Clinical management data dictionary."
+    },
+    {
+      "code": "den-c10-de9-expansion-phase-3",
+      "display": "Expansion phase 3",
+      "definition": "DEN.C10.DE9 from the DEN.C10 Clinical management data dictionary."
+    },
+    {
+      "code": "den-c10-de10-maintenance-phase-1",
+      "display": "Maintenance phase 1",
+      "definition": "DEN.C10.DE10 from the DEN.C10 Clinical management data dictionary."
+    },
+    {
+      "code": "den-c10-de11-maintenance-phase-2",
+      "display": "Maintenance phase 2",
+      "definition": "DEN.C10.DE11 from the DEN.C10 Clinical management data dictionary."
+    },
+    {
+      "code": "den-c10-de12-paracetamol",
+      "display": "Paracetamol",
+      "definition": "DEN.C10.DE12 from the DEN.C10 Clinical management data dictionary."
+    },
+    {
+      "code": "den-c10-de13-dipyrone",
+      "display": "Dipyrone",
+      "definition": "DEN.C10.DE13 from the DEN.C10 Clinical management data dictionary."
     }
   ]
 }

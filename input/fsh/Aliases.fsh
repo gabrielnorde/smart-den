@@ -26,3 +26,6 @@ Alias: $BRCoreLocation = https://br-core.saude.gov.br/fhir/StructureDefinition/b
 Alias: $DENC9Questionnaire = https://smart.who.int/den/Questionnaire/DENC9
 Alias: $DENC9ReferralObservationCodes = https://smart.who.int/den/ValueSet/den-c9-referral-observation-codes
 Alias: $DENC9ReferralServiceTypes = https://smart.who.int/den/ValueSet/den-c9-referral-service-types
+Alias: $DENC10HydrationVolumeCodes = https://smart.who.int/den/ValueSet/den-c10-hydration-volume-codes
+Alias: $DENC10HydrationPhaseCodes = https://smart.who.int/den/ValueSet/den-c10-hydration-phase-codes
+Alias: $DENC10MedicationUseCodes = https://smart.who.int/den/ValueSet/den-c10-medication-use-codes
