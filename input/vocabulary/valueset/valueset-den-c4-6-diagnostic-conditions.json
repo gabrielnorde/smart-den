@@ -1,0 +1,46 @@
+{
+  "resourceType": "ValueSet",
+  "id": "den-c4-6-diagnostic-conditions",
+  "url": "https://smart.who.int/den/ValueSet/den-c4-6-diagnostic-conditions",
+  "version": "0.1.0",
+  "name": "DenC46DiagnosticConditions",
+  "title": "DEN.C4-6 Diagnostic Condition Codes",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-10-18",
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "Local diagnostic and classification concepts represented by the DEN.C4-6 diagnostic Condition profile.",
+  "compose": {
+    "include": [
+      {
+        "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+        "concept": [
+          {
+            "code": "suspected-dengue-fever",
+            "display": "Suspected dengue fever"
+          },
+          {
+            "code": "confirmed-dengue-fever",
+            "display": "Confirmed dengue fever"
+          },
+          {
+            "code": "dengue-classification-group-a",
+            "display": "Group A"
+          },
+          {
+            "code": "dengue-classification-group-b",
+            "display": "Group B"
+          },
+          {
+            "code": "dengue-classification-group-c",
+            "display": "Group C"
+          },
+          {
+            "code": "dengue-classification-group-d",
+            "display": "Group D"
+          }
+        ]
+      }
+    ]
+  }
+}

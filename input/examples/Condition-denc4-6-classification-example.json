@@ -1,0 +1,22 @@
+{
+  "resourceType": "Condition",
+  "id": "denc4-6-classification-example",
+  "meta": {
+    "profile": [
+      "https://smart.who.int/den/StructureDefinition/den-c4-6-diagnostic-condition"
+    ]
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+        "version": "0.1.0",
+        "code": "dengue-classification-group-c",
+        "display": "Group C"
+      }
+    ]
+  }
+}

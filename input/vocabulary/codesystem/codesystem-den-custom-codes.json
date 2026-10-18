@@ -9,7 +9,7 @@
   "experimental": false,
   "date": "2026-10-18",
   "publisher": "Federal University of Santa Catarina (UFSC)",
-  "description": "Single local code system for DEN project concepts that need a local representation; concepts are preserved from the source data dictionary and are not asserted to be equivalent to candidate external codes.",
+  "description": "Single local code system for DEN project concepts that need a local representation. Concepts are preserved from the source data dictionaries; candidate external mappings are maintained separately and are not asserted as exact equivalences.",
   "caseSensitive": true,
   "content": "complete",
   "concept": [
@@ -37,6 +37,36 @@
       "code": "oral-fluid-intake-volume",
       "display": "Quantity of oral intake",
       "definition": "DEN.C3.DE7 Observation code used pending resolution of conflicting LOINC codes in the source material."
+    },
+    {
+      "code": "suspected-dengue-fever",
+      "display": "Suspected dengue fever",
+      "definition": "DEN.C4.DE1 concept from the source data dictionary: signs and symptoms consistent with dengue."
+    },
+    {
+      "code": "confirmed-dengue-fever",
+      "display": "Confirmed dengue fever",
+      "definition": "DEN.C4.DE2 concept from the source data dictionary: dengue diagnosis confirmed by laboratory tests."
+    },
+    {
+      "code": "dengue-classification-group-a",
+      "display": "Group A",
+      "definition": "DEN.C6.DE2 classification option: dengue without warning signs, special conditions, social risk factors, or comorbidities."
+    },
+    {
+      "code": "dengue-classification-group-b",
+      "display": "Group B",
+      "definition": "DEN.C6.DE3 classification option: dengue without warning signs, but with special conditions, social risk factors, or comorbidities."
+    },
+    {
+      "code": "dengue-classification-group-c",
+      "display": "Group C",
+      "definition": "DEN.C6.DE4 classification option: dengue with warning signs."
+    },
+    {
+      "code": "dengue-classification-group-d",
+      "display": "Group D",
+      "definition": "DEN.C6.DE5 classification option: severe forms of dengue with shock, severe bleeding, or organ dysfunction."
     }
   ]
 }

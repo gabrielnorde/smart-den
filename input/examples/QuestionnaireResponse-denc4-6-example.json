@@ -1,0 +1,49 @@
+{
+  "resourceType": "QuestionnaireResponse",
+  "id": "denc4-6-example",
+  "questionnaire": "https://smart.who.int/den/Questionnaire/DENC4-6",
+  "status": "completed",
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "item": [
+    {
+      "linkId": "DEN.C4",
+      "item": [
+        {
+          "linkId": "DEN.C4.DE1",
+          "answer": [
+            {
+              "valueBoolean": true
+            }
+          ]
+        },
+        {
+          "linkId": "DEN.C4.DE2",
+          "answer": [
+            {
+              "valueBoolean": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "DEN.C6",
+      "item": [
+        {
+          "linkId": "DEN.C6.DE1",
+          "answer": [
+            {
+              "valueCoding": {
+                "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+                "code": "dengue-classification-group-c",
+                "display": "Group C"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

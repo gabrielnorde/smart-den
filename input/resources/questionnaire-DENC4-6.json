@@ -1,0 +1,73 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "DENC4-6",
+  "url": "https://smart.who.int/den/Questionnaire/DENC4-6",
+  "version": "0.1.0",
+  "name": "DENC46Diagnostic",
+  "title": "DEN.C4-6 Diagnostic",
+  "status": "draft",
+  "experimental": false,
+  "date": "2026-10-18",
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "Questionnaire for the DEN.C4-6 diagnostic activities, based on the DEN.C4-6 data dictionary.",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<h2>Implementation notes and pending items</h2>\n<p>Pending decisions and terminology checks for DEN.C4-6 Diagnostic:</p>\n<ul>\n<li><strong>Suspected/confirmed Boolean to Condition mapping:</strong> the questionnaire preserves the optional Yes/No answers as Boolean QuestionnaireResponse answers. A Boolean answer alone does not determine whether a Condition should be created or whether its verificationStatus should be provisional, unconfirmed, confirmed, or refuted. Define the clinical workflow before deriving Conditions from these answers.</li>\n<li><strong>DEN.C4.DE1 pop-up note:</strong> the source lists conditions that mimic febrile or critical dengue phases, but does not define which phase triggers the pop-up or whether these are informational text or selectable diagnoses. The note is retained in the traceability matrix; no answer options or trigger rules were invented.</li>\n<li><strong>DEN.C6 decision-support linkage:</strong> the source links classification to “Classify the patient” but provides no executable criteria in this worksheet. The questionnaire records a required single selection and does not calculate a group.</li>\n<li><strong>DEN.C4 ICD mappings:</strong> the source assigns the same ICD-11 code 1D2Z and ICD-10 code A97.9 to suspected and confirmed dengue despite their different meanings; validate these candidate mappings.</li>\n<li><strong>Terminology candidates:</strong> source codes are recorded in ConceptMaps as related candidate mappings; they have not been independently validated. The source repeats Group A codes for Group B and Group C SNOMED code 722863008 for Group D. These conflicts remain unresolved; no replacement was inferred.</li>\n<li><strong>Terminologies not classifiable:</strong> the worksheet marks all DEN.C4-6 concepts as not classifiable in LOINC and ICF. ConceptMaps contain no target codes for these systems.</li>\n<li><strong>OpenMRS columns:</strong> the supplied OpenMRS entities and IDs refer to unrelated obstetric/anatomical concepts such as amniotic fluid, placenta, and fetal position. They were excluded from the dengue model and should be corrected in the source.</li>\n<li><strong>Condition representation:</strong> the secondary mapping workbook proposes BR-Core Condition for clinical diagnoses and classification. Raw Boolean answers remain in QuestionnaireResponse because Condition alone cannot preserve explicit No answers.</li>\n<li><strong>External terminology validation:</strong> ICD-11, ICD-10, and SNOMED CT codes require terminology-server validation. The source provides no LOINC or ICF target code.</li>\n</ul>\n</div>"
+  },
+  "subjectType": [
+    "Patient"
+  ],
+  "item": [
+    {
+      "linkId": "DEN.C4",
+      "text": "Suspected dengue fever",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "DEN.C4.DE1",
+          "text": "Suspected dengue fever",
+          "type": "boolean",
+          "required": false,
+          "repeats": false,
+          "code": [
+            {
+              "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+              "code": "suspected-dengue-fever",
+              "display": "Suspected dengue fever"
+            }
+          ]
+        },
+        {
+          "linkId": "DEN.C4.DE2",
+          "text": "Confirmed dengue fever",
+          "type": "boolean",
+          "required": false,
+          "repeats": false,
+          "code": [
+            {
+              "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+              "code": "confirmed-dengue-fever",
+              "display": "Confirmed dengue fever"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "DEN.C6",
+      "text": "Classify the patient",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "DEN.C6.DE1",
+          "text": "Dengue classification",
+          "type": "choice",
+          "required": true,
+          "repeats": false,
+          "answerValueSet": "https://smart.who.int/den/ValueSet/den-c4-6-classification",
+          "definition": "https://smart.who.int/den/StructureDefinition/den-c4-6-diagnostic-condition#Condition.code"
+        }
+      ]
+    }
+  ]
+}
