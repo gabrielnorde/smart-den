@@ -11,7 +11,7 @@ fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2023+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 license: CC-BY-SA-3.0-IGO # https://www.hl7.org/fhir/valueset-spdx-license.html
-jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#076 "Brazil"
+jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#076 "Brazil (BRA)"
 publisher:
   name: Gabriel Norde Santos
   # url: http://who.int
@@ -159,6 +159,10 @@ menu:
   Indices:
     Artifact Index: artifacts.html
     Mappings: maps.html
+
+parameters:
+  path-resource:
+    - input/vocabulary/*
     
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │

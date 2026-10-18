@@ -1,0 +1,747 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "den-icf",
+  "meta": {
+    "profile": [
+      "http://smart.who.int/base/StructureDefinition/SGConceptMap"
+    ]
+  },
+  "url": "https://smart.who.int/den/ConceptMap/den-icf",
+  "version": "0.1.0",
+  "name": "DENICF",
+  "title": "DEN Concept Map to ICF",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "Cross-map of all DEN custom CodeSystem concepts to ICF, using codes from the DEN.B Screening data dictionary. Entries without a listed target code are marked unmatched.",
+  "group": [
+    {
+      "source": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+      "sourceVersion": "0.1.0",
+      "target": "http://hl7.org/fhir/sid/icf",
+      "element": [
+        {
+          "code": "den-b3-de3-bp-unavailable",
+          "display": "Blood pressure cannot be taken",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "den-b3-de4-fever-onset",
+          "display": "Fever onset",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "den-b3-de6-pallor-present",
+          "display": "Pallor present",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "den-b3-de8-respiratory-exam-result",
+          "display": "Respiratory exam result",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "den-b5-de1-physiological-symptoms",
+          "display": "Current physiological symptoms",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "den-b6-de1-consciousness",
+          "display": "Evaluate consciousness",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "den-b7-de1-diuresis",
+          "display": "Check diuresis",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "den-b8-de1-preexisting-conditions",
+          "display": "Investigate pre-existing conditions",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "den-b9-de1-endemic-area-travel",
+          "display": "Recent travel to endemic area",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "den-b9-de2-similar-symptoms-contact",
+          "display": "Household or community member with similar symptoms",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "den-b9-de3-no-exposure-history",
+          "display": "Client has no history of exposure",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "den-b10-de1-tourniquet-test",
+          "display": "Perform tourniquet test",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "den-b11-de1-warning-sign",
+          "display": "Warning sign",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B3.DE9",
+          "display": "Respiratory exam not done",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B3.DE10",
+          "display": "Normal respiratory exam result",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B3.DE11",
+          "display": "Dyspnoea",
+          "target": [
+            {
+              "code": "b460",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B3.DE12",
+          "display": "Cough",
+          "target": [
+            {
+              "code": "b450",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B3.DE13",
+          "display": "Rapid breathing",
+          "target": [
+            {
+              "code": "b4401",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B3.DE14",
+          "display": "Slow breathing",
+          "target": [
+            {
+              "code": "b4401",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B3.DE15",
+          "display": "Wheezing",
+          "target": [
+            {
+              "code": "b460",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B3.DE16",
+          "display": "Rales",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B3.DE17",
+          "display": "Kussmaul's respiration",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B5.DE2",
+          "display": "No physiological symptoms",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B5.DE3",
+          "display": "Headache",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B5.DE4",
+          "display": "Severe headache",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B5.DE5",
+          "display": "Vomiting",
+          "target": [
+            {
+              "code": "b5106",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B5.DE6",
+          "display": "Nausea",
+          "target": [
+            {
+              "code": "b5350",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B5.DE7",
+          "display": "Diarrhea",
+          "target": [
+            {
+              "code": "b5251",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B5.DE8",
+          "display": "Skin rash (maculopapular)",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B5.DE9",
+          "display": "Other current physiological symptoms (specify)",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B6.DE2",
+          "display": "None",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B6.DE3",
+          "display": "Dizziness",
+          "target": [
+            {
+              "code": "b2401",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B6.DE4",
+          "display": "Irritability",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B6.DE5",
+          "display": "Drowsiness",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B6.DE6",
+          "display": "Lethargy",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B6.DE7",
+          "display": "Fainting",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B6.DE8",
+          "display": "Convulsion",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B6.DE9",
+          "display": "Vertigo",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B7.DE2",
+          "display": "Normal urine output",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B7.DE3",
+          "display": "Oliguria",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B7.DE4",
+          "display": "Anuria",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B7.DE5",
+          "display": "Polyuria",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B7.DE6",
+          "display": "Unknown / Not assessed",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B8.DE2",
+          "display": "No chronic or past health conditions",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B8.DE3",
+          "display": "Don't know / not sure",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B8.DE4",
+          "display": "Infants under 24 months",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B8.DE5",
+          "display": "Adults over 65 years",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B8.DE6",
+          "display": "Obesity",
+          "target": [
+            {
+              "code": "b530",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B8.DE7",
+          "display": "Pregnant women",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B8.DE8",
+          "display": "Asthma",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B8.DE9",
+          "display": "Other respiratory conditions",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B8.DE10",
+          "display": "Diabetes type 1",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B8.DE11",
+          "display": "Diabetes type 2",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B8.DE12",
+          "display": "Hypertension",
+          "target": [
+            {
+              "code": "b4200",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B8.DE13",
+          "display": "Cardiovascular disease",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B8.DE14",
+          "display": "Previous dengue infections",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B9.DE3",
+          "display": "None",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B10.DE2",
+          "display": "Negative tourniquet test",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B10.DE3",
+          "display": "Positive tourniquet test",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B10.DE4",
+          "display": "Test not done",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B11.DE2",
+          "display": "Abdominal pain",
+          "target": [
+            {
+              "code": "b28012",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B11.DE3",
+          "display": "Persistent vomiting",
+          "target": [
+            {
+              "code": "b51060",
+              "equivalence": "inexact",
+              "comment": "Best fit"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B11.DE4",
+          "display": "Fluid accumulation",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B11.DE5",
+          "display": "Mucosal bleeding",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B11.DE6",
+          "display": "Lethargy",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B11.DE7",
+          "display": "Irritability",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B11.DE8",
+          "display": "Postural hypotension",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B11.DE9",
+          "display": "Syncope",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B11.DE10",
+          "display": "Hepatomegaly",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B11.DE11",
+          "display": "Looks very ill",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B11.DE12",
+          "display": "Unconscious",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B11.DE13",
+          "display": "No warning sign",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

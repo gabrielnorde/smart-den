@@ -1,0 +1,897 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "den-custom-codes",
+  "url": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+  "version": "0.1.0",
+  "name": "DENCustomCodes",
+  "title": "DEN Custom Codes",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "Local codes for DEN questionnaire observation concepts and answer options. SNOMED CT mappings are recorded as concept properties when supplied by the data dictionary.",
+  "content": "complete",
+  "caseSensitive": true,
+  "property": [
+    {
+      "code": "snomed-equivalent",
+      "uri": "https://smart.who.int/den/CodeSystem/den-custom-codes#snomed-equivalent",
+      "description": "Equivalent code supplied by the data dictionary.",
+      "type": "Coding"
+    }
+  ],
+  "concept": [
+    {
+      "code": "den-b3-de3-bp-unavailable",
+      "display": "Blood pressure cannot be taken",
+      "definition": "Whether blood pressure could not be taken."
+    },
+    {
+      "code": "den-b3-de4-fever-onset",
+      "display": "Fever onset",
+      "definition": "Number of days the patient has experienced fever."
+    },
+    {
+      "code": "den-b3-de6-pallor-present",
+      "display": "Pallor present",
+      "definition": "Whether pallor is present."
+    },
+    {
+      "code": "den-b3-de8-respiratory-exam-result",
+      "display": "Respiratory exam result",
+      "definition": "Coded respiratory examination result."
+    },
+    {
+      "code": "den-b5-de1-physiological-symptoms",
+      "display": "Current physiological symptoms",
+      "definition": "Coded concepts for current physiological symptoms."
+    },
+    {
+      "code": "den-b6-de1-consciousness",
+      "display": "Evaluate consciousness",
+      "definition": "Coded consciousness assessment."
+    },
+    {
+      "code": "den-b7-de1-diuresis",
+      "display": "Check diuresis",
+      "definition": "Coded diuresis assessment."
+    },
+    {
+      "code": "den-b8-de1-preexisting-conditions",
+      "display": "Investigate pre-existing conditions",
+      "definition": "Coded pre-existing conditions."
+    },
+    {
+      "code": "den-b9-de1-endemic-area-travel",
+      "display": "Recent travel to endemic area",
+      "definition": "Whether the client recently travelled to an endemic area."
+    },
+    {
+      "code": "den-b9-de2-similar-symptoms-contact",
+      "display": "Household or community member with similar symptoms",
+      "definition": "Whether a household or community member has similar symptoms."
+    },
+    {
+      "code": "den-b9-de3-no-exposure-history",
+      "display": "Client has no history of exposure",
+      "definition": "The exclusive no-exposure response specified in the data dictionary."
+    },
+    {
+      "code": "den-b10-de1-tourniquet-test",
+      "display": "Perform tourniquet test",
+      "definition": "Coded tourniquet test result."
+    },
+    {
+      "code": "den-b11-de1-warning-sign",
+      "display": "Warning sign",
+      "definition": "Coded warning sign finding."
+    },
+    {
+      "code": "DEN.B3.DE9",
+      "display": "Respiratory exam not done",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "373121007"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B3.DE10",
+      "display": "Normal respiratory exam result",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "162889004"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B3.DE11",
+      "display": "Dyspnoea",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "267036007"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B3.DE12",
+      "display": "Cough",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "49727002"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B3.DE13",
+      "display": "Rapid breathing",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "271823003"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B3.DE14",
+      "display": "Slow breathing",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "86684002"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B3.DE15",
+      "display": "Wheezing",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "56018004"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B3.DE16",
+      "display": "Rales",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "48409008"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B3.DE17",
+      "display": "Kussmaul's respiration",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "414563008"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B5.DE2",
+      "display": "No physiological symptoms",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "161915001"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B5.DE3",
+      "display": "Headache",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "25064002"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B5.DE4",
+      "display": "Severe headache",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "25064002"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B5.DE5",
+      "display": "Vomiting",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "422400008"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B5.DE6",
+      "display": "Nausea",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "422587007"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B5.DE7",
+      "display": "Diarrhea",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "62315008"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B5.DE8",
+      "display": "Skin rash (maculopapular)",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "47725002"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B5.DE9",
+      "display": "Other current physiological symptoms (specify)",
+      "definition": "DEN.B questionnaire answer option."
+    },
+    {
+      "code": "DEN.B6.DE2",
+      "display": "None",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "161915001"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B6.DE3",
+      "display": "Dizziness",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "404640003"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B6.DE4",
+      "display": "Irritability",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "55929007"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B6.DE5",
+      "display": "Drowsiness",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "271782001"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B6.DE6",
+      "display": "Lethargy",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "214264003"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B6.DE7",
+      "display": "Fainting",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "271594007"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B6.DE8",
+      "display": "Convulsion",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "91175000"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B6.DE9",
+      "display": "Vertigo",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "399153001"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B7.DE2",
+      "display": "Normal urine output",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "53461003"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B7.DE3",
+      "display": "Oliguria",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "83128009"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B7.DE4",
+      "display": "Anuria",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "2472002"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B7.DE5",
+      "display": "Polyuria",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "28442001"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B7.DE6",
+      "display": "Unknown / Not assessed",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "261665006"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B8.DE2",
+      "display": "No chronic or past health conditions",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "14732006"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B8.DE3",
+      "display": "Don't know / not sure",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "261665006"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B8.DE4",
+      "display": "Infants under 24 months",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "263784005"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B8.DE5",
+      "display": "Adults over 65 years",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "271872005"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B8.DE6",
+      "display": "Obesity",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "414915002"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B8.DE7",
+      "display": "Pregnant women",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "77386006"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B8.DE8",
+      "display": "Asthma",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "195967001"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B8.DE9",
+      "display": "Other respiratory conditions",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "50043002"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B8.DE10",
+      "display": "Diabetes type 1",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "46635009"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B8.DE11",
+      "display": "Diabetes type 2",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "44054006"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B8.DE12",
+      "display": "Hypertension",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "38341003"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B8.DE13",
+      "display": "Cardiovascular disease",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "49601007"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B8.DE14",
+      "display": "Previous dengue infections",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "38362002"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B9.DE3",
+      "display": "None",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "14732006"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B10.DE2",
+      "display": "Negative tourniquet test",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "829990003"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B10.DE3",
+      "display": "Positive tourniquet test",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "846603004"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B10.DE4",
+      "display": "Test not done",
+      "definition": "DEN.B questionnaire answer option."
+    },
+    {
+      "code": "DEN.B11.DE2",
+      "display": "Abdominal pain",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "21522001"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B11.DE3",
+      "display": "Persistent vomiting",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "196746003"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B11.DE4",
+      "display": "Fluid accumulation",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "17672001"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B11.DE5",
+      "display": "Mucosal bleeding",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "128145008"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B11.DE6",
+      "display": "Lethargy",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "214264003"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B11.DE7",
+      "display": "Irritability",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "55929007"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B11.DE8",
+      "display": "Postural hypotension",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "28651003"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B11.DE9",
+      "display": "Syncope",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "271594007"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B11.DE10",
+      "display": "Hepatomegaly",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "80515008"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B11.DE11",
+      "display": "Looks very ill",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "39104002"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B11.DE12",
+      "display": "Unconscious",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "418107008"
+          }
+        }
+      ]
+    },
+    {
+      "code": "DEN.B11.DE13",
+      "display": "No warning sign",
+      "definition": "DEN.B questionnaire answer option.",
+      "property": [
+        {
+          "code": "snomed-equivalent",
+          "valueCoding": {
+            "system": "http://snomed.info/sct",
+            "code": "14732006"
+          }
+        }
+      ]
+    }
+  ]
+}

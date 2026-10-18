@@ -1,0 +1,58 @@
+{
+  "resourceType": "ValueSet",
+  "id": "den-b3-de8-choice-grouper",
+  "url": "https://smart.who.int/den/ValueSet/den-b3-de8-choice-grouper",
+  "version": "0.1.0",
+  "name": "DenB3De8ChoiceGrouper",
+  "title": "DEN.B3 Respiratory Exam Result Answers",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "Answer options defined in the DEN custom CodeSystem from the DEN.B data dictionary.",
+  "compose": {
+    "include": [
+      {
+        "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+        "version": "0.1.0",
+        "concept": [
+          {
+            "code": "DEN.B3.DE9",
+            "display": "Respiratory exam not done"
+          },
+          {
+            "code": "DEN.B3.DE10",
+            "display": "Normal respiratory exam result"
+          },
+          {
+            "code": "DEN.B3.DE11",
+            "display": "Dyspnoea"
+          },
+          {
+            "code": "DEN.B3.DE12",
+            "display": "Cough"
+          },
+          {
+            "code": "DEN.B3.DE13",
+            "display": "Rapid breathing"
+          },
+          {
+            "code": "DEN.B3.DE14",
+            "display": "Slow breathing"
+          },
+          {
+            "code": "DEN.B3.DE15",
+            "display": "Wheezing"
+          },
+          {
+            "code": "DEN.B3.DE16",
+            "display": "Rales"
+          },
+          {
+            "code": "DEN.B3.DE17",
+            "display": "Kussmaul's respiration"
+          }
+        ]
+      }
+    ]
+  }
+}

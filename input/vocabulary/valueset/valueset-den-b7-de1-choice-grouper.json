@@ -1,0 +1,42 @@
+{
+  "resourceType": "ValueSet",
+  "id": "den-b7-de1-choice-grouper",
+  "url": "https://smart.who.int/den/ValueSet/den-b7-de1-choice-grouper",
+  "version": "0.1.0",
+  "name": "DenB7De1ChoiceGrouper",
+  "title": "DEN.B7 Diuresis Answers",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "Answer options defined in the DEN custom CodeSystem from the DEN.B data dictionary.",
+  "compose": {
+    "include": [
+      {
+        "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+        "version": "0.1.0",
+        "concept": [
+          {
+            "code": "DEN.B7.DE2",
+            "display": "Normal urine output"
+          },
+          {
+            "code": "DEN.B7.DE3",
+            "display": "Oliguria"
+          },
+          {
+            "code": "DEN.B7.DE4",
+            "display": "Anuria"
+          },
+          {
+            "code": "DEN.B7.DE5",
+            "display": "Polyuria"
+          },
+          {
+            "code": "DEN.B7.DE6",
+            "display": "Unknown / Not assessed"
+          }
+        ]
+      }
+    ]
+  }
+}
