@@ -1,0 +1,748 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "den-snomed",
+  "meta": {
+    "profile": [
+      "http://smart.who.int/base/StructureDefinition/SGConceptMap"
+    ]
+  },
+  "url": "https://smart.who.int/den/ConceptMap/den-snomed",
+  "version": "0.1.0",
+  "name": "DENSNOMEDCT",
+  "title": "DEN Concept Map to SNOMED CT",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "Cross-map of all DEN custom CodeSystem concepts to SNOMED CT, using codes from the DEN.B Screening data dictionary. Entries without a listed target code are marked unmatched.",
+  "group": [
+    {
+      "source": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+      "sourceVersion": "0.1.0",
+      "target": "http://snomed.info/sct",
+      "element": [
+        {
+          "code": "den-b3-de3-bp-unavailable",
+          "display": "Blood pressure cannot be taken",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "den-b3-de4-fever-onset",
+          "display": "Fever onset",
+          "target": [
+            {
+              "code": "386661006",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "den-b3-de6-pallor-present",
+          "display": "Pallor present",
+          "target": [
+            {
+              "code": "267029006",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "den-b3-de8-respiratory-exam-result",
+          "display": "Respiratory exam result",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "den-b5-de1-physiological-symptoms",
+          "display": "Current physiological symptoms",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "den-b6-de1-consciousness",
+          "display": "Evaluate consciousness",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "den-b7-de1-diuresis",
+          "display": "Check diuresis",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "den-b8-de1-preexisting-conditions",
+          "display": "Investigate pre-existing conditions",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "den-b9-de1-endemic-area-travel",
+          "display": "Recent travel to endemic area",
+          "target": [
+            {
+              "code": "443846001",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "den-b9-de2-similar-symptoms-contact",
+          "display": "Household or community member with similar symptoms",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "den-b9-de3-no-exposure-history",
+          "display": "Client has no history of exposure",
+          "target": [
+            {
+              "code": "14732006",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "den-b10-de1-tourniquet-test",
+          "display": "Perform tourniquet test",
+          "target": [
+            {
+              "code": "42106004",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "den-b11-de1-warning-sign",
+          "display": "Warning sign",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B3.DE9",
+          "display": "Respiratory exam not done",
+          "target": [
+            {
+              "code": "373121007",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B3.DE10",
+          "display": "Normal respiratory exam result",
+          "target": [
+            {
+              "code": "162889004",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B3.DE11",
+          "display": "Dyspnoea",
+          "target": [
+            {
+              "code": "267036007",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B3.DE12",
+          "display": "Cough",
+          "target": [
+            {
+              "code": "49727002",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B3.DE13",
+          "display": "Rapid breathing",
+          "target": [
+            {
+              "code": "271823003",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B3.DE14",
+          "display": "Slow breathing",
+          "target": [
+            {
+              "code": "86684002",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B3.DE15",
+          "display": "Wheezing",
+          "target": [
+            {
+              "code": "56018004",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B3.DE16",
+          "display": "Rales",
+          "target": [
+            {
+              "code": "48409008",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B3.DE17",
+          "display": "Kussmaul's respiration",
+          "target": [
+            {
+              "code": "414563008",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B5.DE2",
+          "display": "No physiological symptoms",
+          "target": [
+            {
+              "code": "161915001",
+              "equivalence": "inexact",
+              "comment": "Best fit"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B5.DE3",
+          "display": "Headache",
+          "target": [
+            {
+              "code": "25064002",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B5.DE4",
+          "display": "Severe headache",
+          "target": [
+            {
+              "code": "25064002",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B5.DE5",
+          "display": "Vomiting",
+          "target": [
+            {
+              "code": "422400008",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B5.DE6",
+          "display": "Nausea",
+          "target": [
+            {
+              "code": "422587007",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B5.DE7",
+          "display": "Diarrhea",
+          "target": [
+            {
+              "code": "62315008",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B5.DE8",
+          "display": "Skin rash (maculopapular)",
+          "target": [
+            {
+              "code": "47725002",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B5.DE9",
+          "display": "Other current physiological symptoms (specify)",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B6.DE2",
+          "display": "None",
+          "target": [
+            {
+              "code": "161915001",
+              "equivalence": "inexact",
+              "comment": "Best fit"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B6.DE3",
+          "display": "Dizziness",
+          "target": [
+            {
+              "code": "404640003",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B6.DE4",
+          "display": "Irritability",
+          "target": [
+            {
+              "code": "55929007",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B6.DE5",
+          "display": "Drowsiness",
+          "target": [
+            {
+              "code": "271782001",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B6.DE6",
+          "display": "Lethargy",
+          "target": [
+            {
+              "code": "214264003",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B6.DE7",
+          "display": "Fainting",
+          "target": [
+            {
+              "code": "271594007",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B6.DE8",
+          "display": "Convulsion",
+          "target": [
+            {
+              "code": "91175000",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B6.DE9",
+          "display": "Vertigo",
+          "target": [
+            {
+              "code": "399153001",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B7.DE2",
+          "display": "Normal urine output",
+          "target": [
+            {
+              "code": "53461003",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B7.DE3",
+          "display": "Oliguria",
+          "target": [
+            {
+              "code": "83128009",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B7.DE4",
+          "display": "Anuria",
+          "target": [
+            {
+              "code": "2472002",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B7.DE5",
+          "display": "Polyuria",
+          "target": [
+            {
+              "code": "28442001",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B7.DE6",
+          "display": "Unknown / Not assessed",
+          "target": [
+            {
+              "code": "261665006",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B8.DE2",
+          "display": "No chronic or past health conditions",
+          "target": [
+            {
+              "code": "14732006",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B8.DE3",
+          "display": "Don't know / not sure",
+          "target": [
+            {
+              "code": "261665006",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B8.DE4",
+          "display": "Infants under 24 months",
+          "target": [
+            {
+              "code": "263784005",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B8.DE5",
+          "display": "Adults over 65 years",
+          "target": [
+            {
+              "code": "271872005",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B8.DE6",
+          "display": "Obesity",
+          "target": [
+            {
+              "code": "414915002",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B8.DE7",
+          "display": "Pregnant women",
+          "target": [
+            {
+              "code": "77386006",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B8.DE8",
+          "display": "Asthma",
+          "target": [
+            {
+              "code": "195967001",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B8.DE9",
+          "display": "Other respiratory conditions",
+          "target": [
+            {
+              "code": "50043002",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B8.DE10",
+          "display": "Diabetes type 1",
+          "target": [
+            {
+              "code": "46635009",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B8.DE11",
+          "display": "Diabetes type 2",
+          "target": [
+            {
+              "code": "44054006",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B8.DE12",
+          "display": "Hypertension",
+          "target": [
+            {
+              "code": "38341003",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B8.DE13",
+          "display": "Cardiovascular disease",
+          "target": [
+            {
+              "code": "49601007",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B8.DE14",
+          "display": "Previous dengue infections",
+          "target": [
+            {
+              "code": "38362002",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B9.DE3",
+          "display": "None",
+          "target": [
+            {
+              "code": "14732006",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B10.DE2",
+          "display": "Negative tourniquet test",
+          "target": [
+            {
+              "code": "829990003",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B10.DE3",
+          "display": "Positive tourniquet test",
+          "target": [
+            {
+              "code": "846603004",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B10.DE4",
+          "display": "Test not done",
+          "target": [
+            {
+              "equivalence": "unmatched",
+              "comment": "No target code was listed in the spreadsheet."
+            }
+          ]
+        },
+        {
+          "code": "DEN.B11.DE2",
+          "display": "Abdominal pain",
+          "target": [
+            {
+              "code": "21522001",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B11.DE3",
+          "display": "Persistent vomiting",
+          "target": [
+            {
+              "code": "196746003",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B11.DE4",
+          "display": "Fluid accumulation",
+          "target": [
+            {
+              "code": "17672001",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B11.DE5",
+          "display": "Mucosal bleeding",
+          "target": [
+            {
+              "code": "128145008",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B11.DE6",
+          "display": "Lethargy",
+          "target": [
+            {
+              "code": "214264003",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B11.DE7",
+          "display": "Irritability",
+          "target": [
+            {
+              "code": "55929007",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B11.DE8",
+          "display": "Postural hypotension",
+          "target": [
+            {
+              "code": "28651003",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B11.DE9",
+          "display": "Syncope",
+          "target": [
+            {
+              "code": "271594007",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B11.DE10",
+          "display": "Hepatomegaly",
+          "target": [
+            {
+              "code": "80515008",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B11.DE11",
+          "display": "Looks very ill",
+          "target": [
+            {
+              "code": "39104002",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B11.DE12",
+          "display": "Unconscious",
+          "target": [
+            {
+              "code": "418107008",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DEN.B11.DE13",
+          "display": "No warning sign",
+          "target": [
+            {
+              "code": "14732006",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "resourceType": "Questionnaire",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><strong>Implementation notes for maintainers (not questionnaire questions):</strong></p><ul><li>B8.DE15 Social circumstances appears in the source workbook but is not yet represented by a Questionnaire item, profile, or terminology entry.</li><li>B5.DE9 Other current physiological symptoms (specify) is currently only a coded option; a free-text follow-up item is not represented.</li><li>The source reuses DEN.B3.DE3 for Blood pressure cannot be taken and Body temperature. A unique linkId suffix is used for Body temperature pending correction of the source identifier.</li><li>B3.DE1 and B3.DE2 are marked conditional, but the workbook does not specify their individual condition. Only the explicit rule for B3.DE3 (required when both readings are empty) is represented.</li><li>The workbook says B8.DE2, B8.DE3, B9.DE3, and B11.DE13 cannot be selected with other options. These exclusions are not enforced by the current FHIR R4 Questionnaire structure and need application logic or a revised question design. B5.DE2 says select None when no symptoms but has no explicit exclusion rule.</li><li>B8.DE4 and B8.DE5 depend on age and are marked not editable in the workbook; current answer options do not calculate age-based values or prevent manual selection.</li><li>B11 does not specify Select one versus Select all that apply, and its DE1 row lists an unexpected input option (Infants under 24 months). repeats is omitted and defaults to false until the source rule is clarified.</li><li>Review source terminology entries before release, including the pulse LOINC 8884-9 versus 8867-4 used by the BR-Core based profile, ICD-10 I98*, and LOINC 2469101 as written in the workbook. ConceptMaps currently transcribe source entries and are not external terminology validation.</li><li>Questionnaire-level validation for integer-only quantity subtypes, the height/weight upper limits, and BMI derivation/classification is incomplete. The BMI field is marked non-editable in the source.</li><li>The FHIR resource choice for history and test concepts should be confirmed with the clinical team; the current trace maps questionnaire responses to Observation profiles.</li><li>Activity and subgroup headings from the worksheet are not represented as Questionnaire group items; item order is preserved.</li><li>Some source terminology codes for standard-coded vital signs have no source concept in the DEN custom CodeSystem and therefore are not covered by these custom-source ConceptMaps; the traceability matrix identifies those rows.</li></ul></div>"
+  },
+  "id": "DENB",
+  "url": "https://smart.who.int/den/Questionnaire/DENB",
+  "version": "0.1.0",
+  "name": "DENB",
+  "title": "DEN.B Screening",
+  "status": "draft",
+  "subjectType": [
+    "Patient"
+  ],
+  "date": "2026-10-14",
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "Questionnaire for the DEN.B Screening activity, aligned with the DEN.B Screening data dictionary.",
+  "item": [
+    {
+      "linkId": "DEN.B3.DE1",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-b3-de1-systolic-blood-pressure#Observation.value[x]",
+      "text": "Systolic blood pressure",
+      "type": "quantity",
+      "required": false
+    },
+    {
+      "linkId": "DEN.B3.DE2",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-b3-de2-diastolic-blood-pressure#Observation.value[x]",
+      "text": "Diastolic blood pressure",
+      "type": "quantity",
+      "required": false
+    },
+    {
+      "linkId": "DEN.B3.DE3",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-b3-de3-bp-unavailable#Observation.value[x]",
+      "text": "Blood pressure cannot be taken",
+      "type": "boolean",
+      "required": true,
+      "enableWhen": [
+        {
+          "question": "DEN.B3.DE1",
+          "operator": "exists",
+          "answerBoolean": false
+        },
+        {
+          "question": "DEN.B3.DE2",
+          "operator": "exists",
+          "answerBoolean": false
+        }
+      ],
+      "enableBehavior": "all"
+    },
+    {
+      "linkId": "DEN.B3.DE3-body-temperature",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-b3-de3-body-temperature#Observation.value[x]",
+      "text": "Body temperature",
+      "type": "quantity",
+      "required": true
+    },
+    {
+      "linkId": "DEN.B3.DE4",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-b3-de4-fever-onset#Observation.value[x]",
+      "text": "Fever onset",
+      "type": "quantity",
+      "required": true
+    },
+    {
+      "linkId": "DEN.B3.DE5",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-b3-de5-pulse-rate#Observation.value[x]",
+      "text": "Pulse rate",
+      "type": "quantity",
+      "required": false
+    },
+    {
+      "linkId": "DEN.B3.DE6",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-b3-de6-pallor-present#Observation.value[x]",
+      "text": "Pallor present",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "linkId": "DEN.B3.DE8",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-b3-de8-respiratory-exam-result#Observation.value[x]",
+      "text": "Respiratory exam result",
+      "type": "choice",
+      "answerValueSet": "https://smart.who.int/den/ValueSet/den-b3-de8-choice-grouper",
+      "required": false
+    },
+    {
+      "linkId": "DEN.B4.DE1",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-b4-de1-height#Observation.value[x]",
+      "text": "Current height",
+      "type": "quantity",
+      "required": true
+    },
+    {
+      "linkId": "DEN.B4.DE2",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-b4-de2-weight#Observation.value[x]",
+      "text": "Current weight",
+      "type": "quantity",
+      "required": true
+    },
+    {
+      "linkId": "DEN.B4.DE3",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-b4-de3-bmi#Observation.value[x]",
+      "text": "BMI",
+      "type": "quantity",
+      "required": true
+    },
+    {
+      "linkId": "DEN.B5.DE1",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-b5-de1-physiological-symptoms#Observation.value[x]",
+      "text": "Current physiological symptoms",
+      "type": "choice",
+      "answerValueSet": "https://smart.who.int/den/ValueSet/den-b5-de1-choice-grouper",
+      "required": true,
+      "repeats": true
+    },
+    {
+      "linkId": "DEN.B6.DE1",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-b6-de1-consciousness#Observation.value[x]",
+      "text": "Evaluate consciousness",
+      "type": "choice",
+      "answerValueSet": "https://smart.who.int/den/ValueSet/den-b6-de1-choice-grouper",
+      "required": true,
+      "repeats": true
+    },
+    {
+      "linkId": "DEN.B7.DE1",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-b7-de1-diuresis#Observation.value[x]",
+      "text": "Check diuresis",
+      "type": "choice",
+      "answerValueSet": "https://smart.who.int/den/ValueSet/den-b7-de1-choice-grouper",
+      "required": true
+    },
+    {
+      "linkId": "DEN.B8.DE1",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-b8-de1-preexisting-conditions#Observation.value[x]",
+      "text": "Investigate pre-existing conditions",
+      "type": "choice",
+      "answerValueSet": "https://smart.who.int/den/ValueSet/den-b8-de1-choice-grouper",
+      "required": true,
+      "repeats": true
+    },
+    {
+      "linkId": "DEN.B9.DE1",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-b9-de1-endemic-area-travel#Observation.value[x]",
+      "text": "Recent travel to endemic area",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "linkId": "DEN.B9.DE2",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-b9-de2-similar-symptoms-contact#Observation.value[x]",
+      "text": "Household or community member with similar symptoms",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "linkId": "DEN.B9.DE3",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-b9-de3-no-exposure-history#Observation.value[x]",
+      "text": "No exposure history",
+      "type": "choice",
+      "answerValueSet": "https://smart.who.int/den/ValueSet/den-b9-de3-choice-grouper",
+      "required": false
+    },
+    {
+      "linkId": "DEN.B10.DE1",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-b10-de1-tourniquet-test#Observation.value[x]",
+      "text": "Perform tourniquet test",
+      "type": "choice",
+      "answerValueSet": "https://smart.who.int/den/ValueSet/den-b10-de1-choice-grouper",
+      "required": true
+    },
+    {
+      "linkId": "DEN.B11.DE1",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-b11-de1-warning-sign#Observation.value[x]",
+      "text": "Warning sign",
+      "type": "choice",
+      "answerValueSet": "https://smart.who.int/den/ValueSet/den-b11-de1-choice-grouper",
+      "required": true
+    }
+  ]
+}

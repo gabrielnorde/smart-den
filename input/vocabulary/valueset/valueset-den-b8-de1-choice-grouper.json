@@ -1,0 +1,74 @@
+{
+  "resourceType": "ValueSet",
+  "id": "den-b8-de1-choice-grouper",
+  "url": "https://smart.who.int/den/ValueSet/den-b8-de1-choice-grouper",
+  "version": "0.1.0",
+  "name": "DenB8De1ChoiceGrouper",
+  "title": "DEN.B8 Pre-existing Condition Answers",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "Answer options defined in the DEN custom CodeSystem from the DEN.B data dictionary.",
+  "compose": {
+    "include": [
+      {
+        "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+        "version": "0.1.0",
+        "concept": [
+          {
+            "code": "DEN.B8.DE2",
+            "display": "No chronic or past health conditions"
+          },
+          {
+            "code": "DEN.B8.DE3",
+            "display": "Don't know / not sure"
+          },
+          {
+            "code": "DEN.B8.DE4",
+            "display": "Infants under 24 months"
+          },
+          {
+            "code": "DEN.B8.DE5",
+            "display": "Adults over 65 years"
+          },
+          {
+            "code": "DEN.B8.DE6",
+            "display": "Obesity"
+          },
+          {
+            "code": "DEN.B8.DE7",
+            "display": "Pregnant women"
+          },
+          {
+            "code": "DEN.B8.DE8",
+            "display": "Asthma"
+          },
+          {
+            "code": "DEN.B8.DE9",
+            "display": "Other respiratory conditions"
+          },
+          {
+            "code": "DEN.B8.DE10",
+            "display": "Diabetes type 1"
+          },
+          {
+            "code": "DEN.B8.DE11",
+            "display": "Diabetes type 2"
+          },
+          {
+            "code": "DEN.B8.DE12",
+            "display": "Hypertension"
+          },
+          {
+            "code": "DEN.B8.DE13",
+            "display": "Cardiovascular disease"
+          },
+          {
+            "code": "DEN.B8.DE14",
+            "display": "Previous dengue infections"
+          }
+        ]
+      }
+    ]
+  }
+}

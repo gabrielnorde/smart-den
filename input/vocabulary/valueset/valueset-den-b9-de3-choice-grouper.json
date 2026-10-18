@@ -1,0 +1,26 @@
+{
+  "resourceType": "ValueSet",
+  "id": "den-b9-de3-choice-grouper",
+  "url": "https://smart.who.int/den/ValueSet/den-b9-de3-choice-grouper",
+  "version": "0.1.0",
+  "name": "DenB9De3ChoiceGrouper",
+  "title": "DEN.B9 No Exposure Answer",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "Answer options defined in the DEN custom CodeSystem from the DEN.B data dictionary.",
+  "compose": {
+    "include": [
+      {
+        "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+        "version": "0.1.0",
+        "concept": [
+          {
+            "code": "DEN.B9.DE3",
+            "display": "None"
+          }
+        ]
+      }
+    ]
+  }
+}

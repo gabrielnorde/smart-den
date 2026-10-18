@@ -1,0 +1,74 @@
+{
+  "resourceType": "ValueSet",
+  "id": "den-observation-codes",
+  "url": "https://smart.who.int/den/ValueSet/den-observation-codes",
+  "version": "0.1.0",
+  "name": "DenObservationCodes",
+  "title": "DEN Observation Codes",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "DEN questionnaire observation concepts defined in the DEN custom CodeSystem.",
+  "compose": {
+    "include": [
+      {
+        "system": "https://smart.who.int/den/CodeSystem/den-custom-codes",
+        "version": "0.1.0",
+        "concept": [
+          {
+            "code": "den-b3-de3-bp-unavailable",
+            "display": "Blood pressure cannot be taken"
+          },
+          {
+            "code": "den-b3-de4-fever-onset",
+            "display": "Fever onset"
+          },
+          {
+            "code": "den-b3-de6-pallor-present",
+            "display": "Pallor present"
+          },
+          {
+            "code": "den-b3-de8-respiratory-exam-result",
+            "display": "Respiratory exam result"
+          },
+          {
+            "code": "den-b5-de1-physiological-symptoms",
+            "display": "Current physiological symptoms"
+          },
+          {
+            "code": "den-b6-de1-consciousness",
+            "display": "Evaluate consciousness"
+          },
+          {
+            "code": "den-b7-de1-diuresis",
+            "display": "Check diuresis"
+          },
+          {
+            "code": "den-b8-de1-preexisting-conditions",
+            "display": "Investigate pre-existing conditions"
+          },
+          {
+            "code": "den-b9-de1-endemic-area-travel",
+            "display": "Recent travel to endemic area"
+          },
+          {
+            "code": "den-b9-de2-similar-symptoms-contact",
+            "display": "Household or community member with similar symptoms"
+          },
+          {
+            "code": "den-b9-de3-no-exposure-history",
+            "display": "Client has no history of exposure"
+          },
+          {
+            "code": "den-b10-de1-tourniquet-test",
+            "display": "Perform tourniquet test"
+          },
+          {
+            "code": "den-b11-de1-warning-sign",
+            "display": "Warning sign"
+          }
+        ]
+      }
+    ]
+  }
+}
