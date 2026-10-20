@@ -1,0 +1,146 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "DENA",
+  "url": "https://smart.who.int/den/Questionnaire/DENA",
+  "version": "0.1.0",
+  "name": "DENA",
+  "title": "DEN.A Registration",
+  "status": "draft",
+  "subjectType": [
+    "Patient"
+  ],
+  "date": "2026-10-13",
+  "publisher": "Federal University of Santa Catarina (UFSC)",
+  "description": "Questionnaire for the DEN.A Registration activity, based on the DEN.A. Registration data elements.",
+  "item": [
+    {
+      "linkId": "DEN.A2.DE1",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-patient#Patient.identifier:cns.value",
+      "text": "Unique identification",
+      "type": "string",
+      "required": true
+    },
+    {
+      "linkId": "DEN.A2.DE2",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-patient#Patient.name.given",
+      "text": "First name",
+      "type": "string",
+      "required": true
+    },
+    {
+      "linkId": "DEN.A2.DE3",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-patient#Patient.name.family",
+      "text": "Last name",
+      "type": "string",
+      "required": true
+    },
+    {
+      "linkId": "DEN.A2.DE4",
+      "definition": "https://br-core.saude.gov.br/fhir/StructureDefinition/br-core-encounter#Encounter.period.start",
+      "text": "Visit date",
+      "type": "dateTime",
+      "required": true
+    },
+    {
+      "linkId": "DEN.A2.DE5",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-patient#Patient.birthDate",
+      "text": "Date of birth",
+      "type": "date",
+      "required": true
+    },
+    {
+      "linkId": "DEN.A2.DE6",
+      "definition": "https://br-core.saude.gov.br/fhir/StructureDefinition/br-core-observation#Observation.valueQuantity",
+      "text": "Age",
+      "type": "quantity",
+      "readOnly": true,
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+          "valueExpression": {
+            "description": "Age in years calculated from visit date and date of birth using the DAK formula.",
+            "language": "text/fhirpath",
+            "expression": "((%denVisitDate.difference(%denBirthDate, 'day') / 365.25).toString() + ' a').toQuantity()"
+          }
+        }
+      ],
+      "required": true
+    },
+    {
+      "linkId": "DEN.A2.DE7",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-patient#Patient.extension:identidadeGenero",
+      "text": "Gender*",
+      "type": "open-choice",
+      "answerValueSet": "https://terminologia.saude.gov.br/fhir/ValueSet/BRIdentidadeGenero"
+    },
+    {
+      "linkId": "DEN.A2.DE13",
+      "text": "Other (specify)",
+      "type": "string",
+      "enableWhen": [
+        {
+          "question": "DEN.A2.DE7",
+          "operator": "=",
+          "answerString": "Other"
+        }
+      ]
+    },
+    {
+      "linkId": "DEN.A2.DE14",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-patient#Patient.address.text",
+      "text": "Address",
+      "type": "string",
+      "required": true
+    },
+    {
+      "linkId": "DEN.A2.DE15",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-patient#Patient.telecom",
+      "text": "Mobile phone number",
+      "type": "string",
+      "required": true
+    },
+    {
+      "linkId": "DEN.A2.DE16",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-patient#Patient.contact.name.text",
+      "text": "Alternative contact's name",
+      "type": "string",
+      "required": false
+    },
+    {
+      "linkId": "DEN.A2.DE17",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-patient#Patient.contact.telecom",
+      "text": "Alternative contact's phone number",
+      "type": "string",
+      "required": false
+    },
+    {
+      "linkId": "DEN.A2.DE18",
+      "definition": "https://smart.who.int/den/StructureDefinition/den-patient#Patient.contact.name.text",
+      "text": "Mother´s name",
+      "type": "string",
+      "required": true
+    }
+  ],
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/variable",
+      "valueExpression": {
+        "name": "denVisitDate",
+        "language": "text/fhirpath",
+        "expression": "%context.item.repeat(item).where(linkId='DEN.A2.DE4').answer.value.ofType(dateTime).dateOf()"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/variable",
+      "valueExpression": {
+        "name": "denBirthDate",
+        "language": "text/fhirpath",
+        "expression": "%context.item.repeat(item).where(linkId='DEN.A2.DE5').answer.value.ofType(date)"
+      }
+    }
+  ],
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <h2>Implementation notes and pending items</h2>\n  <p>The following items require clarification or completion against the DEN.A. Registration data dictionary:</p>\n  <ul>\n    <li><strong>DE1, DE2 and DE3 validations:</strong> encode the SUS identifier rule (15 numeric characters) and the specified name-character rules.</li>\n    <li><strong>DE4 visit date:</strong> encode the rule that the date and time must not be in the future, while preserving the ability to enter a visit retrospectively.</li>\n    <li><strong>DE5 and DE6 conditionality:</strong> the source marks date of birth and calculated age as conditional, but this Questionnaire currently marks both required. Confirm when they are required and how to handle an unknown date of birth; then align the Questionnaire. Confirm the age calculation and its age-specific Observation coding/profile.</li>\n    <li><strong>DE7 gender options:</strong> confirm that the referenced external ValueSet contains exactly the source options (Female, Male, Transgender male, Transgender female and Other), with appropriate codes. The Questionnaire uses <code>open-choice</code>, which permits free-text answers although the source specifies “Select one”; confirm whether free text is intended.</li>\n    <li><strong>DE13 “Other (specify)”:</strong> confirm the conditional behavior with a coded “Other” response and define where the free-text answer is stored. No <code>definition</code> target is currently specified.</li>\n    <li><strong>DE14 address:</strong> the source notes “Also unknown”; define how an unknown address is represented.</li>\n    <li><strong>DE15 and DE17 phone numbers:</strong> the source declares these as integer quantities, while the Questionnaire represents them as strings for FHIR telecom values. Confirm and document this representation, including any required mobile or contact-use distinction.</li>\n    <li><strong>DE16 and DE18 contacts:</strong> both currently target <code>Patient.contact.name.text</code>. Define how the alternative contact and the client’s mother are distinguished, including the relationship to the patient.</li>\n    <li><strong>Contact information grouping:</strong> decide whether DE14–DE18 should be grouped in the Questionnaire to reflect the source heading.</li>\n    <li><strong>Terminology mapping:</strong> verify the source LOINC, SNOMED CT and ICD-11 mappings and determine whether DENA-specific terminology artifacts are needed. No DENA-specific CodeSystem, ValueSet or ConceptMap is currently present in the repository.</li>\n    <li><strong>Validation:</strong> run and review the SUSHI build and full IG Publisher validation for the DENA artifacts; document unresolved warnings and terminology validation limitations.</li>\n  </ul>\n</div>"
+  }
+}
