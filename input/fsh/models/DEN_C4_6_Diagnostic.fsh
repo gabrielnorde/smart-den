@@ -2,6 +2,8 @@ Logical: DENC46Diagnostic
 Id: DEN.C4-6
 Title: "DEN.C4-6 Diagnostic"
 Description: "Data elements for the DEN.C4-6 Diagnostic Data Dictionary (Web Annex A: Core data dictionary for DEN digital adaptation kit)."
+* ^url = "https://smart.who.int/den/StructureDefinition/DEN.C4-6"
+* ^type = "https://smart.who.int/den/StructureDefinition/DENC46"
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition"
 * ^status = #draft
 * ^experimental = true
@@ -11,14 +13,14 @@ Description: "Data elements for the DEN.C4-6 Diagnostic Data Dictionary (Web Ann
 // DEN.C4. Suspected dengue fever
 * suspectedDengueFever 0..1 boolean "Suspected dengue fever" "Indicates whether the patient presents with signs and symptoms consistent with dengue"
   * ^code[+] = $DENConcepts#DEN.C4.DE1 "Suspected dengue fever"
-  * ^code[+] = $ICD11#1D2Z "Dengue fever, unspecified"
+  * ^code[+] = $ICD11#1D2Z "Dengue, unspecified"
   * ^code[+] = $ICD10#A97.9 "Dengue, unspecified"
   * ^code[+] = $SCT#418429061000132101 "Suspected dengue (situation)"
   * ^comment = "Required: O."
 
 * confirmedDengueFever 0..1 boolean "Confirmed dengue fever" "Indicates that the patient’s diagnosis of dengue has been confirmed by laboratory tests"
   * ^code[+] = $DENConcepts#DEN.C4.DE2 "Confirmed dengue fever"
-  * ^code[+] = $ICD11#1D2Z "Dengue fever, unspecified"
+  * ^code[+] = $ICD11#1D2Z "Dengue, unspecified"
   * ^code[+] = $ICD10#A97.9 "Dengue, unspecified"
   * ^code[+] = $SCT#38362002 "Dengue (disorder)"
   * ^comment = "Required: O."

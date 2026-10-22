@@ -2,6 +2,8 @@ Logical: DENBScreening
 Id: DEN.B
 Title: "DEN.B Screening"
 Description: "Data elements for the DEN.B Screening Data Dictionary (Web Annex A: Core data dictionary for DEN digital adaptation kit)."
+* ^url = "https://smart.who.int/den/StructureDefinition/DEN.B"
+* ^type = "https://smart.who.int/den/StructureDefinition/DENB"
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition"
 * ^status = #draft
 * ^experimental = true
@@ -42,14 +44,13 @@ Description: "Data elements for the DEN.B Screening Data Dictionary (Web Annex A
 * pulseRate 0..1 Quantity "Pulse rate" "The client's pulse rate in beats per minute (bpm)"
   * ^code[+] = $DENConcepts#DEN.B3.DE5 "Pulse rate"
   * ^code[+] = $LNC#8884-9 "Heart rate rhythm"
-  * ^code[+] = $SCT#301147003 "Pulse rate finding (finding)"
+  * ^code[+] = $SCT#301147003 "Pulse rate finding"
   * ^comment = "Quantity sub-type: Integer quantity. Validation: 50 bpm <= Pulse rate <= 200 bpm. Required: O."
 
 * pallorPresent 0..1 boolean "Pallor present" "Whether or not the client has pallor"
   * ^code[+] = $DENConcepts#DEN.B3.DE6 "Pallor present"
   * ^code[+] = $ICD11#ME64.2 "Pallor"
   * ^code[+] = $ICD10#R23.1 "Pallor"
-  * ^code[+] = $SCT#267029006 "Pale – symptom (finding)"
   * ^comment = "Required: O."
 
 * respiratoryExamResult 0..1 code "Respiratory exam result" "The client's respiratory condition based on respiratory exam"

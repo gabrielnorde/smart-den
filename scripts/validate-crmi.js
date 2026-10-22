@@ -216,8 +216,10 @@ function parseValidationReport(content) {
 }
 
 function profileEvidence(issues, canonical, version) {
-  const target = `Validate resource against profile ${canonical}`;
-  return issues.some((issue) => issue.message.startsWith(target)
+  // IG Publisher localizes validation messages (for example, "Validar
+  // recurso em relação ao perfil" in Portuguese). Match the canonical
+  // profile URL instead of depending on an English sentence prefix.
+  return issues.some((issue) => issue.message.includes(canonical)
     && (!version || issue.message.includes(`|${version}`)));
 }
 

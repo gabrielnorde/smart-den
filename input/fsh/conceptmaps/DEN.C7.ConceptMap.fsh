@@ -4,12 +4,13 @@ Usage: #definition
 Title: "DEN.C7 Initial Management ConceptMap"
 Description: "Mapping between DEN.C7 Initial Management Data Elements and standard terminologies (SNOMED CT)."
 * url = "https://smart.who.int/den/ConceptMap/DEN.C7.ConceptMap"
+* id = "DEN.C7.ConceptMap"
 * version = "0.1.0"
 * name = "DEN_C7_ConceptMap"
 * status = #draft
 * experimental = true
 * publisher = "World Health Organization"
-* sourceCanonical = "https://smart.who.int/den/StructureDefinition/DEN.C7"
+* sourceCanonical = "https://smart.who.int/den/ValueSet/DENConcepts"
 
 * group[+]
   * source = $DENConcepts

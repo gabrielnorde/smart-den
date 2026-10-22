@@ -1,5 +1,5 @@
 Logical: DENA
-Id: DENA
+Id: DEN.A
 Title: "DEN.A. Registration"
 Description: "Data elements for the DEN.A. Registration Data Dictionary (Web Annex A: Core data dictionary for DEN digital adaptation kit)."
 * ^url = "https://smart.who.int/den/StructureDefinition/DEN.A"
@@ -15,18 +15,17 @@ Description: "Data elements for the DEN.A. Registration Data Dictionary (Web Ann
 // DEN.A2. Gather client details
 * uniqueIdentification 1..1 string "Unique identification" "Unique identifier generated (SUS card number)"
   * ^code[+] = $DENConcepts#DEN.A2.DE1 "Unique identification"
-  * ^code[+] = $SCT#900000000000474000 "Universally Unique Identifier (foundation metadata concept)"
   * ^comment = "FHIR mapping: Patient.identifier[cns].value. Validation condition: 15 characters (only numbers), based on local policy. Editable: No. Required: R."
 
 * firstName 1..1 string "First name" "Client's first name"
   * ^code[+] = $DENConcepts#DEN.A2.DE2 "First name"
-  * ^code[+] = $LNC#45392-8 "First Name"
+  * ^code[+] = $LNC#45392-8 "Patient First name"
   * ^code[+] = $SCT#184095009 "Patient forename (observable entity)"
   * ^comment = "FHIR mapping: Patient.name.given. Validation condition: Only letters and special characters (period, dash) allowed. Editable: Yes. Required: R."
 
 * lastName 1..1 string "Last name" "Client's family name or last name"
   * ^code[+] = $DENConcepts#DEN.A2.DE3 "Last name"
-  * ^code[+] = $LNC#45394-4 "Last Name"
+  * ^code[+] = $LNC#45394-4 "Patient Last name"
   * ^code[+] = $SCT#184096005 "Patient surname (observable entity)"
   * ^comment = "FHIR mapping: Patient.name.family. Validation condition: Only letters and special characters (full stop/period, dash) allowed. Editable: Yes. Required: R."
 
@@ -49,7 +48,7 @@ Description: "Data elements for the DEN.A. Registration Data Dictionary (Web Ann
   * ^comment = "FHIR mapping: Derived from Patient.birthDate and Encounter.period.start; not stored separately. Calculation: ('Visit date' - 'Date of birth') / 365.25. Quantity sub-type: Duration. Required: Conditional (C). Editable: N/A."
 
 * gender 1..1 CodeableConcept "Gender identity" "Gender identity of the client, represented using the Brazilian gender identity terminology."
-  * ^code[+] = $DENConcepts#DEN.A2.DE7 "Gender"
+  * ^code[+] = $DENConcepts#DEN.A2.DE7 "Gender identity"
   * ^comment = "Data Type in DAK: Coding. Bound to the BR Core BRIdentidadeGenero ValueSet and represented in Patient.extension:identidadeGenero. The administrative gender required by BR Core is represented separately by Patient.gender. Editable: Yes. Required: R."
 * gender from $BRIdentidadeGenero (required)
 

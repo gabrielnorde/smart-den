@@ -17,7 +17,7 @@ Usage: #example
 * gender = #female
 * birthDate = "1990-03-15"
 * extension[identidadeGenero].url = "http://hl7.org/fhir/StructureDefinition/patient-genderIdentity"
-* extension[identidadeGenero].valueCodeableConcept.coding = $SCT#446141000124107
+* extension[identidadeGenero].valueCodeableConcept.coding = $SCT#446141000124107 "Identifies as female gender (finding)"
 * extension[raca].url = "https://ips.saude.gov.br/fhir/StructureDefinition/raca-br-ips"
 * extension[raca].valueCodeableConcept.coding = $BRRacaCorCS#02 "Preta"
 * address[0].use = #home

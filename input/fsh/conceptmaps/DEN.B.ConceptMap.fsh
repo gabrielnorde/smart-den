@@ -4,12 +4,13 @@ Usage: #definition
 Title: "DEN.B Screening ConceptMap"
 Description: "Mapping between DEN.B Screening Data Elements and standard terminologies (SNOMED CT, LOINC, ICD-11, ICD-10), establishing semantic equivalences according to the WHO Dengue DAK."
 * url = "https://smart.who.int/den/ConceptMap/DEN.B.ConceptMap"
+* id = "DEN.B.ConceptMap"
 * version = "0.1.0"
 * name = "DEN_B_ConceptMap"
 * status = #draft
 * experimental = true
 * publisher = "World Health Organization"
-* sourceCanonical = "https://smart.who.int/den/StructureDefinition/DEN.B"
+* sourceCanonical = "https://smart.who.int/den/ValueSet/DENConcepts"
 
 // =============================================================================
 // Group 1: DAK DEN Concepts -> SNOMED CT
@@ -55,16 +56,12 @@ Description: "Mapping between DEN.B Screening Data Elements and standard termino
     * display = "Pulse rate"
     * target[+]
       * code = #301147003
-      * display = "Pulse rate finding (finding)"
+      * display = "Pulse rate finding"
       * equivalence = #equivalent
 
   * element[+]
     * code = #DEN.B3.DE6
     * display = "Pallor present"
-    * target[+]
-      * code = #267029006
-      * display = "Pale – symptom (finding)"
-      * equivalence = #equivalent
 
   * element[+]
     * code = #DEN.B3.DE9
@@ -184,7 +181,7 @@ Description: "Mapping between DEN.B Screening Data Elements and standard termino
     * target[+]
       * code = #25064002
       * display = "Headache (finding)"
-      * equivalence = #narrower
+      * equivalence = #wider
 
   * element[+]
     * code = #DEN.B5.DE5

@@ -2,6 +2,8 @@ Logical: DENC7InitialManagement
 Id: DEN.C7
 Title: "DEN.C7 Initial management"
 Description: "Data elements for the DEN.C7 Initial management Data Dictionary (Web Annex A: Core data dictionary for DEN digital adaptation kit)."
+* ^url = "https://smart.who.int/den/StructureDefinition/DEN.C7"
+* ^type = "https://smart.who.int/den/StructureDefinition/DENC7"
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition"
 * ^status = #draft
 * ^experimental = true

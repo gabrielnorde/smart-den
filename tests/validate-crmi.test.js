@@ -9,7 +9,7 @@ const { SHAREABLE, PUBLISHABLE, audit, main } = require('../scripts/validate-crm
 
 const baselineIds = [
   'DEN.B', 'DEN.C10', 'DEN.C11', 'DEN.C3', 'DEN.C4-6', 'DEN.C7',
-  'DEN.C8', 'DEN.C9', 'DEN.End', 'DENA', 'den-encounter', 'den-patient',
+  'DEN.C8', 'DEN.C9', 'DEN.End', 'DEN.A', 'den-encounter', 'den-patient',
 ];
 
 function makeStructureDefinition(id, { status = 'draft', date = status === 'active' ? '2026-10-22' : undefined } = {}) {
@@ -88,6 +88,19 @@ test('discovers and validates the 12 current StructureDefinitions', () => {
   assert.equal(result.shareableFailures, 0);
   assert.equal(result.publishableRequired, 0);
   assert.equal(result.publishableFailures, 0);
+});
+
+test('recognizes localized Publisher evidence for CRMI profile validation', () => {
+  const root = fixture();
+  const reports = path.join(root, 'temp', 'pages', '_includes');
+  const report = path.join(reports, 'StructureDefinition-DEN.A-validation.xhtml');
+  fs.writeFileSync(report, validationReport().replace(
+    `Validate resource against profile ${SHAREABLE}|1.0.0`,
+    `Validar recurso em relação ao perfil ${SHAREABLE}|1.0.0`,
+  ));
+  const result = audit(root);
+  assert.equal(result.shareableValidated, 12);
+  assert.equal(result.shareableFailures, 0);
 });
 
 test('fails Shareable validation when required metadata is missing', () => {

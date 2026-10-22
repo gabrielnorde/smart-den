@@ -4,12 +4,13 @@ Usage: #definition
 Title: "DEN.C10 Clinical Management ConceptMap"
 Description: "Mapping between DEN.C10 Clinical Management Data Elements and standard terminologies (SNOMED CT)."
 * url = "https://smart.who.int/den/ConceptMap/DEN.C10.ConceptMap"
+* id = "DEN.C10.ConceptMap"
 * version = "0.1.0"
 * name = "DEN_C10_ConceptMap"
 * status = #draft
 * experimental = true
 * publisher = "World Health Organization"
-* sourceCanonical = "https://smart.who.int/den/StructureDefinition/DEN.C10"
+* sourceCanonical = "https://smart.who.int/den/ValueSet/DENConcepts"
 
 * group[+]
   * source = $DENConcepts

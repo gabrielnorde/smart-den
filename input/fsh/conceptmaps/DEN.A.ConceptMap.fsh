@@ -4,12 +4,13 @@ Usage: #definition
 Title: "DEN.A Registration ConceptMap"
 Description: "Mapping between DEN.A Registration Data Elements and standard terminologies (SNOMED CT, LOINC, ICD-11), establishing semantic equivalences according to the WHO Dengue DAK."
 * url = "https://smart.who.int/den/ConceptMap/DEN.A.ConceptMap"
+* id = "DEN.A.ConceptMap"
 * version = "0.1.0"
 * name = "DEN_A_ConceptMap"
 * status = #draft
 * experimental = true
 * publisher = "World Health Organization"
-* sourceCanonical = "https://smart.who.int/den/StructureDefinition/DEN.A"
+* sourceCanonical = "https://smart.who.int/den/ValueSet/DENConcepts"
 
 // =============================================================================
 // Group 1: DAK DEN Concepts -> SNOMED CT
@@ -21,10 +22,6 @@ Description: "Mapping between DEN.A Registration Data Elements and standard term
   * element[+]
     * code = #DEN.A2.DE1
     * display = "Unique identification"
-    * target[+]
-      * code = #900000000000474000
-      * display = "Universally Unique Identifier (foundation metadata concept)"
-      * equivalence = #equivalent
 
   * element[+]
     * code = #DEN.A2.DE2
@@ -105,6 +102,7 @@ Description: "Mapping between DEN.A Registration Data Elements and standard term
       * code = #33791000087105
       * display = "Identifies as nonbinary gender (finding)"
       * equivalence = #narrower
+      * comment = "The DAK category 'Other' may include additional identities; this target represents only nonbinary gender identity."
 
   * element[+]
     * code = #DEN.A2.DE13
@@ -421,6 +419,7 @@ Description: "Mapping between DEN.A Registration Data Elements and standard term
       * code = #446151000124109
       * display = "Identifies as male gender (finding)"
       * equivalence = #narrower
+      * comment = "This target captures the male gender identity subtype within the broader ICD-11 category."
 
   * element[+]
     * code = #HA60
@@ -429,4 +428,5 @@ Description: "Mapping between DEN.A Registration Data Elements and standard term
       * code = #446141000124107
       * display = "Identifies as female gender (finding)"
       * equivalence = #narrower
+      * comment = "This target captures the female gender identity subtype within the broader ICD-11 category."
 
