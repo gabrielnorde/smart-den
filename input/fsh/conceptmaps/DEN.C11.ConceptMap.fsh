@@ -4,12 +4,13 @@ Usage: #definition
 Title: "DEN.C11 Clinical/Lab Evaluation ConceptMap"
 Description: "Mapping between DEN.C11 Clinical/Lab Evaluation Data Elements and standard terminologies (SNOMED CT, LOINC)."
 * url = "https://smart.who.int/den/ConceptMap/DEN.C11.ConceptMap"
+* id = "DEN.C11.ConceptMap"
 * version = "0.1.0"
 * name = "DEN_C11_ConceptMap"
 * status = #draft
 * experimental = true
 * publisher = "World Health Organization"
-* sourceCanonical = "https://smart.who.int/den/StructureDefinition/DEN.C11"
+* sourceCanonical = "https://smart.who.int/den/ValueSet/DENConcepts"
 
 * group[+]
   * source = $DENConcepts

@@ -4,12 +4,13 @@ Usage: #definition
 Title: "DEN.C9 Refer to Complex Services ConceptMap"
 Description: "Mapping between DEN.C9 Refer to Complex Services Data Elements and standard terminologies (SNOMED CT, LOINC)."
 * url = "https://smart.who.int/den/ConceptMap/DEN.C9.ConceptMap"
+* id = "DEN.C9.ConceptMap"
 * version = "0.1.0"
 * name = "DEN_C9_ConceptMap"
 * status = #draft
 * experimental = true
 * publisher = "World Health Organization"
-* sourceCanonical = "https://smart.who.int/den/StructureDefinition/DEN.C9"
+* sourceCanonical = "https://smart.who.int/den/ValueSet/DENConcepts"
 
 * group[+]
   * source = $DENConcepts
@@ -19,7 +20,7 @@ Description: "Mapping between DEN.C9 Refer to Complex Services Data Elements and
     * display = "Emergency referral"
     * target[+]
       * code = #134403003
-      * display = "Referral to emergency clinic (procedure)"
+      * display = "Urgent referral (procedure)"
       * equivalence = #equivalent
   * element[+]
     * code = #DEN.C9.DE3
@@ -65,7 +66,7 @@ Description: "Mapping between DEN.C9 Refer to Complex Services Data Elements and
     * display = "Emergency referral"
     * target[+]
       * code = #39269-6
-      * display = "Follow-up (referred to) provider/specialist, provider type [CPHS]"
+      * display = "Follow-up (referred to) provider /specialist, provider type CPHS"
       * equivalence = #equivalent
   * element[+]
     * code = #DEN.C9.DE2
@@ -79,7 +80,7 @@ Description: "Mapping between DEN.C9 Refer to Complex Services Data Elements and
     * display = "Location of referral"
     * target[+]
       * code = #39270-4
-      * display = "Follow-up (referred to) provider/specialist, address [CPHS]"
+      * display = "Follow-up (referred to) provider /specialist, address CPHS"
       * equivalence = #equivalent
   * element[+]
     * code = #DEN.C9.DE4

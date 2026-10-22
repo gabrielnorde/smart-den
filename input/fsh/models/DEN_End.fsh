@@ -2,8 +2,9 @@ Logical: DENEnd
 Id: DEN.End
 Title: "DEN.End"
 Description: "Data elements for the DEN.End Data Dictionary (Web Annex A: Core data dictionary for DEN digital adaptation kit)."
+* ^url = "https://smart.who.int/den/StructureDefinition/DEN.End"
+* ^type = "https://smart.who.int/den/StructureDefinition/DENEnd"
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition"
-* ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablestructuredefinition"
 * ^status = #draft
 * ^experimental = true
 * ^name = "DEN_End"

@@ -2,8 +2,9 @@ Logical: DENC3PhysicalExamination
 Id: DEN.C3
 Title: "DEN.C3 Physical examination"
 Description: "Data elements for the DEN.C3 Physical examination Data Dictionary (Web Annex A: Core data dictionary for DEN digital adaptation kit)."
+* ^url = "https://smart.who.int/den/StructureDefinition/DEN.C3"
+* ^type = "https://smart.who.int/den/StructureDefinition/DENC3"
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition"
-* ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablestructuredefinition"
 * ^status = #draft
 * ^experimental = true
 * ^name = "DEN_C3_Physical_examination"
@@ -20,7 +21,7 @@ Description: "Data elements for the DEN.C3 Physical examination Data Dictionary 
 
 * quantityOfOralIntake 0..1 Quantity "Quantity of oral intake" "Volume of fluids consumed by the patient"
   * ^code[+] = $DENConcepts#DEN.C3.DE7 "Quantity of oral intake"
-  * ^code[+] = $LNC#9007-06-01 "Fluid intake oral 24 hour"
+  * ^code[+] = $LNC#9007-6 "Fluid intake oral 24 hour"
   * ^code[+] = $SCT#251853006 "Oral fluid input (observable entity)"
   * ^comment = "Quantity sub-type: Integer quantity. Note: It is important to assess the patient's hydration status."
 

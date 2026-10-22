@@ -22,14 +22,36 @@ SET txoption=
 
 SET JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
 
-IF EXIST "%input_cache_path%\%publisher_jar%" (
-	JAVA -jar "%input_cache_path%\%publisher_jar%" -ig . %txoption% %*
-) ELSE If exist "..\%publisher_jar%" (
-	JAVA -jar "..\%publisher_jar%" -ig . %txoption% %*
-) ELSE IF EXIST "%publisher_home%\%publisher_jar%" (
-	JAVA -jar "%publisher_home%\%publisher_jar%" -ig . %txoption% %*
-) ELSE (
-	ECHO IG Publisher NOT FOUND in input-cache, parent folder, or FHIR publisher home.  Please run _updatePublisher.  Aborting...
-)
+IF NOT EXIST "temp\pages\_includes" MKDIR "temp\pages\_includes"
+DEL /Q "temp\pages\_includes\StructureDefinition-*-validation.xhtml" 2>NUL
 
+IF EXIST "%input_cache_path%\%publisher_jar%" GOTO use_input_cache
+IF EXIST "..\%publisher_jar%" GOTO use_parent
+IF EXIST "%publisher_home%\%publisher_jar%" GOTO use_home
+ECHO IG Publisher NOT FOUND in input-cache, parent folder, or FHIR publisher home. Please run _updatePublisher. Aborting...
+SET "publisher_status=1"
+GOTO run_crmi_check
+
+:use_input_cache
+JAVA -jar "%input_cache_path%\%publisher_jar%" -ig . %txoption% %*
+SET "publisher_status=%ERRORLEVEL%"
+GOTO run_crmi_check
+
+:use_parent
+JAVA -jar "..\%publisher_jar%" -ig . %txoption% %*
+SET "publisher_status=%ERRORLEVEL%"
+GOTO run_crmi_check
+
+:use_home
+JAVA -jar "%publisher_home%\%publisher_jar%" -ig . %txoption% %*
+SET "publisher_status=%ERRORLEVEL%"
+
+:run_crmi_check
+node scripts\validate-crmi.js --root "%CD%"
+SET "crmi_status=%ERRORLEVEL%"
+IF NOT "%publisher_status%"=="0" GOTO finish
+SET "publisher_status=%crmi_status%"
+
+:finish
 PAUSE
+EXIT /B %publisher_status%

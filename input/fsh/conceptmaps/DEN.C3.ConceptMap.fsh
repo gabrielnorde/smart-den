@@ -4,12 +4,13 @@ Usage: #definition
 Title: "DEN.C3 Physical Examination ConceptMap"
 Description: "Mapping between DEN.C3 Physical Examination Data Elements and standard terminologies (SNOMED CT, LOINC, ICD-11, ICD-10)."
 * url = "https://smart.who.int/den/ConceptMap/DEN.C3.ConceptMap"
+* id = "DEN.C3.ConceptMap"
 * version = "0.1.0"
 * name = "DEN_C3_ConceptMap"
 * status = #draft
 * experimental = true
 * publisher = "World Health Organization"
-* sourceCanonical = "https://smart.who.int/den/StructureDefinition/DEN.C3"
+* sourceCanonical = "https://smart.who.int/den/ValueSet/DENConcepts"
 
 * group[+]
   * source = $DENConcepts
@@ -64,7 +65,7 @@ Description: "Mapping between DEN.C3 Physical Examination Data Elements and stan
     * code = #DEN.C3.DE7
     * display = "Quantity of oral intake"
     * target[+]
-      * code = #9007-06-01
+      * code = #9007-6
       * display = "Fluid intake oral 24 hour"
       * equivalence = #equivalent
 

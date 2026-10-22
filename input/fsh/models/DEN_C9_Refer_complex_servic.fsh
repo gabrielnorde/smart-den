@@ -2,8 +2,9 @@ Logical: DENC9ReferToComplexServices
 Id: DEN.C9
 Title: "DEN.C9. Refer to complex services"
 Description: "Data elements for the DEN.C9. Refer to complex services Data Dictionary (Web Annex A: Core data dictionary for DEN digital adaptation kit)."
+* ^url = "https://smart.who.int/den/StructureDefinition/DEN.C9"
+* ^type = "https://smart.who.int/den/StructureDefinition/DENC9"
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition"
-* ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablestructuredefinition"
 * ^status = #draft
 * ^experimental = true
 * ^name = "DEN_C9_Refer_complex_services"
@@ -11,8 +12,8 @@ Description: "Data elements for the DEN.C9. Refer to complex services Data Dicti
 
 * emergencyReferral 1..1 boolean "Emergency referral" "Referral for urgent care"
   * ^code[+] = $DENConcepts#DEN.C9.DE1 "Emergency referral"
-  * ^code[+] = $LNC#39269-6 "Follow-up (referred to) provider/specialist, provider type"
-  * ^code[+] = $SCT#134403003 "Referral to emergency clinic (procedure)"
+  * ^code[+] = $LNC#39269-6 "Follow-up (referred to) provider /specialist, provider type CPHS"
+  * ^code[+] = $SCT#134403003 "Urgent referral (procedure)"
   * ^comment = "Required: R."
 
 * anyTreatmentGivenBeforeReferral 1..1 boolean "Any treatment given before referral?" "If patient was referred, was any treatment provided before referral?"
@@ -22,7 +23,7 @@ Description: "Data elements for the DEN.C9. Refer to complex services Data Dicti
 
 * locationOfReferral 1..1 string "Location of referral" "Where the client is being referred to"
   * ^code[+] = $DENConcepts#DEN.C9.DE3 "Location of referral"
-  * ^code[+] = $LNC#39270-4 "Follow-up (referred to) provider/specialist, address"
+  * ^code[+] = $LNC#39270-4 "Follow-up (referred to) provider /specialist, address CPHS"
   * ^code[+] = $SCT#246267002 "Location (attribute)"
   * ^comment = "Validation: Should come from facility registry list. Required: R."
 

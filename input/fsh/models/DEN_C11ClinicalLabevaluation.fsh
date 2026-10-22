@@ -2,8 +2,9 @@ Logical: DENC11ClinicalLabEvaluation
 Id: DEN.C11
 Title: "DEN.C11 Clinical/Lab evaluation"
 Description: "Data elements for the DEN.C11 Clinical/Lab evaluation Data Dictionary (Web Annex A: Core data dictionary for DEN digital adaptation kit)."
+* ^url = "https://smart.who.int/den/StructureDefinition/DEN.C11"
+* ^type = "https://smart.who.int/den/StructureDefinition/DENC11"
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition"
-* ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablestructuredefinition"
 * ^status = #draft
 * ^experimental = true
 * ^name = "DEN_C11_Clinical_Lab_evaluation"

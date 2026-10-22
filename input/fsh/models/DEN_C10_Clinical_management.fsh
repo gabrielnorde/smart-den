@@ -2,8 +2,9 @@ Logical: DENC10ClinicalManagement
 Id: DEN.C10
 Title: "DEN.C10 Clinical management"
 Description: "Data elements for the DEN.C10 Clinical management Data Dictionary (Web Annex A: Core data dictionary for DEN digital adaptation kit)."
+* ^url = "https://smart.who.int/den/StructureDefinition/DEN.C10"
+* ^type = "https://smart.who.int/den/StructureDefinition/DENC10"
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition"
-* ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablestructuredefinition"
 * ^status = #draft
 * ^experimental = true
 * ^name = "DEN_C10_Clinical_management"

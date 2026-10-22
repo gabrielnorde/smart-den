@@ -4,12 +4,13 @@ Usage: #definition
 Title: "DEN.End End of Follow-up ConceptMap"
 Description: "Mapping between DEN.End End of Follow-up Data Elements and standard terminologies (SNOMED CT, LOINC)."
 * url = "https://smart.who.int/den/ConceptMap/DEN.End.ConceptMap"
+* id = "DEN.End.ConceptMap"
 * version = "0.1.0"
 * name = "DEN_End_ConceptMap"
 * status = #draft
 * experimental = true
 * publisher = "World Health Organization"
-* sourceCanonical = "https://smart.who.int/den/StructureDefinition/DEN.End"
+* sourceCanonical = "https://smart.who.int/den/ValueSet/DENConcepts"
 
 * group[+]
   * source = $DENConcepts

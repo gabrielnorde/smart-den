@@ -4,12 +4,13 @@ Usage: #definition
 Title: "DEN.C4-6 Diagnostic ConceptMap"
 Description: "Mapping between DEN.C4-6 Diagnostic Data Elements and standard terminologies (SNOMED CT, ICD-11, ICD-10)."
 * url = "https://smart.who.int/den/ConceptMap/DEN.C4-6.ConceptMap"
+* id = "DEN.C4-6.ConceptMap"
 * version = "0.1.0"
 * name = "DEN_C4_6_ConceptMap"
 * status = #draft
 * experimental = true
 * publisher = "World Health Organization"
-* sourceCanonical = "https://smart.who.int/den/StructureDefinition/DEN.C4-6"
+* sourceCanonical = "https://smart.who.int/den/ValueSet/DENConcepts"
 
 * group[+]
   * source = $DENConcepts
@@ -65,14 +66,14 @@ Description: "Mapping between DEN.C4-6 Diagnostic Data Elements and standard ter
     * display = "Suspected dengue fever"
     * target[+]
       * code = #1D2Z
-      * display = "Dengue fever, unspecified"
+      * display = "Dengue, unspecified"
       * equivalence = #equivalent
   * element[+]
     * code = #DEN.C4.DE2
     * display = "Confirmed dengue fever"
     * target[+]
       * code = #1D2Z
-      * display = "Dengue fever, unspecified"
+      * display = "Dengue, unspecified"
       * equivalence = #equivalent
   * element[+]
     * code = #DEN.C6.DE2

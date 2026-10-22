@@ -18,6 +18,40 @@ on:
   workflow_dispatch:
 
 jobs:
+  crmi_validation:
+    name: Build and validate CRMI StructureDefinitions
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install SUSHI
+        run: npm install --global fsh-sushi@3.20.1
+
+      - name: Test CRMI validation gate
+        run: node tests/validate-crmi.test.js
+
+      - name: Install IG Publisher
+        run: |
+          mkdir -p input-cache
+          curl --fail --location --silent --show-error \
+            https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar \
+            --output input-cache/publisher.jar
+
+      - name: Build IG and enforce CRMI conformance
+        run: ./_genonce.sh
+
   # This workflow contains a single job called "build"
   call_build: 
     uses: WorldHealthOrganization/smart-base/.github/workflows/fhirbuild.yml@main

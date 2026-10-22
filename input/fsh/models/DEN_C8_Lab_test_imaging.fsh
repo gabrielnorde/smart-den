@@ -2,8 +2,9 @@ Logical: DENC8LabTestImaging
 Id: DEN.C8
 Title: "DEN C8. Lab test & imaging"
 Description: "Data elements for the DEN C8. Lab test & imaging Data Dictionary (Web Annex A: Core data dictionary for DEN digital adaptation kit)."
+* ^url = "https://smart.who.int/den/StructureDefinition/DEN.C8"
+* ^type = "https://smart.who.int/den/StructureDefinition/DENC8"
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition"
-* ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablestructuredefinition"
 * ^status = #draft
 * ^experimental = true
 * ^name = "DEN_C8_Lab_test_imaging"
@@ -48,7 +49,7 @@ Description: "Data elements for the DEN C8. Lab test & imaging Data Dictionary (
 // Results (1)
 * hematocritHtResults1 0..1 Quantity "Hematocrit (Ht) results (1)" "Hematocrit percentage (first reading)"
   * ^code[+] = $DENConcepts#DEN.C8.DE31 "Hematocrit (Ht) results (1)"
-  * ^code[+] = $LNC#20570-8 "Hematocrit [Volume Fraction] of Blood"
+  * ^code[+] = $LNC#20570-8 "Hematocrit [Volume Fraction] of Blood by calculation"
   * ^code[+] = $SCT#365616005 "Finding of hematocrit (finding)"
   * ^comment = "Quantity sub-type: Decimal quantity. Required: C."
 
@@ -60,16 +61,14 @@ Description: "Data elements for the DEN C8. Lab test & imaging Data Dictionary (
 
 * dengueVirusSerologyResults 0..1 string "Dengue virus serology results" "Results of dengue virus serology test"
   * ^code[+] = $DENConcepts#DEN.C8.DE33 "Dengue virus serology results"
-  * ^code[+] = $SCT#996161000000105 "Dengue virus serology (observable entity)"
 
 * denguePcrResults 0..1 string "Dengue PCR results" "Results of dengue PCR test"
   * ^code[+] = $DENConcepts#DEN.C8.DE34 "Dengue PCR results"
-  * ^code[+] = $SCT#1026631000000106 "Dengue polymerase chain reaction (observable entity)"
 
 // Results (2)
 * hematocritHtResults2 0..1 Quantity "Hematocrit (Ht) results (2)" "Results of second hematocrit percentage"
   * ^code[+] = $DENConcepts#DEN.C8.DE35 "Hematocrit (Ht) results (2)"
-  * ^code[+] = $LNC#20570-8 "Hematocrit [Volume Fraction] of Blood"
+  * ^code[+] = $LNC#20570-8 "Hematocrit [Volume Fraction] of Blood by calculation"
   * ^code[+] = $SCT#365616005 "Finding of hematocrit (finding)"
   * ^comment = "Quantity sub-type: Decimal quantity. Required: C."
 
@@ -82,7 +81,7 @@ Description: "Data elements for the DEN C8. Lab test & imaging Data Dictionary (
 // Results (3)
 * hematocritHtResults3 0..1 Quantity "Hematocrit (Ht) results (3)" "Results of third hematocrit percentage"
   * ^code[+] = $DENConcepts#DEN.C8.DE37 "Hematocrit (Ht) results (3)"
-  * ^code[+] = $LNC#20570-8 "Hematocrit [Volume Fraction] of Blood"
+  * ^code[+] = $LNC#20570-8 "Hematocrit [Volume Fraction] of Blood by calculation"
   * ^code[+] = $SCT#365616005 "Finding of hematocrit (finding)"
   * ^comment = "Quantity sub-type: Decimal quantity. Required: C."
 
@@ -95,7 +94,7 @@ Description: "Data elements for the DEN C8. Lab test & imaging Data Dictionary (
 // Results (4)
 * hematocritHtResults4 0..1 Quantity "Hematocrit (Ht) results (4)" "Results of fourth hematocrit percentage"
   * ^code[+] = $DENConcepts#DEN.C8.DE39 "Hematocrit (Ht) results (4)"
-  * ^code[+] = $LNC#20570-8 "Hematocrit [Volume Fraction] of Blood"
+  * ^code[+] = $LNC#20570-8 "Hematocrit [Volume Fraction] of Blood by calculation"
   * ^code[+] = $SCT#365616005 "Finding of hematocrit (finding)"
   * ^comment = "Quantity sub-type: Decimal quantity. Required: C."
 
@@ -108,7 +107,7 @@ Description: "Data elements for the DEN C8. Lab test & imaging Data Dictionary (
 // Results (5)
 * hematocritHtResults5 0..1 Quantity "Hematocrit (Ht) results (5)" "Results of fifth hematocrit percentage"
   * ^code[+] = $DENConcepts#DEN.C8.DE41 "Hematocrit (Ht) results (5)"
-  * ^code[+] = $LNC#20570-8 "Hematocrit [Volume Fraction] of Blood"
+  * ^code[+] = $LNC#20570-8 "Hematocrit [Volume Fraction] of Blood by calculation"
   * ^code[+] = $SCT#365616005 "Finding of hematocrit (finding)"
   * ^comment = "Quantity sub-type: Decimal quantity. Required: C."
 
@@ -121,7 +120,7 @@ Description: "Data elements for the DEN C8. Lab test & imaging Data Dictionary (
 // Results (6)
 * hematocritHtResults6 0..1 Quantity "Hematocrit (Ht) results (6)" "Results of sixth hematocrit percentage"
   * ^code[+] = $DENConcepts#DEN.C8.DE43 "Hematocrit (Ht) results (6)"
-  * ^code[+] = $LNC#20570-8 "Hematocrit [Volume Fraction] of Blood"
+  * ^code[+] = $LNC#20570-8 "Hematocrit [Volume Fraction] of Blood by calculation"
   * ^code[+] = $SCT#365616005 "Finding of hematocrit (finding)"
   * ^comment = "Quantity sub-type: Decimal quantity. Required: C."
 
@@ -134,7 +133,7 @@ Description: "Data elements for the DEN C8. Lab test & imaging Data Dictionary (
 // Results (7)
 * hematocritHtResults7 0..1 Quantity "Hematocrit (Ht) results (7)" "Results of seventh hematocrit percentage"
   * ^code[+] = $DENConcepts#DEN.C8.DE45 "Hematocrit (Ht) results (7)"
-  * ^code[+] = $LNC#20570-8 "Hematocrit [Volume Fraction] of Blood"
+  * ^code[+] = $LNC#20570-8 "Hematocrit [Volume Fraction] of Blood by calculation"
   * ^code[+] = $SCT#365616005 "Finding of hematocrit (finding)"
   * ^comment = "Quantity sub-type: Decimal quantity. Required: C."
 

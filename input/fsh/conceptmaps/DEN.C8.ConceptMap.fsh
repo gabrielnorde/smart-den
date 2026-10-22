@@ -4,12 +4,13 @@ Usage: #definition
 Title: "DEN.C8 Lab Test & Imaging ConceptMap"
 Description: "Mapping between DEN.C8 Lab Test & Imaging Data Elements and standard terminologies (SNOMED CT, LOINC)."
 * url = "https://smart.who.int/den/ConceptMap/DEN.C8.ConceptMap"
+* id = "DEN.C8.ConceptMap"
 * version = "0.1.0"
 * name = "DEN_C8_ConceptMap"
 * status = #draft
 * experimental = true
 * publisher = "World Health Organization"
-* sourceCanonical = "https://smart.who.int/den/StructureDefinition/DEN.C8"
+* sourceCanonical = "https://smart.who.int/den/ValueSet/DENConcepts"
 
 * group[+]
   * source = $DENConcepts
