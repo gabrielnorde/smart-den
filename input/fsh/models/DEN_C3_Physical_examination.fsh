@@ -1,21 +1,26 @@
-// -----------------------------------------------------------------------------
-// Source worksheet: "DEN.C3 Physical examination"
-
-Alias: $DENConcepts = https://smart.who.int/den/CodeSystem/den-custom-codes
-
 Logical: DENC3PhysicalExamination
-Id: DEN-C3-Physical-examination
+Id: DEN.C3
 Title: "DEN.C3 Physical examination"
-Description: "Data elements for the DEN.C3 Physical examination Data Dictionary."
+Description: "Data elements for the DEN.C3 Physical examination Data Dictionary (Web Annex A: Core data dictionary for DEN digital adaptation kit)."
+* ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition"
+* ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablestructuredefinition"
 * ^status = #draft
 * ^experimental = true
-* ^publisher = "World Health Organization"
-* ^purpose = "Computable logical representation of the DEN.C3 Physical examination data dictionary."
-* dangerSign 0..1 code "Danger sign"
-  "Evaluate if patient is in shock"
-  * ^code[+] = $DENConcepts#DEN.C3.DE1
-  * ^comment = "Requiredness is not specified in the source dictionary; cardinality is provisionally 0..1. | Input-option concepts from the source dictionary (not separate logical properties): DEN.C3.DE3 ('Hypotensive shock'; Required=R); DEN.C3.DE4 ('Severe bleeding'; Required=R); DEN.C3.DE5 ('Severe organ impairment'; Required=R); DEN.C3.DE6 ('None'; Required=O); validation: Cannot select with any other option. Create/verify the corresponding CodeSystem concepts and ValueSet, then bind this field. Do not infer terminology bindings solely from labels."
-* quantityOfOralIntake 0..1 Quantity "Quantity of oral intake"
-  "Volume of fluids consumed by the patient."
-  * ^code[+] = $DENConcepts#DEN.C3.DE7
-  * ^comment = "Requiredness is not specified in the source dictionary; cardinality is provisionally 0..1. | Quantity sub-type: Integer quantity."
+* ^name = "DEN_C3_Physical_examination"
+* ^version = "0.1.0"
+
+// DEN.C1. Enter doctor office - No data is recorded during this activity
+// DEN.C2. Take history - No data is recorded during this activity
+
+// DEN.C3. Physical examination
+* dangerSign 0..* code "Danger sign" "Evaluate if patient is in shock"
+  * ^code[+] = $DENConcepts#DEN.C3.DE1 "Danger sign"
+* dangerSign from DENC3DE1 (required)
+  * ^comment = "Select all that apply. Options: Hypotensive shock (DEN.C3.DE3), Severe bleeding (DEN.C3.DE4), Severe organ impairment (DEN.C3.DE5), None (DEN.C3.DE6)."
+
+* quantityOfOralIntake 0..1 Quantity "Quantity of oral intake" "Volume of fluids consumed by the patient"
+  * ^code[+] = $DENConcepts#DEN.C3.DE7 "Quantity of oral intake"
+  * ^code[+] = $LNC#9007-06-01 "Fluid intake oral 24 hour"
+  * ^code[+] = $SCT#251853006 "Oral fluid input (observable entity)"
+  * ^comment = "Quantity sub-type: Integer quantity. Note: It is important to assess the patient's hydration status."
+

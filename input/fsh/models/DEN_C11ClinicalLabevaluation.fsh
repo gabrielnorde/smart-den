@@ -1,31 +1,41 @@
-// -----------------------------------------------------------------------------
-// Source worksheet: "DEN.C11 ClinicalLab evaluation"
-
-Alias: $DENConcepts = https://smart.who.int/den/CodeSystem/den-custom-codes
-
 Logical: DENC11ClinicalLabEvaluation
-Id: DEN-C11-ClinicalLab-evaluation
-Title: "DEN.C11 ClinicalLab evaluation"
-Description: "Data elements for the DEN.C11 ClinicalLab evaluation Data Dictionary."
+Id: DEN.C11
+Title: "DEN.C11 Clinical/Lab evaluation"
+Description: "Data elements for the DEN.C11 Clinical/Lab evaluation Data Dictionary (Web Annex A: Core data dictionary for DEN digital adaptation kit)."
+* ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition"
+* ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablestructuredefinition"
 * ^status = #draft
 * ^experimental = true
-* ^publisher = "World Health Organization"
-* ^purpose = "Computable logical representation of the DEN.C11 ClinicalLab evaluation data dictionary."
-* hematocritEvaluationFirst 0..1 code "Hematocrit evaluation - first"
-  * ^code[+] = $DENConcepts#DEN.C11.DE1
-  * ^comment = "Requiredness is not specified in the source dictionary; cardinality is provisionally 0..1. | Input-option concepts from the source dictionary (not separate logical properties): DEN.C11.DE2 ('Hematocrit below reference range'; Required=O); DEN.C11.DE3 ('Hematocrit above reference range'; Required=O); DEN.C11.DE4 ('Normal hematocrit'; Required=O). Create/verify the corresponding CodeSystem concepts and ValueSet, then bind this field. Do not infer terminology bindings solely from labels."
-* hematocritEvaluationSecond 0..1 code "Hematocrit evaluation - second"
-  * ^code[+] = $DENConcepts#DEN.C11.DE5
-  * ^comment = "Requiredness is not specified in the source dictionary; cardinality is provisionally 0..1. | Input-option concepts from the source dictionary (not separate logical properties): DEN.C11.DE6 ('Rising hematocrit'; Required=O); DEN.C11.DE7 ('Falling hematocrit'; Required=O); DEN.C11.DE8 ('Normal/stable hematocrit'; Required=O). Create/verify the corresponding CodeSystem concepts and ValueSet, then bind this field. Do not infer terminology bindings solely from labels."
-* hematocritEvaluationThird 0..1 code "Hematocrit evaluation - third"
-  * ^code[+] = $DENConcepts#DEN.C11.DE9
-  * ^comment = "Requiredness is not specified in the source dictionary; cardinality is provisionally 0..1. | Input-option concepts from the source dictionary (not separate logical properties): DEN.C11.DE10 ('Rising hematocrit'; Required=O); DEN.C11.DE11 ('Falling hematocrit'; Required=O); DEN.C11.DE12 ('Normal/stable hematocrit'; Required=O). Create/verify the corresponding CodeSystem concepts and ValueSet, then bind this field. Do not infer terminology bindings solely from labels."
-* hematocritEvaluationFourth 0..1 code "Hematocrit evaluation - fourth"
-  * ^code[+] = $DENConcepts#DEN.C11.DE13
-  * ^comment = "Requiredness is not specified in the source dictionary; cardinality is provisionally 0..1. | Input-option concepts from the source dictionary (not separate logical properties): DEN.C11.DE14 ('Rising hematocrit'; Required=O); DEN.C11.DE15 ('Falling hematocrit'; Required=O); DEN.C11.DE16 ('Normal/stable hematocrit'; Required=O). Create/verify the corresponding CodeSystem concepts and ValueSet, then bind this field. Do not infer terminology bindings solely from labels."
-* hematocritEvaluationFifth 0..1 code "Hematocrit evaluation - fifth"
-  * ^code[+] = $DENConcepts#DEN.C11.DE17
-  * ^comment = "Requiredness is not specified in the source dictionary; cardinality is provisionally 0..1. | Input-option concepts from the source dictionary (not separate logical properties): DEN.C11.DE18 ('Rising hematocrit'; Required=O); DEN.C11.DE19 ('Falling hematocrit'; Required=O); DEN.C11.DE20 ('Normal/stable hematocrit'; Required=O). Create/verify the corresponding CodeSystem concepts and ValueSet, then bind this field. Do not infer terminology bindings solely from labels."
-* hematocritEvaluationSixth 0..1 code "Hematocrit evaluation - sixth"
-  * ^code[+] = $DENConcepts#DEN.C11.DE21
-  * ^comment = "Requiredness is not specified in the source dictionary; cardinality is provisionally 0..1. | Input-option concepts from the source dictionary (not separate logical properties): DEN.C11.DE22 ('Rising hematocrit'; Required=O); DEN.C11.DE23 ('Falling hematocrit'; Required=O); DEN.C11.DE24 ('Normal/stable hematocrit'; Required=O). Create/verify the corresponding CodeSystem concepts and ValueSet, then bind this field. Do not infer terminology bindings solely from labels."
+* ^name = "DEN_C11_Clinical_Lab_evaluation"
+* ^version = "0.1.0"
+
+* hematocritEvaluationFirst 0..1 code "Hematocrit evaluation - first" "First hematocrit evaluation against reference range"
+  * ^code[+] = $DENConcepts#DEN.C11.DE1 "Hematocrit evaluation - first"
+* hematocritEvaluationFirst from DENC11DE1 (required)
+  * ^comment = "Select one. Options: Below reference (DEN.C11.DE2), Above reference (DEN.C11.DE3), Normal (DEN.C11.DE4)."
+
+* hematocritEvaluationSecond 0..1 code "Hematocrit evaluation - second" "Second hematocrit evaluation trend"
+  * ^code[+] = $DENConcepts#DEN.C11.DE5 "Hematocrit evaluation - second"
+* hematocritEvaluationSecond from DENC11DE5 (required)
+  * ^comment = "Select one. Options: Rising (DEN.C11.DE6), Falling (DEN.C11.DE7), Normal/stable (DEN.C11.DE8)."
+
+* hematocritEvaluationThird 0..1 code "Hematocrit evaluation - third" "Third hematocrit evaluation trend"
+  * ^code[+] = $DENConcepts#DEN.C11.DE9 "Hematocrit evaluation - third"
+* hematocritEvaluationThird from DENC11DE9 (required)
+  * ^comment = "Select one. Options: Rising (DEN.C11.DE10), Falling (DEN.C11.DE11), Normal/stable (DEN.C11.DE12)."
+
+* hematocritEvaluationFourth 0..1 code "Hematocrit evaluation - fourth" "Fourth hematocrit evaluation trend"
+  * ^code[+] = $DENConcepts#DEN.C11.DE13 "Hematocrit evaluation - fourth"
+* hematocritEvaluationFourth from DENC11DE13 (required)
+  * ^comment = "Select one. Options: Rising (DEN.C11.DE14), Falling (DEN.C11.DE15), Normal/stable (DEN.C11.DE16)."
+
+* hematocritEvaluationFifth 0..1 code "Hematocrit evaluation - fifth" "Fifth hematocrit evaluation trend"
+  * ^code[+] = $DENConcepts#DEN.C11.DE17 "Hematocrit evaluation - fifth"
+* hematocritEvaluationFifth from DENC11DE17 (required)
+  * ^comment = "Select one. Options: Rising (DEN.C11.DE18), Falling (DEN.C11.DE19), Normal/stable (DEN.C11.DE20)."
+
+* hematocritEvaluationSixth 0..1 code "Hematocrit evaluation - sixth" "Sixth hematocrit evaluation trend"
+  * ^code[+] = $DENConcepts#DEN.C11.DE21 "Hematocrit evaluation - sixth"
+* hematocritEvaluationSixth from DENC11DE21 (required)
+  * ^comment = "Select one. Options: Rising (DEN.C11.DE22), Falling (DEN.C11.DE23), Normal/stable (DEN.C11.DE24)."
+

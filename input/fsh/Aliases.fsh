@@ -4,6 +4,7 @@ Alias: $ICD11 = http://id.who.int/icd/release/11/mms
 Alias: $ICD10 = http://hl7.org/fhir/sid/icd-10
 Alias: $CVX = http://hl7.org/fhir/sid/cvx 
 Alias: $GENDER = http://hl7.org/fhir/administrative-gender
+Alias: $DENConcepts = https://smart.who.int/den/CodeSystem/DENConcepts
 
 Alias: $library-type = http://terminology.hl7.org/CodeSystem/library-type
 Alias: $measure-scoring = http://terminology.hl7.org/CodeSystem/measure-scoring
