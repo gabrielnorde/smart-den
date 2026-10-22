@@ -3,7 +3,6 @@ Id: DEN.C9
 Title: "DEN.C9. Refer to complex services"
 Description: "Data elements for the DEN.C9. Refer to complex services Data Dictionary (Web Annex A: Core data dictionary for DEN digital adaptation kit)."
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition"
-* ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablestructuredefinition"
 * ^status = #draft
 * ^experimental = true
 * ^name = "DEN_C9_Refer_complex_services"

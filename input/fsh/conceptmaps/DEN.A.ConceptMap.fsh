@@ -86,25 +86,25 @@ Description: "Mapping between DEN.A Registration Data Elements and standard term
     * code = #DEN.A2.DE10
     * display = "Transgender male"
     * target[+]
-      * code = #446151000124109
-      * display = "Identifies as male gender (finding)"
+      * code = #407377005
+      * display = "Female-to-male transsexual (finding)"
       * equivalence = #equivalent
 
   * element[+]
     * code = #DEN.A2.DE11
     * display = "Transgender female"
     * target[+]
-      * code = #446141000124107
-      * display = "Identifies as female gender (finding)"
+      * code = #407376001
+      * display = "Male-to-female transsexual (finding)"
       * equivalence = #equivalent
 
   * element[+]
     * code = #DEN.A2.DE12
     * display = "Other"
     * target[+]
-      * code = #33821000087103
-      * display = "Gender identity (observable entity)"
-      * equivalence = #equivalent
+      * code = #33791000087105
+      * display = "Identifies as nonbinary gender (finding)"
+      * equivalence = #narrower
 
   * element[+]
     * code = #DEN.A2.DE13

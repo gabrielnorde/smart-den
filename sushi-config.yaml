@@ -44,6 +44,12 @@ dependencies:
     version: 1.4.1
     reason: This IG uses Brazilian FHIR core profiles
 
+  br.gov.saude.ips.fhir:
+    id: brips
+    uri: https://ips.saude.gov.br/fhir/ImplementationGuide/br.gov.saude.ips.fhir
+    version: 1.0.0
+    reason: This IG uses the gender identity and race extensions referenced by BRCorePatient
+
   # smart.who.int.base-clinical:
   #   id: sbc
   #   version: current

@@ -16,7 +16,7 @@ Description: "CodeSystem grouping all data elements and concepts for the WHO Den
 * #DEN.A2.DE4 "Visit date" "The date and time of the client's contact"
 * #DEN.A2.DE5 "Date of birth" "The client's date of birth (DOB), if known"
 * #DEN.A2.DE6 "Age" "Age (number of years) of the client based on date of birth"
-* #DEN.A2.DE7 "Gender" "Gender of the client"
+* #DEN.A2.DE7 "Gender identity" "Gender identity of the client"
 * #DEN.A2.DE8 "Female" "Client identifies as female"
 * #DEN.A2.DE9 "Male" "Client identifies as male"
 * #DEN.A2.DE10 "Transgender male" "Client identifies as transgender male"

@@ -3,7 +3,6 @@ Id: DEN.C4-6
 Title: "DEN.C4-6 Diagnostic"
 Description: "Data elements for the DEN.C4-6 Diagnostic Data Dictionary (Web Annex A: Core data dictionary for DEN digital adaptation kit)."
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablestructuredefinition"
-* ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablestructuredefinition"
 * ^status = #draft
 * ^experimental = true
 * ^name = "DEN_C4_6_Diagnostic"
